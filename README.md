@@ -1,7 +1,6 @@
 
 Welcome! To the Durham Tax Hub Repository
 ===
-avish
 
 A small tour is where things must begin....
 
