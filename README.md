@@ -1,7 +1,6 @@
 
 Welcome! To the Durham Tax Hub Repository
 ===
-I am here!
 A small tour is where things must begin....
 
 The bare bones, raw, stripped down, less than nothing, ever incomplete, dust trailing, hair splittingly empty theme Underscores is where we begin.
