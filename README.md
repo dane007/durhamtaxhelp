@@ -42,6 +42,17 @@ This will be the foundation for everything we build on. Styles, structure, plugi
 Getting Started
 ---------------
 
-If you want to keep it simple, head over to https://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
+Original Theme URL: https://underscores.me
+If you want a failsafe to all the failsafes, create your own theme from here with the !!EXACT NAME!!!!!
+Theme Name: durham-tax-help
+This theme is created by underscores but authored by us students at Durham College in the Contemporary Web Design Program. 2019 Graduates represent!
+Follow the strict production, development, staging, and master plan to avoid conflict.
+Conflict with the code and with the team.
+Thanks! Great working.
 
-If you want to set things up manually, download `_s` from GitHub. The first thing you want to do is copy the `_s` directory and change the name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a five-step find and replace on the name in all the templates.
+RULES
+----------
+1. No lazy commits. Give a good message
+2. Master comes last. Always.
+3. If you aren't sure on something. Don't push or stage just ask for help please!
+4. Code off production, for the 18th time, code off production.
