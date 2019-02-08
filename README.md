@@ -44,7 +44,7 @@ Getting Started
 
 Original Theme URL: https://underscores.me
 If you want a failsafe to all the failsafes, create your own theme from here with the !!EXACT NAME!!!!!
-Theme Name: durham-tax-help
+Theme Name: `durham-tax-help`
 This theme is created by underscores but authored by us students at Durham College in the Contemporary Web Design Program. 2019 Graduates represent!
 Follow the strict production, development, staging, and master plan to avoid conflict.
 Conflict with the code and with the team.
