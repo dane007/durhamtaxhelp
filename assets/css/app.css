@@ -125,6 +125,29 @@ body {
   }
 }
 
+.entry-content {
+  border-bottom: 2px solid black;
+}
+
+/* HOW TO QUALIFY */
+#how-to-qualify {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#locations {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width:30.063em) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 }
