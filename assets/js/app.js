@@ -1,6 +1,7 @@
 const GO_BTN = document.querySelector('body .map-list-option');
 let dataLocations = [{
   name: "Diverse Financial Group",
+  id: "DivFinGrp",
   location: [43.894260, -78.868295],
   lat: 43.894260,
   lng: -78.868295,
@@ -8,11 +9,44 @@ let dataLocations = [{
   desc: "By apointment only Current and prior year returns call 647-887-8725"
 }, {
   name: "Durham Community Legal Clinic",
+  id: "DurComLegClin",
   location: [43.848900, -79.020986],
   lat: 43.848900,
   lng: -79.020986,
   address: "200 John Street West, Unit B1, Oshawa",
-  desc: "By apointment only Current and prior year returns call 647-887-8725"
+  desc: "By apointment only Current and prior year returns call 905-728-7321 ext. 259"
+}, {
+  name: "Ontario Works (Oshawa)",
+  id: "ONWrksOS",
+  location: [43.894231, -78.868267],
+  lat: 43.894231,
+  lng: -78.868267,
+  address: "200 John Street West, unit c1a, Oshawa, ON L1J 2B4",
+  desc: "Oshawa office: 905-436-6747 ext. 5208"
+}, {
+  name: "Ontario Works (Whitby)",
+  id: "ONWrksWT",
+  location: [43.898619, -78.940669],
+  lat: 43.898619,
+  lng: -78.940669,
+  address: "605 Rossland Rd E, Whitby, ON L1N 6A3",
+  desc: "Whitby office: 905-666-6239 ext. 2722"
+}, {
+  name: "Ontario Works (Ajax)",
+  id: "ONWrksAJ",
+  location: [43.848012, -79.022613],
+  lat: 43.848012,
+  lng: -79.022613,
+  address: "140 Commercial Ave, Ajax, ON L1S 2H5",
+  desc: "Ajax office: 905-428-7400 ext. 6606"
+}, {
+  name: "Local Diversity & Immigration Partnership Council",
+  id: "LocDivImPrtCnc",
+  location: [43.898603, -78.940277],
+  lat: 43.898603,
+  lng: -78.940277,
+  address: "605 Rossland Rd. E.",
+  desc: "P. O. Box 623\nWhitby, ON L1N 6A3"
 }];
 (function($) {
 
@@ -41,15 +75,7 @@ let dataLocations = [{
 
     let locations = []
 
-    // let durhamComLegClin = L.marker([43.894260, -78.868295]).addTo(mymap)
-    //   .bindPopup(`<div class='mapPopUp'><h1>Durham Community Legal Clinic</h1><h2>200 John Street West, Unit B1, Oshawa</h2><h3>By apointment only</h4><h3>call 905-728-7321 ext. 259</h3></div>`);
-
-
-    // Diverse Financial Group
-    // let divFinGrp = L.marker([43.848900, -79.020986]).addTo(mymap)
-    //   .bindPopup(`<div class='mapPopUp'><h1>Diverse Financial Group</h1><h2>190 Harwood Avenue South (inside G Centre), Ajax</h2><h3>By apointment only</h3><h4>Current and prior year returns</h4><h3>call 647-887-8725</h3></div>`);
-
-    // locations = [divFinGrp, durhamComLegClin];
+    // For all location items, add them to a location array with different map options...
     for (i = 0; i < dataLocations.length; i++) {
       locations[i] = L.marker(dataLocations[i].location).addTo(mymap);
       locations[i].bindPopup(`<div id="hotel${i}">
@@ -59,12 +85,14 @@ let dataLocations = [{
       </div>`)
     }
 
+    // Sample circle
     L.circle([43.849875, -79.035955], 250, {
       color: 'red',
       fillColor: '#f03',
       fillOpacity: 0.5
     }).addTo(mymap).bindPopup("I am a circle.");
 
+    // Sample Polygon
     L.polygon([
       [43.847079, -79.021547],
       [43.846071, -79.019101],
@@ -84,30 +112,40 @@ let dataLocations = [{
     mymap.on('click', onMapClick);
 
 
+    // Initialize map to first location items
+    // center view to the first location
+    locations[0].openPopup();
+    mymap
+      .setView(new L.LatLng(dataLocations[0].lat, dataLocations[0].lng), 16, {
+        animation: true
+      });
 
+    // Send list of locations to screen
+    let content = "";
+    for (var i = 0; i < locations.length; i++) {
+      content +=
+        `<div class="map-list-option" data-id="${i}" data-name='${dataLocations[i].id}'>
+      <h3>${dataLocations[i].name}</h3>
+      <h4>${dataLocations[i].address}</h4>
+      </div>`;
+    }
+
+    $("#map-list").html(content);
 
     // -------     C O N T R O L L E R     -------
     $(document).on("click", "body .map-list-option", function(e) {
-      // console.log(`Loc. Length: ${locations.length}`);
-      // durhamComLegClin
-      //   .setLatLng([43.848900, -79.020986])
-      //   .openOn(myMap);
-
+      content = "";
       var id = $(this).attr("data-id");
       var name = $(this).attr("data-name");
       // console.log(`ID: ${id}\nName: ${name}`);
-      // onMapClick(e, id);
 
+      content = `<h1>${dataLocations[id].name}</h1>
+      <h2>${dataLocations[id].address}</h2>
+      <p>${dataLocations[id].desc}</p>`;
       doMoveMap(id, mymap, name, locations);
-      // durhamComLegClin.openPopup();
 
-      // mymap.setView(new L.LatLng(43.894260, -78.868295), 16, {
-      //   animation: true
-      // });
-      //
-      // console.log(mymap.marker);
-      //
-      // console.log(id);
+
+      $("#map-info").html(content);
     });
   });
 
@@ -115,23 +153,13 @@ let dataLocations = [{
     locations[id].openPopup();
     console.log(`ID(96): ${id}`);
     console.log(locations[id]._popup.openPopup());
-    // let theClinic = location[id];
-    // console.log(clinic);
-    // console.log(clinic);
-    // locations[id].openPopup();
-    // console.log(locations[id]._popup);
-    // console.log(dataLocations[id].lat, dataLocations[id].lng);
+
     console.log(dataLocations[id].lng);
     mymap
       .setView(new L.LatLng(dataLocations[id].lat, dataLocations[id].lng), 16, {
         animation: true
       });
-    // onMapClick(id);
 
-    // theClinic.openPopup();
-    // console.log(mymap);
   };
-
-
 
 })(jQuery);
