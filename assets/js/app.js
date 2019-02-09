@@ -1,10 +1,18 @@
 const GO_BTN = document.querySelector('body .map-list-option');
 let dataLocations = [{
+  name: "Diverse Financial Group",
+  location: [43.894260, -78.868295],
   lat: 43.894260,
-  lng: -78.868295
+  lng: -78.868295,
+  address: "190 Harwood Avenue South (inside G Centre), Ajax",
+  desc: "By apointment only Current and prior year returns call 647-887-8725"
 }, {
+  name: "Durham Community Legal Clinic",
+  location: [43.848900, -79.020986],
   lat: 43.848900,
-  lng: -79.020986
+  lng: -79.020986,
+  address: "200 John Street West, Unit B1, Oshawa",
+  desc: "By apointment only Current and prior year returns call 647-887-8725"
 }];
 (function($) {
 
@@ -33,15 +41,23 @@ let dataLocations = [{
 
     let locations = []
 
-    let durhamComLegClin = L.marker([43.894260, -78.868295]).addTo(mymap)
-      .bindPopup(`<div class='mapPopUp'><h1>Durham Community Legal Clinic</h1><h2>200 John Street West, Unit B1, Oshawa</h2><h3>By apointment only</h4><h3>call 905-728-7321 ext. 259</h3></div>`);
-    locations += durhamComLegClin;
+    // let durhamComLegClin = L.marker([43.894260, -78.868295]).addTo(mymap)
+    //   .bindPopup(`<div class='mapPopUp'><h1>Durham Community Legal Clinic</h1><h2>200 John Street West, Unit B1, Oshawa</h2><h3>By apointment only</h4><h3>call 905-728-7321 ext. 259</h3></div>`);
+
 
     // Diverse Financial Group
-    let divFinGrp = L.marker([43.848900, -79.020986]).addTo(mymap)
-      .bindPopup(`<div class='mapPopUp'><h1>Diverse Financial Group</h1><h2>190 Harwood Avenue South (inside G Centre), Ajax</h2><h3>By apointment only</h3><h4>Current and prior year returns</h4><h3>call 647-887-8725</h3></div>`).openPopup();
+    // let divFinGrp = L.marker([43.848900, -79.020986]).addTo(mymap)
+    //   .bindPopup(`<div class='mapPopUp'><h1>Diverse Financial Group</h1><h2>190 Harwood Avenue South (inside G Centre), Ajax</h2><h3>By apointment only</h3><h4>Current and prior year returns</h4><h3>call 647-887-8725</h3></div>`);
 
-    locations += divFinGrp;
+    // locations = [divFinGrp, durhamComLegClin];
+    for (i = 0; i < dataLocations.length; i++) {
+      locations[i] = L.marker(dataLocations[i].location).addTo(mymap);
+      locations[i].bindPopup(`<div id="hotel${i}">
+      <h1>${dataLocations[i].name}</h1>
+      <h2>${dataLocations[i].address}</h2>
+      <h3>${dataLocations[i].desc}</h3>
+      </div>`)
+    }
 
     L.circle([43.849875, -79.035955], 250, {
       color: 'red',
@@ -68,17 +84,21 @@ let dataLocations = [{
     mymap.on('click', onMapClick);
 
 
+
+
     // -------     C O N T R O L L E R     -------
     $(document).on("click", "body .map-list-option", function(e) {
-      console.log(locations.length);
+      // console.log(`Loc. Length: ${locations.length}`);
       // durhamComLegClin
       //   .setLatLng([43.848900, -79.020986])
       //   .openOn(myMap);
 
       var id = $(this).attr("data-id");
       var name = $(this).attr("data-name");
-      console.log(name);
-      doMoveMap(id, mymap, name);
+      // console.log(`ID: ${id}\nName: ${name}`);
+      // onMapClick(e, id);
+
+      doMoveMap(id, mymap, name, locations);
       // durhamComLegClin.openPopup();
 
       // mymap.setView(new L.LatLng(43.894260, -78.868295), 16, {
@@ -91,16 +111,24 @@ let dataLocations = [{
     });
   });
 
-  function doMoveMap(id, mymap, clinic) {
-    let theClinic = clinic;
-    console.log(clinic);
+  function doMoveMap(id, mymap, clinic, locations) {
+    locations[id].openPopup();
+    console.log(`ID(96): ${id}`);
+    console.log(locations[id]._popup.openPopup());
+    // let theClinic = location[id];
+    // console.log(clinic);
+    // console.log(clinic);
+    // locations[id].openPopup();
+    // console.log(locations[id]._popup);
     // console.log(dataLocations[id].lat, dataLocations[id].lng);
+    console.log(dataLocations[id].lng);
     mymap
       .setView(new L.LatLng(dataLocations[id].lat, dataLocations[id].lng), 16, {
         animation: true
       });
+    // onMapClick(id);
 
-    theClinic.openPopup();
+    // theClinic.openPopup();
     // console.log(mymap);
   };
 
