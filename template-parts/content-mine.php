@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<!-- Here is the landing page / header -->
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -27,38 +28,27 @@
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
+<!-- Get main content -->
+<?php get_template_part( 'page-templates/page-template-splash', 'page' );?>
 	</header><!-- .entry-header -->
 
 	<?php durhamtaxhelp_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<div id="map-section">
-		<div id="map-list">
-			<div class="map-list-option" data-id="0" data-name='divFinGrp'>
-				<h3>Diverse Financial Group</h3>
-			 <h4>190 Harwood Avenue South (inside G Centre), Ajax</h4>
-			</div>
-			<div class="map-list-option" data-id="1" data-name='durhamComLegClin'>
-				<h3>Durham Community Legal Clinic</h3>
-			 <h4>200 John Street West, Unit B1, Oshawa</h4>
-			</div>
-		</div>
-
-		<div id="map-box">
-		 <div id="leafletMap"></div>
-		</div>
-
-		<div id="map-info">
-		 <h1>Diverse Financial Group</h1>
-		 <h2>190 Harwood Avenue South (inside G Centre), Ajax</h2>
-		 <p>By apointment only</p>
-		 <p>Current and prior year returns</p>
-		 <p>call 647-887-8725</p>
-		</div>
+<!-- After the header, add the qualify page -->
+	<div class="entry-content" id="how-to-qualify">
+		<?php get_template_part( 'page-templates/page-template-qualify', 'page' );?>
 	</div>
-	</div><!-- .entry-content -->
+	<!-- .entry-content -->
+
+<!-- After the first section, add the locations page -->
+	<div class="entry-content" id="locations">
+		<?php get_template_part( 'page-templates/page-template-locations', 'page' );?>
+	</div>
+	<!-- .entry-content -->
+
 
 	<footer class="entry-footer">
 		<?php durhamtaxhelp_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
 </article><!-- #post-<?php the_ID(); ?> -->
