@@ -85,6 +85,7 @@ let dataLocations = [{
       </div>`)
     }
 
+
     // Sample circle
     L.circle([43.849875, -79.035955], 250, {
       color: 'red',
@@ -124,7 +125,7 @@ let dataLocations = [{
     let content = "";
     for (var i = 0; i < locations.length; i++) {
       content +=
-        `<div class="map-list-option" data-id="${i}" data-name='${dataLocations[i].id}'>
+        `<div class="map-list-option" data-id="${i}" data-name='${dataLocations[i].id}' id='${dataLocations[i].id}'>
       <h3>${dataLocations[i].name}</h3>
       <h4>${dataLocations[i].address}</h4>
       </div>`;
@@ -132,8 +133,13 @@ let dataLocations = [{
 
     $("#map-list").html(content);
 
+    // add active to first item
+    $('body #DivFinGrp').attr('class', 'map-list-option active');
+
     // -------     C O N T R O L L E R     -------
     $(document).on("click", "body .map-list-option", function(e) {
+      $('body .map-list-option').attr('class', 'map-list-option');
+      $(this).attr('class', 'map-list-option active');
       content = "";
       var id = $(this).attr("data-id");
       var name = $(this).attr("data-name");

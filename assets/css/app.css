@@ -1,7 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   width: 100vw;
   background-image: url(../img/section-total2-bg.png);
   background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+  padding: 5px;
 }
 
 .slider .slide {
@@ -60,12 +70,26 @@ body {
   transition: width .4s cubic-bezier(.79, .14, .15, .86);
 }
 
+.map-list-option {
+  transition: all ease-in-out 0.5s;
+  padding: 5px;
+  line-height: 20px;
+  color: #19868E;
+}
+
+.active {
+  background-color: #022D41;
+  color: white;
+  border-radius: 20px;
+}
+
 /* Map Parts */
 /* list of locations */
 #map-list {
-  padding: 10px;
+  /* padding: 10px; */
   margin: 10px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: auto;
   max-height: 228px;
 }
 
@@ -184,6 +208,10 @@ body {
   /* list of locations */
   #map-list {
     width: auto;
+    margin: 10px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    max-height: 772px;
   }
 
   #map-box {
