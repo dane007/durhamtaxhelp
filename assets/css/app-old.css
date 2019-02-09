@@ -1,7 +1,5 @@
 body {
   width: 100vw;
-  background-image: url(../img/section-total2-bg.png);
-  background-size: cover;
 }
 
 .slider .slide {
@@ -31,17 +29,13 @@ body {
   align-items: center;
   width: 100%;
   height: 100vh;
-  /* background-color: rgba(0, 0, 0, 0.1); */
+  background-color: rgba(0, 0, 0, 0.1);
   padding: 10px;
 }
 
 .slider .slide * {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-.entry-content {
-  border-bottom: 10px solid black;
 }
 
 /* Map Container */
@@ -154,7 +148,6 @@ body {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid black;
 }
 
 #locations {
@@ -164,7 +157,44 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid black;
+}
+
+#splash {
+  /* background-position: center;
+   */
+  background-size: cover;
+  background-image: url(../img/section-6-bg.png);
+}
+
+#how-to-qualify {
+  /* background-position: center;
+   */
+  background-size: cover;
+  background-image: url(../img/section-5-bg.png);
+}
+
+#locations {
+  /* background-position: center; */
+  background-size: cover;
+  background-image: url(../img/section-4-bg.png);
+}
+
+#volunteer {
+  /* background-position: center; */
+  background-size: cover;
+  background-image: url(../img/section-3-bg.png);
+}
+
+#empowerment {
+  /* background-position: center; */
+  background-size: cover;
+  background-image: url(../img/section-2-bg.png);
+}
+
+#testimonials {
+  /* background-position: center; */
+  background-size: cover;
+  background-image: url(../img/section-1-bg2.png);
 }
 
 @media (min-width:30.063em) {
