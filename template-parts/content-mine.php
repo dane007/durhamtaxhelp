@@ -40,9 +40,25 @@
 	</div>
 	<!-- .entry-content -->
 
-<!-- After the first section, add the locations page -->
 	<div class="entry-content" id="locations">
 		<?php get_template_part( 'page-templates/page-template-locations', 'page' );?>
+	</div>
+	<!-- .entry-content -->
+
+	<div class="entry-content" id="volunteer">
+		<?php get_template_part( 'page-templates/page-template-volunteer', 'page' );?>
+	</div>
+	<!-- .entry-content -->
+
+
+	<div class="entry-content" id="empowerment">
+		<?php get_template_part( 'page-templates/page-template-empowerment', 'page' );?>
+	</div>
+	<!-- .entry-content -->
+
+
+	<div class="entry-content" id="testimonials">
+		<?php get_template_part( 'page-templates/page-template-testimonials', 'page' );?>
 	</div>
 	<!-- .entry-content -->
 

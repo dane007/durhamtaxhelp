@@ -130,7 +130,7 @@ body {
 }
 
 /* HOW TO QUALIFY */
-#how-to-qualify {
+#how-to-qualify, #volunteer, #empowerment, #testimonials {
   width: 100vw;
   height: 100vh;
   display: flex;
