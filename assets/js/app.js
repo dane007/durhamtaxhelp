@@ -39,6 +39,14 @@ let dataLocations = [{
   lng: -79.022613,
   address: "140 Commercial Ave, Ajax, ON L1S 2H5",
   desc: "Ajax office: 905-428-7400 ext. 6606"
+}, {
+  name: "Local Diversity & Immigration Partnership Council",
+  id: "LocDivImPrtCnc",
+  location: [43.898603, -78.940277],
+  lat: 43.898603,
+  lng: -78.940277,
+  address: "605 Rossland Rd. E.",
+  desc: "P. O. Box 623\nWhitby, ON L1N 6A3"
 }];
 (function($) {
 
