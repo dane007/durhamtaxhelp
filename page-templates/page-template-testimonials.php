@@ -9,5 +9,6 @@
 
 ?>
 <!-- Pull content from front-page -->
-<h1>Testimonials</h1>
+<!-- the id here is being used for the navigation! -->
+<h1 id="testimonials_page">Testimonials</h1>
 <h2>Here is where Mahnoors page should go.</h2>

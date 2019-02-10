@@ -9,5 +9,6 @@
 
 ?>
 <!-- Pull content from front-page -->
-<h1>How To Qualify</h1>
+<!-- the id here is being used for the navigation! -->
+<h1 id="qualify_page">How To Qualify</h1>
 <h2>Here is where Calebs page should go.</h2>
