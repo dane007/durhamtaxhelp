@@ -8,7 +8,8 @@
  */
 
 ?>
-<h4>Locations</h4>
+<!-- the id here is being used for the navigation! -->
+<h4 id="locations_page">Locations</h4>
 <div id="map-section">
 <div id="map-list">
 	<div class="map-list-option" data-id="0" data-name='divFinGrp'>

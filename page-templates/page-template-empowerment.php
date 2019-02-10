@@ -9,5 +9,6 @@
 
 ?>
 <!-- Pull content from front-page -->
-<h1>Financial Empowerment</h1>
+<!-- the id here is being used for the navigation! -->
+<h1 id="financial_empowerment_page">Financial Empowerment</h1>
 <h2>Here is where Sonalis page should go.</h2>
