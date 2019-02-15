@@ -6,6 +6,7 @@
 
 body {
   width: 100vw;
+  overflow: hidden;
   /* background-image: url(../img/section-total2-bg.png);
   background-size: cover; */
 }
@@ -25,6 +26,11 @@ h1, h2, h3, h4, h5, h6, p, span {
   background-repeat: no-repeat;
 }
 
+#masthead {
+  height: 0px;
+  overflow: hidden;
+}
+
 /*
 #splash
 #how-to-qualify
@@ -34,20 +40,21 @@ h1, h2, h3, h4, h5, h6, p, span {
 #testimonials
 */
 /* Front-page */
-.entry-header {
+.page .entry-header {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* background-color: rgba(0, 0, 0, 0.1); */
-  padding: 10px;
+  display: none;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .landing-page {
   background-color: rgba(0, 0, 0, 0.2);
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .slider .slide * {
