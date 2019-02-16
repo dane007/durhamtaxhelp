@@ -1,18 +1,18 @@
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
 body {
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
   /* background-image: url(../img/section-total2-bg.png);
   background-size: cover; */
 }
 
 h1, h2, h3, h4, h5, h6, p, span {
   padding: 5px;
+  padding: 0;
+  margin: 0;
 }
 
 .slider .slide {
@@ -26,11 +26,6 @@ h1, h2, h3, h4, h5, h6, p, span {
   background-repeat: no-repeat;
 }
 
-#masthead {
-  height: 0px;
-  overflow: hidden;
-}
-
 /*
 #splash
 #how-to-qualify
@@ -40,21 +35,30 @@ h1, h2, h3, h4, h5, h6, p, span {
 #testimonials
 */
 /* Front-page */
-.page .entry-header {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  display: none;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
 .landing-page {
   background-color: rgba(0, 0, 0, 0.2);
   height: 100vh;
   width: 100%;
+}
+
+.site-navigation {
+  position: absolute;
+}
+
+.site-branding {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.site-branding a, .site-navigation a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: gray;
 }
 
 .slider .slide * {

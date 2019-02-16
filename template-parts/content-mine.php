@@ -35,9 +35,9 @@
 	<?php durhamtaxhelp_post_thumbnail(); ?>
 
 <!-- After the header, add the qualify page -->
-	<div id='splash' class="landing-page">
+<div id='splash' class="landing-page">
 
-	</div>
+</div>
 
 	<footer class="entry-footer">
 		<?php durhamtaxhelp_entry_footer(); ?>

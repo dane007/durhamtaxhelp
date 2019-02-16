@@ -1,4 +1,7 @@
 const GO_BTN = document.querySelector('body .map-list-option');
+const CONVERSION = document.querySelector('body .landing-page .conversion');
+const CALCULATE = document.querySelector('body .landing-page .calculate');
+
 let dataLocations = [{
   name: "Diverse Financial Group",
   id: "DivFinGrp",
@@ -52,6 +55,25 @@ let dataLocations = [{
 
   // Initialize Slick Slider
   $(document).ready(function() {
+
+    // after establishing the value of user input we can convert and
+    // change the content to valid or non valid amount
+    CALCULATE.addEventListener('click', function() {
+      // get input every click
+      let userInp = document.querySelector('body .landing-page .userInp');
+
+      // take input innerHTML
+      let userNum = userInp.value;
+      console.log(userNum);
+
+      if (userNum <= '30000') {
+        CONVERSION.innerHTML = `${userNum}: Wonderful, you qualify!`;
+        console.log(`Conversion: ${userNum}`);
+      } else {
+        CONVERSION.innerHTML = `${userNum}: Sorry, that income is too high to qualify.`;
+        console.log(`Conversion: ${userNum}`);
+      }
+    });
 
     // $('.slider').slick({
     //   dots: true,

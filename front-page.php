@@ -12,26 +12,41 @@
  * @package durhamtaxhelp
  */
 
-get_header();
+
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+			<div id='splash' class="landing-page">
+				<?php get_header(); ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content-mine', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
+				<h1>Title</h1>
+				<?php
+					if ( function_exists( 'get_field' ) ) {
+					$home_contents = get_field( 'home_contents' );
+				?>
+				<div class="intro">
+				<?php
+				foreach ( $home_contents as $home_content ) {
+					$title = $home_content['title'];
+					$statement = $home_content['statement'];
+					$conversion = $home_content['conversion'];
+					// var_dump( $image );
+					?>
+				<div class="slide">
+					<h1 class="title"><?php echo $title; ?></h1>
+					<p class="statement"><?php echo $statement; ?></p>
+					<input class="userInp" type="number" name="" value="">
+					<button class="calculate" type="button" name="button">QUALIFY</button>
+					<p class="conversion">What Is Your Income? The average is <?php echo $conversion; ?></p>
+				</div>
+				<?php
+				}
+				?>
+			<?php
+			}
+			?>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
