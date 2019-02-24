@@ -67,16 +67,14 @@ let dataLocations = [{
       console.log(userNum);
 
       if (isPosNum(userNum) !== true) {
-        // Alert to the user know that a positive number must be entered
-        CONVERSION.innerHTML = `Please enter a nuber.`;
+        CONVERSION.innerHTML = `Please enter a valid number.`;
       } else {
-        if (userNum < '30000') {
+        if (userNum <= 30000) {
           CONVERSION.innerHTML = `${userNum}: Wonderful, you qualify!`;
-          console.log(`Conversion: ${userNum}`);
         } else {
           CONVERSION.innerHTML = `${userNum}: Sorry, that income is too high to qualify.`;
-          console.log(`Conversion: ${userNum}`);
         }
+        userInp.value = "";
       }
 
     });

@@ -25,14 +25,10 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'durhamtaxhelp' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
 
-			?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+
+		<nav id="site-navigation" class="main-navigation menu-text">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'durhamtaxhelp' ); ?></button>
 			<?php
 			wp_nav_menu( array(
