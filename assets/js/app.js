@@ -66,13 +66,19 @@ let dataLocations = [{
       let userNum = userInp.value;
       console.log(userNum);
 
-      if (userNum <= '30000') {
-        CONVERSION.innerHTML = `${userNum}: Wonderful, you qualify!`;
-        console.log(`Conversion: ${userNum}`);
+      if (isPosNum(userNum) !== true) {
+        // Alert to the user know that a positive number must be entered
+        CONVERSION.innerHTML = `Please enter a nuber.`;
       } else {
-        CONVERSION.innerHTML = `${userNum}: Sorry, that income is too high to qualify.`;
-        console.log(`Conversion: ${userNum}`);
+        if (userNum < '30000') {
+          CONVERSION.innerHTML = `${userNum}: Wonderful, you qualify!`;
+          console.log(`Conversion: ${userNum}`);
+        } else {
+          CONVERSION.innerHTML = `${userNum}: Sorry, that income is too high to qualify.`;
+          console.log(`Conversion: ${userNum}`);
+        }
       }
+
     });
 
     // $('.slider').slick({
@@ -83,6 +89,9 @@ let dataLocations = [{
     //   adaptiveHeight: true
     // });
 
+    function isPosNum(num) {
+      return !isNaN(num) && num > 0;
+    }
 
     // Leaflet Map
     var mymap = L.map('leafletMap').setView([43.848900, -79.020986], 16);

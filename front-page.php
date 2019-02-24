@@ -12,12 +12,14 @@
  * @package durhamtaxhelp
  */
 
-get_header();
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div id='splash' class="landing-page">
+				<?php
+				get_header();
+				?>
 				<!-- Main Content for Front-Page -->
 				<?php
 				while ( have_posts() ) :
@@ -46,13 +48,11 @@ get_header();
 					$conversion = $home_content['conversion'];
 					// var_dump( $image );
 					?>
-				<div class="slide">
-					<h1 class="title"><?php echo $title; ?></h1>
-					<p class="statement"><?php echo $statement; ?></p>
+					<!-- <h1 class="title"><?php echo $title; ?></h1> -->
+					<!-- <p class="statement"><?php echo $statement; ?></p> -->
 					<input class="userInp" type="number" name="" value="">
 					<button class="calculate" type="button" name="button">QUALIFY</button>
 					<p class="conversion">What Is Your Income? The average is <?php echo $conversion; ?></p>
-				</div>
 				<?php
 				}
 				?>
@@ -62,7 +62,7 @@ get_header();
 			</div>
 		</div>
 		<!-- Locations Page -->
-		<div id='locations' class="locations-page">
+		<!-- <div id='locations' class="locations-page">
 			<h4 id="locations_page">Locations</h4>
 			<div id="map-section">
 			<div id="map-list">
@@ -88,7 +88,7 @@ get_header();
 			 <p>call 647-887-8725</p>
 			</div>
 			</div>
-		</div>
+		</div> -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
