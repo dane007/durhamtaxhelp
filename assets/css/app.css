@@ -20,6 +20,11 @@ h1, h2, h3, h4, h5, h6, p, span {
   margin: 0;
 }
 
+.responsive-menu-boring {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
 /*
 #masthead {
   display: none;
@@ -166,6 +171,7 @@ conversion
   left: 0px;
   margin: 10px;
   height: 75px;
+  font-size: 1.25em;
   position: absolute;
 }
 
@@ -423,14 +429,54 @@ a:visited {
   }
 }
 
-@media (min-width:80.063em) {
+@media (min-width:70.063em) {
 
   /* hi-res laptops and desktops */
   .intro {
     width: 45%;
   }
 
+  .title {
+    font-size: 4em;
+  }
+
+  .statement {
+    font-size: 2em;
+  }
+
+  .userInp,
+  .calculate,
+  .conversion {
+    font-size: 1.5em;
+  }
+
   .characters {
     height: 500px;
+  }
+}
+
+@media (min-width:100.063em) {
+
+  /* hi-res laptops and desktops */
+  .intro {
+    width: 45%;
+  }
+
+  .title {
+    font-size: 6em;
+  }
+
+  .statement {
+    font-size: 3em;
+  }
+
+  .userInp,
+  .calculate,
+  .conversion {
+    font-size: 2em;
+  }
+
+  .characters {
+    height: 600px;
   }
 }
