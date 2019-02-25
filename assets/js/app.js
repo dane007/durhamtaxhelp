@@ -1,4 +1,7 @@
 const GO_BTN = document.querySelector('body .map-list-option');
+const CONVERSION = document.querySelector('body .landing-page .conversion');
+const CALCULATE = document.querySelector('body .landing-page .calculate');
+
 let dataLocations = [{
   name: "Diverse Financial Group",
   id: "DivFinGrp",
@@ -50,40 +53,71 @@ let dataLocations = [{
 }];
 (function($) {
 
+  // Initialize Slick Slider
   $(document).ready(function() {
 
-    $('.slider').slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 1,
-      adaptiveHeight: true
+    // after establishing the value of user input we can convert and
+    // change the content to valid or non valid amount
+    CALCULATE.addEventListener('click', function() {
+      // get input every click
+      let userInp = document.querySelector('body .landing-page .userInp');
+
+      // take input innerHTML
+      let userNum = userInp.value;
+      console.log(userNum);
+
+      if (isPosNum(userNum) !== true) {
+        CONVERSION.innerHTML = `Please enter a valid number.`;
+      } else {
+        if (userNum <= 30000) {
+          CONVERSION.innerHTML = `${userNum}: Wonderful, you qualify!`;
+        } else {
+          CONVERSION.innerHTML = `${userNum}: Sorry, that income is too high to qualify.`;
+        }
+        userInp.value = "";
+      }
+
     });
 
+    // $('.slider').slick({
+    //   dots: true,
+    //   infinite: true,
+    //   speed: 300,
+    //   slidesToShow: 1,
+    //   adaptiveHeight: true
+    // });
+
+    function isPosNum(num) {
+      return !isNaN(num) && num > 0;
+    }
 
     // Leaflet Map
     var mymap = L.map('leafletMap').setView([43.848900, -79.020986], 16);
 
+    // Map settings
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-      maxZoom: 18,
-      minZoom: 13,
+      maxZoom: 14,
+      minZoom: 14,
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       id: 'mapbox.streets'
     }).addTo(mymap);
 
+    // Create new array to store data locations and their popUp structure
     let locations = []
 
     // For all location items, add them to a location array with different map options...
+    // - Take the dataLocations and use the values to assign popUp structure
     for (i = 0; i < dataLocations.length; i++) {
       locations[i] = L.marker(dataLocations[i].location).addTo(mymap);
       locations[i].bindPopup(`<div id="hotel${i}">
-      <h1>${dataLocations[i].name}</h1>
-      <h2>${dataLocations[i].address}</h2>
-      <h3>${dataLocations[i].desc}</h3>
+      <h4>${dataLocations[i].name}</h4>
+      <h5>${dataLocations[i].address}</h5>
+      <h6>${dataLocations[i].desc}</63>
       </div>`)
     }
+
 
     // Sample circle
     L.circle([43.849875, -79.035955], 250, {
@@ -124,7 +158,7 @@ let dataLocations = [{
     let content = "";
     for (var i = 0; i < locations.length; i++) {
       content +=
-        `<div class="map-list-option" data-id="${i}" data-name='${dataLocations[i].id}'>
+        `<div class="map-list-option" data-id="${i}" data-name='${dataLocations[i].id}' id='${dataLocations[i].id}'>
       <h3>${dataLocations[i].name}</h3>
       <h4>${dataLocations[i].address}</h4>
       </div>`;
@@ -132,15 +166,20 @@ let dataLocations = [{
 
     $("#map-list").html(content);
 
+    // add active to first item
+    $('body #DivFinGrp').attr('class', 'map-list-option active');
+
     // -------     C O N T R O L L E R     -------
     $(document).on("click", "body .map-list-option", function(e) {
+      $('body .map-list-option').attr('class', 'map-list-option');
+      $(this).attr('class', 'map-list-option active');
       content = "";
       var id = $(this).attr("data-id");
       var name = $(this).attr("data-name");
       // console.log(`ID: ${id}\nName: ${name}`);
 
-      content = `<h1>${dataLocations[id].name}</h1>
-      <h2>${dataLocations[id].address}</h2>
+      content = `<h3>${dataLocations[id].name}</h3>
+      <h4>${dataLocations[id].address}</h4>
       <p>${dataLocations[id].desc}</p>`;
       doMoveMap(id, mymap, name, locations);
 

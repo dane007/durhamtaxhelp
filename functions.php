@@ -22,7 +22,9 @@ function durhamtaxhelp_scripts() {
 	wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/css/vendor/slick.css', array(), '1.8.1' );
 	wp_enqueue_style( 'slick-theme-css', get_template_directory_uri() . '/assets/css/vendor/slick-theme.css', array(), '1.8.1' );
 	wp_enqueue_style( 'leaflet-css', get_template_directory_uri() . '/assets/css/vendor/leaflet.css', array(), '1.4.0' );
+	wp_enqueue_style( 'foundation-css', get_template_directory_uri() . '/assets/css/vendor/foundation.css', array(), '6.5.1' );
 	wp_enqueue_style( 'app-css', get_template_directory_uri() . '/assets/css/app.css', array(), null );
+
 
 	wp_enqueue_script( 'durhamtaxhelp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -30,6 +32,8 @@ function durhamtaxhelp_scripts() {
 	// Add JS components
 	wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/vendor/slick.js', array( 'jquery' ), '1.8.1', true );
 	wp_enqueue_script( 'leaflet-js', get_template_directory_uri() . '/assets/js/vendor/leaflet.js', array( 'jquery' ), '1.4.0', true );
+	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/js/vendor/foundation.js', array( 'jquery' ), '6.5.1', true );
+	wp_enqueue_script( 'what-input-js', get_template_directory_uri() . '/assets/js/vendor/what-input.js', array( 'jquery' ), '5.1.2', true );
 	wp_enqueue_script( 'app-js', get_template_directory_uri() . '/assets/js/app.js', array( 'jquery' ), null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

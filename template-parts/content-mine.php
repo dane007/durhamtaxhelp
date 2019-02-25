@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<!-- Here is the landing page / header -->
-	<header class="entry-header" id='splash'>
+	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -29,39 +29,15 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 <!-- Get main content -->
-<?php get_template_part( 'page-templates/page-template-splash', 'page' );?>
+
 	</header><!-- .entry-header -->
 
 	<?php durhamtaxhelp_post_thumbnail(); ?>
 
 <!-- After the header, add the qualify page -->
-	<div class="entry-content" id="how-to-qualify">
-		<?php get_template_part( 'page-templates/page-template-qualify', 'page' );?>
-	</div>
-	<!-- .entry-content -->
+<div id='splash' class="landing-page">
 
-	<div class="entry-content" id="locations">
-		<?php get_template_part( 'page-templates/page-template-locations', 'page' );?>
-	</div>
-	<!-- .entry-content -->
-
-	<div class="entry-content" id="volunteer">
-		<?php get_template_part( 'page-templates/page-template-volunteer', 'page' );?>
-	</div>
-	<!-- .entry-content -->
-
-
-	<div class="entry-content" id="empowerment">
-		<?php get_template_part( 'page-templates/page-template-empowerment', 'page' );?>
-	</div>
-	<!-- .entry-content -->
-
-
-	<div class="entry-content" id="testimonials">
-		<?php get_template_part( 'page-templates/page-template-testimonials', 'page' );?>
-	</div>
-	<!-- .entry-content -->
-
+</div>
 
 	<footer class="entry-footer">
 		<?php durhamtaxhelp_entry_footer(); ?>
