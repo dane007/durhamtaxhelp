@@ -96,8 +96,8 @@ let dataLocations = [{
 
     // Map settings
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-      maxZoom: 18,
-      minZoom: 10,
+      maxZoom: 14,
+      minZoom: 14,
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -112,9 +112,9 @@ let dataLocations = [{
     for (i = 0; i < dataLocations.length; i++) {
       locations[i] = L.marker(dataLocations[i].location).addTo(mymap);
       locations[i].bindPopup(`<div id="hotel${i}">
-      <h1>${dataLocations[i].name}</h1>
-      <h2>${dataLocations[i].address}</h2>
-      <h3>${dataLocations[i].desc}</h3>
+      <h4>${dataLocations[i].name}</h4>
+      <h5>${dataLocations[i].address}</h5>
+      <h6>${dataLocations[i].desc}</63>
       </div>`)
     }
 
@@ -178,8 +178,8 @@ let dataLocations = [{
       var name = $(this).attr("data-name");
       // console.log(`ID: ${id}\nName: ${name}`);
 
-      content = `<h1>${dataLocations[id].name}</h1>
-      <h2>${dataLocations[id].address}</h2>
+      content = `<h3>${dataLocations[id].name}</h3>
+      <h4>${dataLocations[id].address}</h4>
       <p>${dataLocations[id].desc}</p>`;
       doMoveMap(id, mymap, name, locations);
 

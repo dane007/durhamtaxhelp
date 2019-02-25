@@ -1,3 +1,5 @@
+/* G E N E R A L   S T Y L I N G */
+/* ------------ -g- ------------ */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -7,10 +9,6 @@
 body {
   width: 100vw;
   overflow-x: hidden;
-  background-image: url(../img/section-7-bg.png);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   font-family: 'Shree Devanagari 714', sans-serif;
 }
 
@@ -20,15 +18,13 @@ h1, h2, h3, h4, h5, h6, p, span {
   margin: 0;
 }
 
+/*            M E N U            */
+/* ------------ -n- ------------ */
 .responsive-menu-boring {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
-/*
-#masthead {
-  display: none;
-} */
 .slider .slide {
   min-height: 600px;
   display: flex !important;
@@ -38,127 +34,6 @@ h1, h2, h3, h4, h5, h6, p, span {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.inp,
-.btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/*
-#splash
-#how-to-qualify
-#locations
-#volunteer
-#empowerment
-#testimonials
-*/
-/*
-landing-page
-intro
-title
-statement
-userInp
-calculate
-conversion
-*/
-/* Front-page */
-.landing-page, .locations-page {
-  /* background-color: rgba(0, 0, 0, 0.2); */
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  align-content: center;
-  justify-content: flex-end;
-}
-
-.characters {
-  margin: 0 auto;
-  order: 2;
-  transition: all 0.6s cubic-bezier(.79, .14, .15, .86);
-}
-
-.characters img {
-  height: 100%;
-}
-
-#masthead {
-  display: none;
-}
-
-.intro {
-  transition: all 0.6s cubic-bezier(.79, .14, .15, .86);
-  padding: 10px;
-  border-radius: 15px;
-}
-
-.title {
-  color: #022D41;
-  font-size: 4em;
-  font-weight: bolder;
-  padding: 10px;
-}
-
-.statement {
-  color: #0F5B5C;
-  font-weight: bold;
-  font-size: 2em;
-  padding: 10px;
-}
-
-.userInp {
-  width: 80%;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.calculate {
-  transition: all 0.3s ease-out;
-  padding: 10px 20px;
-  color: rgba(15, 91, 92, 0.6);
-  border-radius: 40px;
-  border: 2px solid rgba(15, 91, 92, 0.6);
-  padding: 10px;
-}
-
-.calculate:hover {
-  border: 2px solid rgba(15, 91, 92, 1);
-  color: rgba(15, 91, 92, 1);
-}
-
-.findTxHp {
-  transition: all 0.3s ease-out;
-  font-size: 2em;
-  padding: 10px 20px;
-  color: #0F5B5C;
-  border-radius: 40px;
-  background-color: rgba(0, 0, 0, 0);
-  border: 2px solid #0F5B5C;
-  border: 2px solid #0F5B5C;
-  background-color: #0F5B5C;
-  color: white;
-  padding: 10px;
-}
-
-.findTxHp:hover {
-  color: #0F5B5C;
-  background-color: rgba(0, 0, 0, 0);
-  border: 2px solid #0F5B5C;
-}
-
-.conversion {
-  height: auto;
-  padding: 10px;
-}
-
-.userInp,
-.calculate,
-.conversion {
-  font-size: 1.5em;
 }
 
 .site-navigation {
@@ -189,27 +64,168 @@ a:visited {
   color: gray;
 }
 
+/*          P A G E    1         */
+/* ------------ -1- ------------ */
+.landing-page, .locations-page {
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+.landing-page {
+  background-image: url(../img/section-7-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.characters {
+  margin: 0 auto;
+  order: 2;
+  transition: all 0.6s cubic-bezier(.79, .14, .15, .86);
+}
+
+.characters img {
+  height: 100%;
+}
+
+#masthead {
+  display: none;
+}
+
+.intro {
+  transition: all 0.6s cubic-bezier(.79, .14, .15, .86);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.title {
+  color: #022D41;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.statement {
+  color: #0F5B5C;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.userInp {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.calculate {
+  transition: all 0.3s ease-out;
+  padding: 10px 20px;
+  color: rgba(15, 91, 92, 0.6);
+  border-radius: 40px;
+  border: 2px solid rgba(15, 91, 92, 0.6);
+  padding: 10px;
+}
+
+.calculate:hover {
+  border: 2px solid rgba(15, 91, 92, 1);
+  color: rgba(15, 91, 92, 1);
+}
+
+.findTxHp {
+  transition: all 0.3s ease-out;
+  padding: 10px 20px;
+  color: #0F5B5C;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #0F5B5C;
+  border: 2px solid #0F5B5C;
+  background-color: #0F5B5C;
+  color: white;
+  padding: 10px;
+}
+
+.findTxHp:hover {
+  color: #0F5B5C;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #0F5B5C;
+}
+
+.conversion {
+  height: auto;
+  padding: 10px;
+}
+
+.userInp,
+.calculate,
+.conversion {
+  font-size: 1.5em;
+}
+
+.inp,
+.btn,
+.bigbtn {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bigbtn {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .slider .slide * {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .entry-content {
-  border-bottom: 10px solid black;
+  /* border-bottom: 10px solid black; */
+}
+
+/*          P A G E    2         */
+/* ------------ -2- ------------ */
+.locations-page {
+  /* background-image: url(../img/section-6-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; */
+  padding: 20px;
 }
 
 /* Map Container */
 #map-section {
+  margin: 10px;
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+}
+
+#map-section .title {
+  order: -1;
+  text-align: center;
+}
+
+#map-section h3,
+#map-section h4,
+#map-section h5,
+#map-section h6 {
+  font-size: 1em;
 }
 
 /* shared style */
 #map-list,
 #leafletMap,
 #map-info {
+  padding: 10px;
   background-color: rgba(25, 134, 142, 0.05);
   transition: width .4s cubic-bezier(.79, .14, .15, .86);
 }
@@ -230,49 +246,41 @@ a:visited {
 /* Map Parts */
 /* list of locations */
 #map-list {
+  height: 33vh;
   /* padding: 10px; */
-  margin: 10px;
-  overflow-y: scroll;
-  overflow-x: auto;
-  max-height: 228px;
+  overflow-y: auto;
 }
 
 /* main map */
 #map-box {
-  /* background-image: url(../img/rect-bg.png); */
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
+  padding: 20px;
+  height: 33vh;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0);
-  margin: 10px;
-  /* padding: 10px; */
-  height: 50vh;
-  width: 80%;
+  /* height: 50vh; */
+  /* width: 80%; */
 }
 
 #leafletMap {
-  margin: 0 auto;
   height: 100%;
-  width: 100%;
+  height: 100%;
 }
 
-/* main info */
 #map-info {
-  width: 40%;
-  padding: 10px;
-  margin: 10px;
+  height: 33vh;
+  font-size: 1em;
 }
 
-.leaflet-popup-content-wrapper {
+map-section.leaflet-popup-content-wrapper {
   background-color: #27a5b7;
   color: white;
   border-radius: 0;
   padding: 15px;
-  margin: 0px;
   /* filter: blur(1px); */
 }
 
 .leaflet-popup-content {
-  width: 501px !important;
+  /* width: 501px !important; */
 }
 
 .leaflet-popup-content-wrapper * {
@@ -311,30 +319,13 @@ a:visited {
   align-items: center;
 }
 
+/*          Q U E R I E S        */
+/* ------------ -q- ------------ */
 @media (min-width:20em) {
 
   /* smartphones, iPhone, portrait 480x320 phones */
   /* Map Parts */
   /* list of locations */
-  #map-list {
-    width: 80%;
-  }
-
-  #map-box {
-    height: 50vh;
-    width: 80%;
-  }
-
-  /* main map */
-  #leafletMap {
-    width: 100%;
-  }
-
-  /* main info */
-  #map-info {
-    width: 80%;
-  }
-
   .intro {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
@@ -343,10 +334,59 @@ a:visited {
   .characters {
     display: none;
   }
+
+  .findTxHp, .statement {
+    font-size: 2em;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  .statement {
+    font-size: 1.25em;
+  }
+
+  .userInp,
+  .calculate,
+  .conversion,
+  .findTxHp {
+    font-size: 1.15em;
+  }
+
+  #map-list {
+    height: 35vh;
+  }
+
+  /* main map */
+  #map-box {
+    height: 60vh;
+    order: -1;
+  }
+
+  #map-info {
+    height: 25vh;
+    display: none;
+  }
 }
 
 @media (min-width:30.063em) {
+
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .title {
+    font-size: 3em;
+  }
+
+  .statement {
+    font-size: 2em;
+  }
+
+  .userInp,
+  .calculate,
+  .conversion,
+  .findTxHp {
+    font-size: 1.5em;
+  }
 }
 
 @media (min-width:40.063em) {
@@ -358,6 +398,21 @@ a:visited {
     order: 2;
     height: 350px;
   }
+
+  #map-list {
+    height: 23vh;
+    order: -1;
+  }
+
+  /* main map */
+  #map-box {
+    height: 50vh;
+  }
+
+  #map-info {
+    height: 23vh;
+    display: block;
+  }
 }
 
 @media (min-width:60.063em) {
@@ -365,29 +420,6 @@ a:visited {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
   /* Map Parts */
   /* list of locations */
-  #map-list {
-    width: auto;
-    margin: 10px;
-    overflow-y: scroll;
-    overflow-x: auto;
-    max-height: 772px;
-  }
-
-  #map-box {
-    height: 50vh;
-    width: 30%;
-  }
-
-  /* main map */
-  #leafletMap {
-    width: 100%;
-  }
-
-  /* main info */
-  #map-info {
-    width: 40%;
-  }
-
   .intro {
     background-color: rgba(255, 255, 255, 0);
     width: 60%;
@@ -404,28 +436,19 @@ a:visited {
 @media (min-width:64.063em) {
 
   /* big landscape tablets, laptops, and desktops */
-  /* Map Parts */
-  /* list of locations */
   #map-list {
     height: 70vh;
-    width: 20%;
-  }
-
-  #map-box {
-    height: 70vh;
-    width: 40%;
+    order: -1;
   }
 
   /* main map */
-  #leafletMap {
-    height: 100%;
-    width: 100%;
+  #map-box {
+    height: 70vh;
   }
 
-  /* main info */
   #map-info {
     height: 70vh;
-    width: 30%;
+    display: block;
   }
 }
 
