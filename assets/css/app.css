@@ -84,10 +84,10 @@ a:visited {
 
 /*          P A G E    1         */
 /* ------------ -1- ------------ */
-.landing-page, .locations-page {
+.page1, .page2 {
   /* background-color: rgba(0, 0, 0, 0.2); */
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-flow: row wrap;
   align-content: center;
@@ -95,10 +95,19 @@ a:visited {
   align-items: center;
 }
 
-.landing-page {
-  background-image: url(../img/aibg-001.png);
+.page1 {
+  background-image: url(../img/bgBG-001.png);
   background-position: center;
   background-size: cover;
+  /* background-image: linear-gradient(45deg, #1f7ee4 0%, #5357da 51%, #913473 100%);
+  background-size: 200% auto; */
+}
+
+.page2 {
+  background-image: url(../img/bgBG-002.png);
+  background-position: center;
+  background-size: cover;
+  /* background-color: white; */
   /* background-image: linear-gradient(45deg, #1f7ee4 0%, #5357da 51%, #913473 100%);
   background-size: 200% auto; */
 }
@@ -252,9 +261,10 @@ a:visited {
 
 .map-list-option {
   transition: all ease-in-out 0.5s;
-  padding: 5px;
+  padding: 10px 10px;
   line-height: 20px;
   color: #19868E;
+  font-size: 1em;
 }
 
 .active {
@@ -301,6 +311,7 @@ map-section.leaflet-popup-content-wrapper {
 
 .leaflet-popup-content {
   /* width: 501px !important; */
+  padding: 10px !important;
 }
 
 .leaflet-popup-content-wrapper * {
@@ -355,16 +366,16 @@ map-section.leaflet-popup-content-wrapper {
     display: none;
   }
 
-  .statement {
-    font-size: 2em;
-  }
-
   .title {
     font-size: 2em;
   }
 
-  .statement {
+  .statement, #map-section h3 {
     font-size: 1.25em;
+  }
+
+  #map-section h3 {
+    font-weight: bolder;
   }
 
   .userInp,
@@ -406,7 +417,7 @@ map-section.leaflet-popup-content-wrapper {
 
   .userInp,
   .calculate,
-  .conversion {
+  .conversion, .map-list-option h3 {
     font-size: 1.5em;
   }
 
@@ -465,6 +476,11 @@ map-section.leaflet-popup-content-wrapper {
     order: -1;
     height: 350px;
   }
+
+  #map-list, #map-info {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+  }
 }
 
 @media (min-width:64.063em) {
@@ -503,8 +519,15 @@ map-section.leaflet-popup-content-wrapper {
 
   .userInp,
   .calculate,
-  .conversion {
+  .conversion,
+  #map-section h3 {
     font-size: 1.5em;
+  }
+
+  #map-section h4,
+  #map-section h5,
+  #map-section h6 {
+    font-size: 1.25em;
   }
 
   .characters {
