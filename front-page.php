@@ -39,6 +39,16 @@
 					$title = $home_content['title'];
 					$statement = $home_content['statement'];
 					$image = $home_content['image'];
+					$conversion_messages = $home_content['conversion_messages'];
+
+
+          // Conversion statements
+          $begin = $conversion_messages['begin'];
+          $failed = $conversion_messages['failed'];
+          $failed = $conversion_messages['success'];
+          $invalid = $conversion_messages['invalid'];
+
+
 					// var_dump( $image );
 				?>
 
@@ -51,11 +61,11 @@
 
 					<h1 class="title small-12"><?php echo $title; ?></h1>
 					<p class="statement small-12"><?php echo $statement; ?></p>
-					<p class="conversion small-12 medium-6">Enter your income to see if you apply</p>
-					<div class="inp small-6 medium-3">
+					<p class="conversion small-12 medium-12"><?php echo $begin; ?></p>
+					<div class="inp small-6 medium-4 large-4">
 						<input class="userInp" type="number" name="" value="" placeholder="30000">
 					</div>
-					<div class="btn small-6 medium-3">
+					<div class="btn small-6 medium-2 large-3">
 						<button class="calculate" type="button" name="button">QUALIFY</button>
 					</div>
 					<div class="bigbtn small-12">
@@ -71,7 +81,7 @@
 			?>
 			</div>
 		</div>
-		
+
 		</main>
 	</div><!-- #primary -->
 

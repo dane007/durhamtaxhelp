@@ -59,6 +59,7 @@ let dataLocations = [{
     // after establishing the value of user input we can convert and
     // change the content to valid or non valid amount
     CALCULATE.addEventListener('click', function() {
+
       // get input every click
       let userInp = document.querySelector('body .landing-page .userInp');
 
@@ -70,9 +71,9 @@ let dataLocations = [{
         CONVERSION.innerHTML = `Please enter a valid number.`;
       } else {
         if (userNum <= 30000) {
-          CONVERSION.innerHTML = `${userNum}: Wonderful, you qualify!`;
+          CONVERSION.innerHTML = `$${userNum} is a qualified income!`;
         } else {
-          CONVERSION.innerHTML = `${userNum}: Sorry, that income is too high to qualify.`;
+          CONVERSION.innerHTML = `Sorry, $${userNum} is too high an income..`;
         }
         userInp.value = "";
       }
@@ -200,5 +201,8 @@ let dataLocations = [{
       });
 
   };
+
+
+
 
 })(jQuery);

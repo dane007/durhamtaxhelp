@@ -134,6 +134,7 @@ a:visited {
   color: #0F5B5C;
   font-weight: bold;
   padding: 10px;
+  line-height: 1.25em;
 }
 
 .userInp {
@@ -340,7 +341,7 @@ map-section.leaflet-popup-content-wrapper {
 
 /*          Q U E R I E S        */
 /* ------------ -q- ------------ */
-@media (min-width:20em) {
+@media (min-width:0em) {
 
   /* smartphones, iPhone, portrait 480x320 phones */
   /* Map Parts */
@@ -354,7 +355,7 @@ map-section.leaflet-popup-content-wrapper {
     display: none;
   }
 
-  .findTxHp, .statement {
+  .statement {
     font-size: 2em;
   }
 
@@ -368,9 +369,12 @@ map-section.leaflet-popup-content-wrapper {
 
   .userInp,
   .calculate,
-  .conversion,
-  .findTxHp {
+  .conversion {
     font-size: 1.15em;
+  }
+
+  .findTxHp {
+    font-size: 1.75em;
   }
 
   #map-list {
@@ -402,9 +406,12 @@ map-section.leaflet-popup-content-wrapper {
 
   .userInp,
   .calculate,
-  .conversion,
-  .findTxHp {
+  .conversion {
     font-size: 1.5em;
+  }
+
+  .findTxHp {
+    font-size: 2em;
   }
 }
 
@@ -416,6 +423,10 @@ map-section.leaflet-popup-content-wrapper {
     display: block;
     order: 2;
     height: 350px;
+  }
+
+  .intro {
+    padding-right: 20px;
   }
 
   #map-list {
@@ -431,6 +442,10 @@ map-section.leaflet-popup-content-wrapper {
   #map-info {
     height: 23vh;
     display: block;
+  }
+
+  .findTxHp {
+    font-size: 2.5em;
   }
 }
 
@@ -475,7 +490,7 @@ map-section.leaflet-popup-content-wrapper {
 
   /* hi-res laptops and desktops */
   .intro {
-    width: 45%;
+    width: 50%;
   }
 
   .title {
