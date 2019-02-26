@@ -9,16 +9,30 @@
 body {
   width: 100vw;
   overflow-x: hidden;
+  background-image: linear-gradient(45deg, #27A5B7 0%, #279FB8 51%, #4698BD 100%);
+  background-size: 200% auto;
   font-family: 'Shree Devanagari 714', sans-serif;
-  background-image: url(../img/section-7-bg.png);
-  background-position: center;
-  background-size: cover;
   /* background-attachment: fixed; */
 }
 
 h1, h2, h3, h4, h5, h6, p, span {
   padding: 5px;
   padding: 0;
+  margin: 0;
+}
+
+footer {
+  height: 0;
+  overflow: hidden;
+  background-color: #022D41;
+  color: white;
+}
+
+footer a, footer a:active, footer a:visited {
+  color: white;
+}
+
+.post, .page {
   margin: 0;
 }
 
@@ -78,17 +92,20 @@ a:visited {
   flex-flow: row wrap;
   align-content: center;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .landing-page {
-  /* background-image: url(../img/section-7-bg.png);
+  background-image: url(../img/aibg-001.png);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed; */
+  /* background-image: linear-gradient(45deg, #1f7ee4 0%, #5357da 51%, #913473 100%);
+  background-size: 200% auto; */
 }
 
 .characters {
   margin: 0 auto;
+  padding: 20px;
   order: 2;
   transition: all 0.6s cubic-bezier(.79, .14, .15, .86);
 }
@@ -131,7 +148,7 @@ a:visited {
   color: rgba(15, 91, 92, 0.6);
   border-radius: 40px;
   border: 2px solid rgba(15, 91, 92, 0.6);
-  padding: 10px;
+  padding: 14px 10px 10px 10px;
 }
 
 .calculate:hover {
@@ -141,20 +158,18 @@ a:visited {
 
 .findTxHp {
   transition: all 0.3s ease-out;
-  padding: 10px 20px;
+  padding: 14px 10px 10px 10px;
   color: #0F5B5C;
   border-radius: 40px;
   background-color: rgba(0, 0, 0, 0);
-  border: 2px solid #0F5B5C;
-  border: 2px solid #0F5B5C;
-  background-color: #0F5B5C;
+  border: 2px solid #022D41;
+  background-color: #022D41;
   color: white;
-  padding: 10px;
 }
 
 .findTxHp:hover {
-  color: #0F5B5C;
-  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  background-color: #0F5B5C;
   border: 2px solid #0F5B5C;
 }
 
