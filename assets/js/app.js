@@ -97,7 +97,7 @@ let dataLocations = [{
 
     // Map settings
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-      maxZoom: 14,
+      maxZoom: 17,
       minZoom: 14,
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -121,18 +121,18 @@ let dataLocations = [{
 
 
     // Sample circle
-    L.circle([43.849875, -79.035955], 250, {
-      color: 'red',
-      fillColor: '#f03',
-      fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("I am a circle.");
+    // L.circle([43.849875, -79.035955], 250, {
+    //   color: 'red',
+    //   fillColor: '#f03',
+    //   fillOpacity: 0.5
+    // }).addTo(mymap).bindPopup("I am a circle.");
 
     // Sample Polygon
-    L.polygon([
-      [43.847079, -79.021547],
-      [43.846071, -79.019101],
-      [43.848038, -79.018435]
-    ]).addTo(mymap).bindPopup("I am a polygon.");
+    // L.polygon([
+    //   [43.847079, -79.021547],
+    //   [43.846071, -79.019101],
+    //   [43.848038, -79.018435]
+    // ]).addTo(mymap).bindPopup("I am a polygon.");
 
 
     var popup = L.popup();

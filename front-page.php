@@ -110,6 +110,138 @@
 				</div>
   		 </div>
       </div>
+      <div class="testimonials-page">
+        <!-- Content for Testimonials Page -->
+
+        <section class="content_sections" id="volunteer_page">
+            <!-- Volunteer Section -->
+            <div class="volunteer grid-container">
+
+            <?php
+                    if ( function_exists( 'get_field' ) ) {
+                    $volunteer_contents = get_field( 'volunteer_contents' );
+                ?>
+                <?php
+                foreach ( $volunteer_contents as $volunteer_content ) {
+                    $main_title = $volunteer_content['main_title'];
+                    $title_1 = $volunteer_content['title_1'];
+                    $content_1 = $volunteer_content['content_1'];
+                    $video = $volunteer_content['video'];
+                    $video_description = $volunteer_content['video_description'];
+                    $title_2 = $volunteer_content['title_2'];
+                    $content_2 = $volunteer_content['content_2'];
+                    // var_dump( $image );
+                ?>
+
+                <!-- Main Content for Volunteer-Section -->
+
+                <h1 class="section_titles cell"><?php echo $main_title; ?></h1>
+
+                <div class="volunteer grid-x grid-margin-x">
+
+                    <div class="cell small-12 large-4 volunteer_content_container">
+                        <h4 class="volunteer_subtitles"><?php echo $title_1; ?></h4>
+                        <p class=""><?php echo $content_1; ?></p>
+                        <div class="volunteer_button_container">
+                            <a href="#location_page">
+                                <button class="volunteer_button" type="button" name="button">Organizations >></button>
+                            </a>
+                        </div>
+                        <p id="volunteer_p2">For FAQs and to get more in-depth information about being a volunteer, click the button below.</p>
+                        <div class="volunteer_button_container">
+                            <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program/lend-a-hand-individuals.html">
+                                <button class="volunteer_button" type="button" name="button">Learn More >></button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cell small-12 large-4">
+                        <div id="video_container">
+                            <img src="<?php echo $video['url'] ?>" alt="">
+                        </div>
+                        <p id="video_description"><?php echo $video_description; ?></p>
+                    </div>
+
+                    <div class="cell small-12 large-4 volunteer_content_container">
+                        <h4 class="volunteer_subtitles"><?php echo $title_2; ?></h4>
+                        <p class=""><?php echo $content_2; ?></p>
+                        <div class="volunteer_button_container">
+                            <a href="https://www.canada.ca/en/revenue-agency/news/newsroom/tax-tips/tax-tips-2014/tax-clinics-your-community-organization.html">
+                                <button class="volunteer_button" type="button" name="button">Click here >></button>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+
+                <?php
+                }
+                ?>
+            <?php
+            }
+            ?>
+
+            </div>
+            <!-- end of Volunteer Section -->
+        </section>
+
+        <section>
+
+          <!-- Page Heading -->
+          <h1 id="testimonials_h1"> Testimonials</h1>
+
+          <!-- Grid Container for positoong of testimonials cards -->
+          <div class="grid-x grid-margin-x container">
+
+          <?php
+              if ( function_exists( 'get_field' ) ) {
+              $testimonials = get_field( 'testimonials' );
+          ?>
+
+              <!-- for each function to output card for each field added -->
+              <?php
+              foreach ( $testimonials as $testimonial ) {
+
+                  $statement = $testimonial['statement'];
+                  $image = $testimonial['image'];
+                  $imageBG = $testimonial['imageBG'];
+
+              ?>
+                  <!-- card structure -->
+                      <!-- outer most div containing all smaller elements -->
+            <div class="cell card small-4 large-6">
+                <!-- background image for text -->
+                     <img class="imageBG" src="<?php echo $imageBG['url'] ?>" alt="">
+                <div class="grid-x grid-margin-x">
+                   <!-- larger div for text to be placed inside -->
+                    <div class="cell small-8 large-10 textContainer">
+                        <p class="statement">
+                            <?php echo $statement; ?>
+                        </p>
+                    </div>
+
+
+                <!-- frame for image to be placed inside -->
+                    <div class="cell small-4 large-6 large-offset-2 imageFrame">
+                        <div id="frame">
+                            <img class="image" src="<?php echo $image['url'] ?>" alt="">
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        <?php
+      }
+      ?>
+    <?php
+    }
+    ?>
+  </section>
+</div>
+</div>
     </div>
 		</main>
 	</div><!-- #primary -->
