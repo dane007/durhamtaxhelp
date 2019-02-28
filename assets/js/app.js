@@ -2,6 +2,7 @@ const GO_BTN = document.querySelector('body .map-list-option');
 const CONVERSION = document.querySelector('body .landing-page .conversion');
 const CALCULATE = document.querySelector('body .landing-page .calculate');
 
+// LOCATIONS
 let dataLocations = [{
   name: "Diverse Financial Group",
   id: "DivFinGrp",
@@ -187,6 +188,39 @@ let dataLocations = [{
 
       $("#map-info").html(content);
     });
+
+
+
+
+
+
+
+    (function animateIntro() {
+      
+      // var tl = new TimelineLite({onComplete:myFunction});
+
+      // $("#main_site_title").hide();
+      //$("#main_site_title").fadeIn(2000);
+
+      $("#main_site_title").delay(250).animate({
+        opacity: 1
+      }, 500);
+  
+      $(".fadeOn").delay(500).animate({
+        opacity: 1
+      }, 250);
+
+      //let image2 = "<?php echo get_template_directory_uri() . '/assets/img/image2.png;?>'";
+      // $(".characters img").delay(1500).attr('src', "<?php echo get_template_directory_uri() . '/assets/img/pdf.png'; ?>");
+
+
+
+
+    })();
+
+
+
+
   });
 
   function doMoveMap(id, mymap, clinic, locations) {
@@ -204,6 +238,7 @@ let dataLocations = [{
 
 })(jQuery);
 
+// FINANCIAL EMPOWERMENT
 $("#cost").hide();
   $("#credit").hide();
   $("#overview").show();
@@ -268,39 +303,24 @@ $("#cost").hide();
 
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
+// HOW TO QUALIFY
   $(function() {
 
+    $("#eligible_btn").addClass("qualify_button_selected");
+
     $( "#eligible_btn" ).click(function() {
-      $("#article_box01").delay(600).fadeIn(500);
-      $("#article_box02").fadeOut(500);
-      $("#article_box03").fadeOut(500);
+      $("#article_box01").fadeIn();
+      $("#article_box02").fadeOut();
+      $("#article_box03").fadeOut();
     
-      $("#eligible_btn").addClass("am_I_eligible_button_selected");
-      $("#eligible_btn").removeClass("am_I_eligible_button_deselected");
-      $("#eligible_btn_backdrop").addClass("am_I_eligible_button_backdrop_selected");
-      $("#eligible_btn_backdrop").removeClass("am_I_eligible_button_backdrop_deselected");
+      $("#eligible_btn").addClass("qualify_button_selected");
+      $("#eligible_btn").removeClass("qualify_button_deselected");
     
-      $("#receipts_btn").addClass("receipts_button_deselected");
-      $("#receipts_btn").removeClass("receipts_button_selected");
-      $("#receipts_btn_backdrop").addClass("receipts_button_backdrop_deselected");
-      $("#receipts_btn_backdrop").removeClass("receipts_button_backdrop_selected");
+      $("#receipts_btn").addClass("qualify_button_deselected");
+      $("#receipts_btn").removeClass("qualify_button_selected");
     
-      $("#infoSlips_btn").addClass("information_slips_button_deselected");
-      $("#infoSlips_btn").removeClass("information_slips_button_selected");
-      $("#infoSlips_btn_backdrop").addClass("information_slips_button_backdrop_deselected");
-      $("#infoSlips_btn_backdrop").removeClass("information_slips_button_backdrop_selected");
+      $("#infoSlips_btn").addClass("qualify_button_deselected");
+      $("#infoSlips_btn").removeClass("qualify_button_selected");
       
     }); 
     
@@ -309,48 +329,36 @@ $("#cost").hide();
     $( "#receipts_btn" ).click(function() {
       // Remove Classes
     
-      $("#article_box01").fadeOut(500);
-      $("#article_box02").delay(600).fadeIn(500);
-      $("#article_box03").fadeOut(500);
+      $("#article_box01").fadeOut();
+      $("#article_box02").fadeIn();
+      $("#article_box03").fadeOut();
     
-      $("#receipts_btn").addClass("receipts_button_selected");
-      $("#receipts_btn").removeClass("receipts_button_deselected");
-      $("#receipts_btn_backdrop").addClass("receipts_button_backdrop_selected");
-      $("#receipts_btn_backdrop").removeClass("receipts_button_backdrop_deselected");
+      $("#receipts_btn").addClass("qualify_button_selected");
+      $("#receipts_btn").removeClass("qualify_button_deselected");
     
-      $("#eligible_btn").addClass("am_I_eligible_button_deselected");
-      $("#eligible_btn").removeClass("am_I_eligible_button_selected");
-      $("#eligible_btn_backdrop").addClass("am_I_eligible_button_backdrop_deselected");
-      $("#eligible_btn_backdrop").removeClass("am_I_eligible_button_backdrop_selected");
+      $("#eligible_btn").addClass("qualify_button_deselected");
+      $("#eligible_btn").removeClass("qualify_button_selected");
     
-      $("#infoSlips_btn").addClass("information_slips_button_deselected");
-      $("#infoSlips_btn").removeClass("information_slips_button_selected");
-      $("#infoSlips_btn_backdrop").addClass("information_slips_button_backdrop_deselected");
-      $("#infoSlips_btn_backdrop").removeClass("information_slips_button_backdrop_selected");
+      $("#infoSlips_btn").addClass("qualify_button_deselected");
+      $("#infoSlips_btn").removeClass("qualify_button_selected");
     
       
     });
     
     
     $( "#infoSlips_btn" ).click(function() {
-      $("#article_box01").fadeOut(500);
-      $("#article_box02").fadeOut(500);
-      $("#article_box03").delay(600).fadeIn(500);
+      $("#article_box01").fadeOut();
+      $("#article_box02").fadeOut();
+      $("#article_box03").delay(100).fadeIn();
     
-      $("#infoSlips_btn").addClass("information_slips_button_selected");
-      $("#infoSlips_btn").removeClass("information_slips_button_deselected");
-      $("#infoSlips_btn_backdrop").addClass("information_slips_button_backdrop_selected");
-      $("#infoSlips_btn_backdrop").removeClass("information_slips_button_backdrop_deselected");
+      $("#infoSlips_btn").addClass("qualify_button_selected");
+      $("#infoSlips_btn").removeClass("qualify_button_deselected");
     
-      $("#eligible_btn").addClass("am_I_eligible_button_deselected");
-      $("#eligible_btn").removeClass("am_I_eligible_button_selected");
-      $("#eligible_btn_backdrop").addClass("am_I_eligible_button_backdrop_deselected");
-      $("#eligible_btn_backdrop").removeClass("am_I_eligible_button_backdrop_selected");
+      $("#eligible_btn").addClass("qualify_button_deselected");
+      $("#eligible_btn").removeClass("qualify_button_selected");
     
-      $("#receipts_btn").addClass("receipts_button_deselected");
-      $("#receipts_btn").removeClass("receipts_button_selected");
-      $("#receipts_btn_backdrop").addClass("receipts_button_backdrop_deselected");
-      $("#receipts_btn_backdrop").removeClass("receipts_button_backdrop_selected");
+      $("#receipts_btn").addClass("qualify_button_deselected");
+      $("#receipts_btn").removeClass("qualify_button_selected");
     });
      
     });

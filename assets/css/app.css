@@ -251,8 +251,21 @@ a:visited {
   cursor: pointer;
 }
 
+.qualify_button_selected {
+	/* width: 223.411px;
+	height: 80.02px; */
+	background-color: #19868E;
+}
+
+.qualify_button_deselected {
+	/* width: 223.411px;
+	height: 80.02px; */
+	background-color: #022D41;
+}
+
 .qualify_box {
   margin-left: 225px;
+  padding: 25px;
 }
 
 #qualify_page .frame_image {
@@ -492,7 +505,7 @@ map-section.leaflet-popup-content-wrapper {
 
 #overview h1 {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 5px;
   font-size: 30px;
   color: #27a5b7;
  }
@@ -535,13 +548,17 @@ map-section.leaflet-popup-content-wrapper {
   width: 650px;
   height: 419px;
   border-radius: 30px;
-  padding: 15px;
   background-color: rgba(39, 165, 183, 0.09);
  }
 
  #financial_empowerment .box {
     margin-left: 355px;
+    padding: 8px;
  }
+
+ #financial_empowerment .box p {
+  font-size: 16px;
+}
 
  #sideNav li {
   margin-left: 30px;
@@ -564,18 +581,20 @@ margin-top: 20px;
   z-index: 2;
  }
  
- li:hover {
+ #sideNav li:hover {
   cursor: pointer;
+  opacity: 0.6;
  }
  
  #cost {
-  font-size: 18px;
+  font-size: 16px;
   color: #022d41;
  }
  
  
  .firstPara {
  
+  margin: 10px 8px 0px 10px;
   padding: 10px;
  
  }
@@ -674,7 +693,7 @@ margin-top: 20px;
  
  #tax p {
   font-size: 20px;
-  margin-left: 90px;
+  margin-left: 20px;
   padding-top: 20px;
   padding: 0px 10px 0px 10px;
  }
@@ -712,10 +731,27 @@ margin-top: 20px;
   width: 200px;
  }
 
+ #sidebar div img {
+   height: 86px;
+   max-width: 280px;
+ }
 
  #arrow1 img{
-   width:900px;
+   width: 900px;
+   margin-top: 22px;
  }
+
+ #arrow2 img{
+  margin-top: 16px;
+}
+
+#arrow3 img{
+  margin-top: 6px;
+}
+
+#arrow4 img{
+  margin-top: -2px;
+}
 
 
 
@@ -779,15 +815,17 @@ margin-top: 20px;
 }
 
 #frame {
-  width: 110px;
-  height: 110px;
+  width: 148px;
+  height: 140px;
   background-color: white;
   border: 2px solid #022D41;
   padding: 5px;
+  margin-left: -84px;
 }
 
 .image {
-  width: 125px;
+  /* width: 125px; */
+  height: 100%;
 }
 
 
@@ -829,6 +867,24 @@ margin-top: 20px;
   padding: 5px;
   margin-left: 20px; 
 }
+
+button {
+  transition: all 0.5s;
+}
+
+button:hover {
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+
+
+
+/* ANIMATION PURPOSES */
+#main_site_title, .fadeOn {
+  opacity: 0;
+}
+
+
 
 
 

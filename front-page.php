@@ -62,22 +62,22 @@
 
                             <div class="intro grid-x grid-margin-x">
 
-                                <h1 class="title small-12"><?php echo $title; ?></h1>
-                                <p class="statement small-12">
+                                <h1 id="main_site_title" class="title small-12"><?php echo $title; ?></h1>
+                                <p class="statement fadeOn small-12">
                                     <?php echo $statement; ?>
                                 </p>
-                                <p class="conversion small-12 medium-12">
+                                <p class="conversion fadeOn small-12 medium-12">
                                     <?php echo $begin; ?>
                                 </p>
-                                <div class="inp small-6 medium-4 large-4">
+                                <div class="inp fadeOn small-6 medium-4 large-4">
                                     <input class="userInp" type="number" name="" value="" placeholder="30000">
                                 </div>
-                                <div class="btn small-6 medium-2 large-3">
+                                <div class="btn fadeOn small-6 medium-2 large-3">
                                     <button class="calculate" type="button" name="button">
                                         <?php echo $qualify; ?>
                                     </button>
                                 </div>
-                                <div class="bigbtn small-12">
+                                <div class="bigbtn fadeOn small-12">
                                     <a href="#locations_page">
                                         <button class="findTxHp" type="button" name="button">
                                             <?php echo $findhelp; ?>
@@ -542,6 +542,7 @@
 
                  <section id="footer">
                      <div id="footer_holder">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/img/logos/durham_region_logo.png'; ?>" alt="Durham Region Logo" />
                         <img src="<?php echo get_template_directory_uri() . '/assets/img/logos/money_makes_cents_logo.png'; ?>" alt="Money Makes Cents Logo" />
                         <img src="<?php echo get_template_directory_uri() . '/assets/img/logos/North House Logo_Colour.jpg'; ?>" alt="North House Logo" />
                         <img src="<?php echo get_template_directory_uri() . '/assets/img/logos/JHS_Logo_65px_high.png'; ?>" alt="John Howard Logo" />
