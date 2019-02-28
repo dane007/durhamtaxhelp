@@ -96,8 +96,18 @@ a:visited {
 
 /*          P A G E    1         */
 /* ------------ -1- ------------ */
-.page1, .page2, .testimonials-page {
+.page2, .testimonials-page {
   background-color: rgba(255, 255, 255, 1);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.page1 {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -220,9 +230,53 @@ a:visited {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.entry-content {
-  /* border-bottom: 10px solid black; */
+
+/* HOW TO QUALIFY PAGE */
+.how_to_qualify_btn_container {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-right: -100px;
+  margin-left: 100px;
 }
+.qualify_buttons {
+  background-color: #022D41;
+  padding: 20px;
+  font-size: 20px;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+.qualify_box {
+  margin-left: 225px;
+}
+
+#qualify_page .frame_image {
+  margin-left: 199px;
+}
+
+.download {
+  cursor: pointer;
+  padding-left: 180px;
+  color: black;
+}
+
+.download img {
+  width: 80px;
+}
+
+
+
+
+
+
+
+
+
 
 /*          P A G E    2         */
 /* ------------ -2- ------------ */
@@ -363,9 +417,14 @@ map-section.leaflet-popup-content-wrapper {
 }
 
 /* VOLUNTEER PAGE */
+#volunteer_page div {
+  border-radius: 10px;
+}
+
 .volunteer_subtitles {
   color: #022d41;
   margin-bottom: 10px;
+  border-bottom: 1px solid black;
 }
 
 #video_container {
@@ -414,6 +473,260 @@ map-section.leaflet-popup-content-wrapper {
   border-radius: 15px;
 }
 
+
+
+
+/* FINANCIAL EMPOWERMENT */
+#financial_empowerment {
+  padding: 0 60px;
+  padding-bottom: 140px;
+}
+.financial_empowerment_grid {
+  margin-left: 80px;
+} 
+
+#financial_empowerment .section_titles {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#overview h1 {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 30px;
+  color: #27a5b7;
+ }
+
+ #overview p {
+  font-size: 18px;
+  padding: 10px 15px 0px 35px;
+  color: #022d41;
+ }
+
+ .frame_image {
+  width: 700px;
+ }
+
+ #financial_empowerment .frame_image {
+ margin-left: 330px;
+ }
+
+ #sidebar {
+  position: absolute;
+  margin-top: 0px;
+  width: 250px;
+  height: 460px;
+  background-color: #022d41;
+  border-radius: 40px;
+ 
+ }
+
+ #navi {
+  z-index: 2;
+  position: absolute;
+  /* margin-left: 100px; */
+  margin-top: 85px;
+ }
+
+.box {
+   overflow: auto;
+  position: relative;
+  margin-top: -440px;
+  width: 650px;
+  height: 419px;
+  border-radius: 30px;
+  padding: 15px;
+  background-color: rgba(39, 165, 183, 0.09);
+ }
+
+ #financial_empowerment .box {
+    margin-left: 355px;
+ }
+
+ #sideNav li {
+  margin-left: 30px;
+ }
+ 
+ nav {
+  position: absolute;
+  
+  margin: 50px 0px auto 0px;
+  margin-left: 20px;
+  z-index: 2;
+ }
+ #sideNav ol{
+margin-top: 20px;
+}
+ #sideNav ol li {
+  margin-top: 40px;
+  font-size: 18px;
+  color: white;
+  z-index: 2;
+ }
+ 
+ li:hover {
+  cursor: pointer;
+ }
+ 
+ #cost {
+  font-size: 18px;
+  color: #022d41;
+ }
+ 
+ 
+ .firstPara {
+ 
+  padding: 10px;
+ 
+ }
+
+ #cost ul {
+  margin-left: 70px;
+ }
+ 
+ .secondPara {
+ 
+  padding: 20px 30px 20px 35px;
+ 
+ }
+ 
+ a {
+  color: #27a5b7;
+  text-decoration: none;
+ }
+ 
+ a:hover {
+  color: #022d41;
+ 
+ }
+ 
+ .thirdPara {
+ 
+  padding: 25px 30px 30px 30px;
+ 
+ }
+
+ #arrow1 {
+  position: absolute;
+  left: -1px;
+  /*2    top: 43%;*/
+  top: 11%;
+  z-index: 1;
+ 
+ /* width:20px; */
+ }
+ 
+ 
+ #arrow2 {
+  position: absolute;
+  left: -1px;
+  top: 31%;
+  z-index: 1;
+ 
+ }
+ 
+ #arrow3 {
+  position: absolute;
+  left: -1px;
+  top: 48%;
+  z-index: 1;
+ 
+ }
+ 
+ #arrow4 {
+  position: absolute;
+  left: -1px;
+  top: 68%;
+  z-index: 1;
+ }
+
+ #credit li {
+  margin-left: 80px;
+ }
+ 
+ #bond {
+  color: #022d41;
+  font-size: 10px;
+ }
+ 
+ .fourthPara {
+ 
+  padding: 30px 30px 30px 30px;
+ 
+ }
+ 
+ .sixthPara {
+ 
+  padding: 20px 30px 20px 35px;
+ font-size: 15px;
+ line-height: 22px;
+ }
+ 
+ #credit {
+  color: #022d41;
+ }
+
+ #tax h1 {
+  font-size: 30px;
+  padding: 30px;
+ 
+ }
+ 
+ #tax p {
+  font-size: 20px;
+  margin-left: 90px;
+  padding-top: 20px;
+  padding: 0px 10px 0px 10px;
+ }
+
+ .filingPdf {
+
+  margin-left: 190px;
+  margin-top: 20px;
+  font-size: 25px;
+ }
+ 
+ .filingPdf img {
+  position: absolute;
+  margin-left: -264.5px;
+  margin-top: -10px;
+  width: 5%;
+ }
+ 
+ .RefundPdf {
+  margin-left: 195px;
+  font-size: 25px;
+ }
+ 
+ 
+ 
+ .RefundPdf img {
+  position: absolute;
+  margin-left: -269px;
+  margin-top: -10px;
+  width: 5%;
+ }
+ 
+ blockqoute {
+  height: 200px;
+  width: 200px;
+ }
+
+
+ #arrow1 img{
+   width:900px;
+ }
+
+
+
+
+
+
+
+
+
+
+
 /***********         TESTIMONIALS -  P A G E    5        ***********/
 /* -------------- 5 ------------ */
 #testimonials_h1 {
@@ -423,7 +736,8 @@ map-section.leaflet-popup-content-wrapper {
 }
 
 .container {
-  padding-left: 180px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .card {
@@ -436,7 +750,7 @@ map-section.leaflet-popup-content-wrapper {
 
 .imageBG {
   margin-top: 125px;
-  margin-left: -65px;
+  margin-left: -45px;
 }
 
 .textContainer>p {
@@ -444,7 +758,7 @@ map-section.leaflet-popup-content-wrapper {
   font-size: 17px;
   margin-top: 75px;
   text-align: center;
-  padding: 5px 25px;
+  padding: 18px 25px;
   font-weight: 600;
 }
 
@@ -475,6 +789,48 @@ map-section.leaflet-popup-content-wrapper {
 .image {
   width: 125px;
 }
+
+
+
+
+/* BENEFITS FINDER SECTION */
+#benefits_finder_section {
+  background:#c7f5f9;
+  text-align: center;
+  padding: 100px 220px 220px 220px;
+  border-top: 1px solid black;
+}
+
+#benefits_finder_section p, #benefits_finder_section a{
+  font-size: 20px;
+}
+
+#benefits_finder_section p{
+  color: #127375;
+  margin-bottom: 20px;
+}
+
+#benefits_finder_section  a {
+  color: #022D41;
+  text-decoration: underline;
+}
+
+#footer {
+  background: #022d41;
+}
+
+#footer_holder{
+  text-align: center;
+  padding: 10px 0;
+}
+
+#footer_holder  img{
+  height: 100px;
+  padding: 5px;
+  margin-left: 20px; 
+}
+
+
 
 /*          Q U E R I E S        */
 /* ------------ -q- ------------ */
@@ -584,6 +940,7 @@ map-section.leaflet-popup-content-wrapper {
   .findTxHp {
     font-size: 2.5em;
   }
+
 }
 
 @media (min-width:60.063em) {
