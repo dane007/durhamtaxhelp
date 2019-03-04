@@ -70,19 +70,22 @@
                                     <?php echo $begin; ?>
                                 </p>
                                 <div class="inp fadeOn small-6 medium-4 large-4">
-                                    <input class="userInp" type="number" name="" value="" placeholder="30000">
+                                    <input class="userInp" type="number" name="" value="" placeholder="Example: 30000">
                                 </div>
                                 <div class="btn fadeOn small-6 medium-2 large-3">
                                     <button class="calculate" type="button" name="button">
                                         <?php echo $qualify; ?>
                                     </button>
                                 </div>
-                                <div class="bigbtn fadeOn small-12">
-                                    <a href="#locations_page">
-                                        <button class="findTxHp" type="button" name="button">
-                                            <?php echo $findhelp; ?>
-                                        </button>
-                                    </a>
+                                <div class="two_button_container">
+                                    <p class="fadeOn" id="or">OR</p>
+                                    <div class="bigbtn fadeOn small-12">
+                                        <a href="#locations_page">
+                                            <button class="findTxHp" type="button" name="button">
+                                                <?php echo $findhelp; ?>
+                                            </button>
+                                        </a>
+                                    </div>
                                 </div>
                                 <?php
 				}
@@ -542,7 +545,6 @@
 
                  <section id="footer">
                      <div id="footer_holder">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/logos/durham_region_logo.png'; ?>" alt="Durham Region Logo" />
                         <img src="<?php echo get_template_directory_uri() . '/assets/img/logos/money_makes_cents_logo.png'; ?>" alt="Money Makes Cents Logo" />
                         <img src="<?php echo get_template_directory_uri() . '/assets/img/logos/North House Logo_Colour.jpg'; ?>" alt="North House Logo" />
                         <img src="<?php echo get_template_directory_uri() . '/assets/img/logos/JHS_Logo_65px_high.png'; ?>" alt="John Howard Logo" />
