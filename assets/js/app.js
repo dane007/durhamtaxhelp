@@ -2,6 +2,7 @@ const GO_BTN = document.querySelector('body .map-list-option');
 const CONVERSION = document.querySelector('body .landing-page .conversion');
 const CALCULATE = document.querySelector('body .landing-page .calculate');
 
+// LOCATIONS
 let dataLocations = [{
   name: "Diverse Financial Group",
   id: "DivFinGrp",
@@ -187,6 +188,39 @@ let dataLocations = [{
 
       $("#map-info").html(content);
     });
+
+
+
+
+
+
+
+    (function animateIntro() {
+      
+      // var tl = new TimelineLite({onComplete:myFunction});
+
+      // $("#main_site_title").hide();
+      //$("#main_site_title").fadeIn(2000);
+
+      $("#main_site_title").delay(250).animate({
+        opacity: 1
+      }, 500);
+  
+      $(".fadeOn").delay(500).animate({
+        opacity: 1
+      }, 250);
+
+      //let image2 = "<?php echo get_template_directory_uri() . '/assets/img/image2.png;?>'";
+      // $(".characters img").delay(1500).attr('src', "<?php echo get_template_directory_uri() . '/assets/img/pdf.png'; ?>");
+
+
+
+
+    })();
+
+
+
+
   });
 
   function doMoveMap(id, mymap, clinic, locations) {
@@ -202,7 +236,129 @@ let dataLocations = [{
 
   };
 
-
-
-
 })(jQuery);
+
+// FINANCIAL EMPOWERMENT
+$("#cost").hide();
+  $("#credit").hide();
+  $("#overview").show();
+  $("#tax").hide();
+  $("#bond").hide();
+  $("#arrow1").hide();
+  $("#arrow2").hide();
+  $("#arrow3").hide();
+  $("#arrow4").hide();
+
+  $(".one").click(function() {
+
+      $("#cost").show();
+      $("#overview").hide();
+      $("#credit").hide();
+      $("#tax").hide();
+      $("#bond").hide();
+      $("#arrow1").show();
+      $("#arrow2").hide();
+      $("#arrow3").hide();
+      $("#arrow4").hide();
+
+
+  });
+  $(".two").click(function() {
+
+      $("#credit").show();
+      $("#overview").hide();
+      $("#cost").hide();
+      $("#tax").hide();
+      $("#bond").hide();
+      $("#arrow2").show();
+      $("#arrow1").hide();
+      $("#arrow3").hide();
+      $("#arrow4").hide();
+
+  });
+  $(".three").click(function() {
+
+      $("#tax").show();
+      $("#overview").hide();
+      $("#cost").hide();
+      $("#credit").hide();
+      $("#bond").hide();
+      $("#arrow3").show();
+      $("#arrow2").hide();
+      $("#arrow4").hide();
+      $("#arrow1").hide();
+
+  });
+  $(".four").click(function() {
+
+      $("#bond").show();
+      $("#overview").hide();
+      $("#cost").hide();
+      $("#credit").hide();
+      $("#tax").hide();
+      $("#arrow4").show();
+      $("#arrow3").hide();
+      $("#arrow2").hide();
+      $("#arrow1").hide();
+
+  });
+
+// HOW TO QUALIFY
+  $(function() {
+
+    $("#eligible_btn").addClass("qualify_button_selected");
+
+    $( "#eligible_btn" ).click(function() {
+      $("#article_box01").fadeIn();
+      $("#article_box02").fadeOut();
+      $("#article_box03").fadeOut();
+    
+      $("#eligible_btn").addClass("qualify_button_selected");
+      $("#eligible_btn").removeClass("qualify_button_deselected");
+    
+      $("#receipts_btn").addClass("qualify_button_deselected");
+      $("#receipts_btn").removeClass("qualify_button_selected");
+    
+      $("#infoSlips_btn").addClass("qualify_button_deselected");
+      $("#infoSlips_btn").removeClass("qualify_button_selected");
+      
+    }); 
+    
+    
+    
+    $( "#receipts_btn" ).click(function() {
+      // Remove Classes
+    
+      $("#article_box01").fadeOut();
+      $("#article_box02").fadeIn();
+      $("#article_box03").fadeOut();
+    
+      $("#receipts_btn").addClass("qualify_button_selected");
+      $("#receipts_btn").removeClass("qualify_button_deselected");
+    
+      $("#eligible_btn").addClass("qualify_button_deselected");
+      $("#eligible_btn").removeClass("qualify_button_selected");
+    
+      $("#infoSlips_btn").addClass("qualify_button_deselected");
+      $("#infoSlips_btn").removeClass("qualify_button_selected");
+    
+      
+    });
+    
+    
+    $( "#infoSlips_btn" ).click(function() {
+      $("#article_box01").fadeOut();
+      $("#article_box02").fadeOut();
+      $("#article_box03").delay(100).fadeIn();
+    
+      $("#infoSlips_btn").addClass("qualify_button_selected");
+      $("#infoSlips_btn").removeClass("qualify_button_deselected");
+    
+      $("#eligible_btn").addClass("qualify_button_deselected");
+      $("#eligible_btn").removeClass("qualify_button_selected");
+    
+      $("#receipts_btn").addClass("qualify_button_deselected");
+      $("#receipts_btn").removeClass("qualify_button_selected");
+    });
+     
+    });
