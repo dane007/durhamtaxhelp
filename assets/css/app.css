@@ -782,8 +782,8 @@ margin-top: 20px;
 
 
 
-/***********         TESTIMONIALS -  P A G E    5        ***********/
-/* -------------- 5 ------------ */
+        /***********         TESTIMONIALS -  P A G E    5        ***********/
+                        /* -------------- 5 ------------ */
 #testimonials_h1 {
   font-family: 'Shree Devanagari 714', sans-serif;
   font-size: 50px;
@@ -791,55 +791,57 @@ margin-top: 20px;
 }
 
 .container {
+  height: auto;
   padding: 0 20px;
   margin: 0 auto;
 }
 
 .card {
   background-color: transparent;
-  height: 330px;
+  height: 360px;
   border: none;
+  padding-top: 12px;
   padding-left: 60px;
   margin-top: 0px;
 }
 
 .imageBG {
-  margin-top: 125px;
-  margin-left: -45px;
+  margin-top: 23%;
+  margin-left: -1%;
 }
 
 .textContainer>p {
   font-family: 'Shree Devanagari 714', sans-serif;
   font-size: 17px;
-  margin-top: 75px;
+  margin-top: 14%;
   text-align: center;
   padding: 18px 25px;
   font-weight: 600;
 }
 
 .textContainer {
-  margin-top: -235px;
+  margin-top: -37%;
   height: 250px;
   border: 2px solid #022D41;
 }
 
 .imageFrame {
-  padding: 5px;
-  height: 120px;
+  padding: 3px 5px;
+  height: 105px;
   background-color: white;
-  margin-top: -315px;
+  margin-top: -54%;
   border: none;
   text-align: center;
-  padding-left: 135px;
+  padding-left: 25%;
 }
 
 #frame {
-  width: 148px;
-  height: 140px;
+  width: 123px;
+  height: 125px;
   background-color: white;
   border: 2px solid #022D41;
   padding: 5px;
-  margin-left: -84px;
+  margin-left: -65%;
 }
 
 .image {
@@ -959,6 +961,71 @@ button:hover {
     height: 25vh;
     display: none;
   }
+    
+/***********         TESTIMONIALS -  P A G E    5        ***********/
+                        /* -------------- 5 ------------ */
+
+.testimonials-page {
+  height: auto;
+  
+}
+
+.container {
+  background-color: transparent;
+  height: auto;
+  padding: 0 5px;
+  margin: 0;
+}
+
+.card {
+  background-color: transparent;
+  height: 310px;
+  border: none;
+  padding: 0 5px;
+  margin-top: 0px;
+}
+
+.imageBG {
+  margin-top: 34%;
+  margin-left: 0;
+}
+
+.textContainer>p {
+  
+  font-size: 13px;
+  margin-top: 14%;
+  text-align: left;
+  padding: 20px 5px;
+}
+
+.textContainer {
+  margin-top: -45%;
+  height: 205px;
+  border: 2px solid #022D41;
+}
+
+.imageFrame {
+  padding: 2px;
+  height: 85px;
+  background-color: white;
+  margin-top: -71%;
+  border: none;
+  text-align: center;
+}
+
+#frame {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border: 2px solid #022D41;
+  padding: 5px;
+  margin-left: 25%;
+}
+
+.image {
+  /* width: 125px; */
+  height: 100%;
+}
 }
 
 @media (min-width:30.063em) {
@@ -981,6 +1048,73 @@ button:hover {
   .findTxHp {
     font-size: 2em;
   }
+    
+/***********         TESTIMONIALS -  P A G E    5        ***********/
+                        /* -------------- 5 ------------ */
+
+.testimonials-page {
+  height: auto;
+  
+}
+
+.container {
+  background-color: transparent;
+  height: auto;
+  padding: 0 5px;
+  margin: 0;
+}
+
+.card {
+  background-color: transparent;
+  height: 310px;
+  border: none;
+  padding: 0 5px;
+  margin-top: 0px;
+}
+
+.imageBG {
+  margin-top: 24%;
+  margin-left: 0;
+}
+
+.textContainer>p {
+  font-family: 'Shree Devanagari 714', sans-serif;
+  font-size: 17px;
+  margin-top: 19%;
+  text-align: center;
+  padding: 18px 25px;
+  font-weight: 800;
+}
+
+.textContainer {
+  margin-top: -46%;
+  height: 265px;
+  border: 2px solid #022D41;
+}
+
+.imageFrame {
+  padding: 2px;
+  height: 95px;
+  background-color: white;
+  margin-top: -59%;
+  border: none;
+  text-align: center;
+}
+
+#frame {
+  width: 108px;
+  height: 100px;
+  background-color: white;
+  border: 2px solid #022D41;
+  padding: 5px;
+  margin-left: 28%;
+}
+
+.image {
+  /* width: 125px; */
+  height: 100%;
+}
+
 }
 
 @media (min-width:40.063em) {
@@ -1016,6 +1150,61 @@ button:hover {
     /* font-size: 2.5em; */
     font-size: 2em;
   }
+    
+/***********         TESTIMONIALS -  P A G E    5        ***********/
+                        /* -------------- 5 ------------ */
+
+.card {
+  background-color: transparent;
+  height: 330px;
+  border: none;
+  padding: 0 5px;
+  margin-top: 0px;
+}
+
+.imageBG {
+  margin-top: 21%;
+  margin-left: 0;
+}
+
+.textContainer>p {
+  font-family: 'Shree Devanagari 714', sans-serif;
+  font-size: 19px;
+  margin-top: 12%;
+  text-align: center;
+  padding: 18px 25px;
+  font-weight: 800;
+}
+
+.textContainer {
+  margin-top: -35%;
+  height: 235px;
+  border: 2px solid #022D41;
+}
+
+.imageFrame {
+  padding: 2px;
+  height: 95px;
+  background-color: white;
+  margin-top: -50%;
+  border: none;
+  text-align: center;
+}
+
+#frame {
+  width: 108px;
+  height: 100px;
+  background-color: white;
+  border: 2px solid #022D41;
+  padding: 5px;
+  margin-left: 30%;
+}
+
+.image {
+  /* width: 125px; */
+  height: 100%;
+}
+
 
 }
 
@@ -1040,6 +1229,65 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
   }
+    
+ /***********         TESTIMONIALS -  P A G E    5        ***********/
+                        /* -------------- 5 ------------ */
+
+
+
+.card {
+  background-color: transparent;
+  height: 350px;
+  border: none;
+  padding-top: 12px;
+  padding-left: 60px;
+  margin-top: 0px;
+}
+
+.imageBG {
+  margin-top: 30%;
+  margin-left: -1%;
+}
+
+.textContainer>p {
+  font-family: 'Shree Devanagari 714', sans-serif;
+  font-size: 15px;
+  margin-top: 18%;
+  text-align: center;
+  padding: 18px 25px;
+  font-weight: 600;
+}
+
+.textContainer {
+  margin-top: -46%;
+  height: 250px;
+  border: 2px solid #022D41;
+}
+
+.imageFrame {
+  padding: 2px;
+  height: 95px;
+  background-color: white;
+  margin-top: -68%;
+  border: none;
+  text-align: center;
+}
+
+#frame {
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  border: 2px solid #022D41;
+  padding: 5px;
+  margin-left: 27%;
+}
+
+.image {
+  /* width: 125px; */
+  height: 100%;
+}
+
+    
 }
 
 @media (min-width:64.063em) {
@@ -1059,6 +1307,64 @@ button:hover {
     height: 70vh;
     display: block;
   }
+    
+  /***********         TESTIMONIALS -  P A G E    5        ***********/
+                        /* -------------- 5 ------------ */
+
+
+.card {
+  background-color: transparent;
+  height: 350px;
+  border: none;
+  padding-top: 12px;
+  padding-left: 60px;
+  margin-top: 0px;
+}
+
+.imageBG {
+  margin-top: 20%;
+  margin-left: -1%;
+}
+
+.textContainer>p {
+  font-family: 'Shree Devanagari 714', sans-serif;
+  font-size: 17px;
+  margin-top: 14%;
+  text-align: center;
+  padding: 18px 25px;
+  font-weight: 600;
+}
+
+.textContainer {
+  margin-top: -36%;
+  height: 250px;
+  border: 2px solid #022D41;
+}
+
+.imageFrame {
+  padding: 3px 5px;
+  height: 105px;
+  background-color: white;
+  margin-top: -51%;
+  border: none;
+  text-align: center;
+  padding-left: 25%;
+}
+
+#frame {
+  width: 123px;
+  height: 125px;
+  background-color: white;
+  border: 2px solid #022D41;
+  padding: 5px;
+  margin-left: -65%;
+}
+
+.image {
+  /* width: 125px; */
+  height: 100%;
+}
+
 }
 
 @media (min-width:70.063em) {
@@ -1092,6 +1398,65 @@ button:hover {
   .characters {
     height: 500px;
   }
+    
+/***********         TESTIMONIALS -  P A G E    5        ***********/
+                        /* -------------- 5 ------------ */
+.container {
+  height: auto;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: transparent;
+  height: 360px;
+  border: none;
+  padding-top: 12px;
+  padding-left: 60px;
+  margin-top: 0px;
+}
+
+.imageBG {
+  margin-top: 23%;
+  margin-left: -1%;
+}
+
+.textContainer>p {
+  font-family: 'Shree Devanagari 714', sans-serif;
+  font-size: 17px;
+  margin-top: 14%;
+  text-align: center;
+  padding: 18px 25px;
+  font-weight: 600;
+}
+
+.textContainer {
+  margin-top: -37%;
+  height: 250px;
+  border: 2px solid #022D41;
+}
+
+.imageFrame {
+  padding: 3px 5px;
+  height: 105px;
+  background-color: white;
+  margin-top: -54%;
+  border: none;
+  text-align: center;
+  padding-left: 25%;
+}
+
+#frame {
+  width: 123px;
+  height: 125px;
+  background-color: white;
+  border: 2px solid #022D41;
+  padding: 5px;
+  margin-left: -65%;
+}
+
+
+
 }
 
 @media (min-width:100.063em) {
@@ -1118,4 +1483,65 @@ button:hover {
   .characters {
     height: 600px;
   }
+    
+    /***********         TESTIMONIALS -  P A G E    5        ***********/
+                        /* -------------- 5 ------------ */
+.container {
+  height: auto;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: transparent;
+  height: 360px;
+  border: none;
+  padding-top: 12px;
+  padding-left: 60px;
+  margin-top: 0px;
+}
+
+.imageBG {
+  margin-top: 23%;
+  margin-left: -1%;
+}
+
+.textContainer>p {
+  font-family: 'Shree Devanagari 714', sans-serif;
+  font-size: 17px;
+  margin-top: 14%;
+  text-align: center;
+  padding: 18px 25px;
+  font-weight: 600;
+}
+
+.textContainer {
+  margin-top: -37%;
+  height: 250px;
+  border: 2px solid #022D41;
+}
+
+.imageFrame {
+  padding: 3px 5px;
+  height: 105px;
+  background-color: white;
+  margin-top: -54%;
+  border: none;
+  text-align: center;
+  padding-left: 25%;
+}
+
+#frame {
+  width: 123px;
+  height: 125px;
+  background-color: white;
+  border: 2px solid #022D41;
+  padding: 5px;
+  margin-left: -65%;
+}
+
+
+
+    
+
 }

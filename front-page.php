@@ -506,19 +506,19 @@
                 ?>
                                     <!-- card structure -->
                                     <!-- outer most div containing all smaller elements -->
-                                    <div class="cell card small-4 large-6">
+                                    <div class="cell card small-offset-0 small-12 medium-offset-1 medium-10 large-offset-0  large-6">
                                         <!-- background image for text -->
                                         <img class="imageBG" src="<?php echo $imageBG['url'] ?>" alt="">
                                         <div class="grid-x grid-margin-x">
                                             <!-- larger div for text to be placed inside -->
-                                            <div class="cell small-8 large-10 textContainer">
+                                            <div class="cell small-offset-1 small-10 medium-10  large-10 textContainer">
                                                 <p class="statement">
                                                     <?php echo $statement; ?>
                                                 </p>
                                             </div>
 
                                             <!-- frame for image to be placed inside -->
-                                            <div class="cell small-4 large-6 large-offset-2 imageFrame">
+                                            <div class="cell small-offset-3 small-6 medium-6 large-6 large-offset-3 imageFrame">
                                                 <div id="frame">
                                                     <img class="image" src="<?php echo $image['url'] ?>" alt="">
                                                 </div>
