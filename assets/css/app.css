@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6, p, span {
   margin: 0;
 }
 
+.content-area {
+  max-width: 1280px;
+}
+
 .content_sections {
   padding-top: 30px;
   padding-bottom: 40px;
@@ -61,9 +65,14 @@ footer a, footer a:active, footer a:visited {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-size: cover;
+  background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* custom menu */
+#responsive-menu-container {
+  opacity: 0.9;
 }
 
 .site-navigation {
@@ -125,6 +134,17 @@ a:visited {
   background-size: 200% auto; */
 }
 
+.characters img {
+  height: 55%;
+  position: absolute;
+  top: 28%;
+  left:10%;
+}
+
+#main_img_chara2, #main_img_chara3, #main_img_chara4 {
+  opacity: 0;
+}
+
 .characters {
   margin: 0 auto;
   padding: 20px;
@@ -132,9 +152,9 @@ a:visited {
   transition: all 0.6s cubic-bezier(.79, .14, .15, .86);
 }
 
-.characters img {
+/* .characters img {
   height: 100%;
-}
+} */
 
 #masthead {
   display: none;
@@ -289,12 +309,6 @@ a:visited {
 
 #qualify_page .frame_image {
   margin-left: 199px;
-}
-
-.download {
-  cursor: pointer;
-  padding-left: 180px;
-  color: black;
 }
 
 .download img {
@@ -461,7 +475,7 @@ map-section.leaflet-popup-content-wrapper {
 
 #video_container {
   /* width: 400px; */
-  padding-top: 22px;
+  padding-top: 60px;
 }
 
 #video_description {
@@ -513,9 +527,6 @@ map-section.leaflet-popup-content-wrapper {
   padding: 0 60px;
   padding-bottom: 140px;
 }
-.financial_empowerment_grid {
-  margin-left: 80px;
-} 
 
 #financial_empowerment .section_titles {
   margin-top: 40px;
@@ -898,7 +909,13 @@ button:hover {
   transition: all 0.5s;
 }
 
-
+/* CUSTOM LOGO */
+.custom-logo-link img {
+  width: 300px;
+  height: auto;
+  margin-top: -10px;
+  margin-left: 10px;
+}
 
 /* ANIMATION PURPOSES */
 #main_site_title, .fadeOn {
