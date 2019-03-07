@@ -793,8 +793,8 @@ margin-top: 20px;
 
 
 
-/***********         TESTIMONIALS -  P A G E    5        ***********/
-/* -------------- 5 ------------ */
+        /***********         TESTIMONIALS -  P A G E    5        ***********/
+                        /* -------------- 5 ------------ */
 #testimonials_h1 {
   font-family: 'Shree Devanagari 714', sans-serif;
   font-size: 50px;
@@ -810,8 +810,8 @@ margin-top: 20px;
 .card {
   background-color: transparent;
   height: 360px;
-  padding-top: 12px;
   border: none;
+  padding-top: 12px;
   padding-left: 60px;
   margin-top: 0px;
 }
@@ -978,13 +978,8 @@ button:hover {
     height: 25vh;
     display: none;
   }
-
-
-
-
-
-
-  /***********         TESTIMONIALS -  P A G E    5        ***********/
+    
+/***********         TESTIMONIALS -  P A G E    5        ***********/
                         /* -------------- 5 ------------ */
 
 .testimonials-page {
@@ -1048,157 +1043,6 @@ button:hover {
   /* width: 125px; */
   height: 100%;
 }
-
-
-
-
-
-
-
-
-}
-
-@media (min-width:0em) and (max-width:38em) {
-
-  /* smartphones, iPhone, portrait 480x320 phones */
-
-  /* SHARED */
-  .section_titles {
-    font-size: 30px;
-  }
-
-  /* INTRO SECTION*/
-  .userInp {
-    width: 160px;
-  }
-  
-  .calculate {
-    transition: all 0.3s ease-out;
-    padding: 10px 20px;
-    color: #022D41;
-    background-color: #ffc436;
-    cursor: pointer;
-    width: 160px;
-    height: 52px;
-    margin-left: 28px;
-    /* border-radius: 40px; */
-    border: 2px solid rgba(15, 91, 92, 0.6);
-    padding: 2px;
-  }
-
-  .two_button_container {
-    display: flex;
-  }
-  
-  #or {
-    font-size: 25px;
-    margin-right: 5px;
-    margin-top: 25px;
-    margin-left: 30px;
-  }
-  
-  .findTxHp {
-    font-size: 2em;
-    transition: all 0.3s ease-out;
-    padding: 14px 10px 10px 10px;
-    cursor: pointer;
-    color: #0F5B5C;
-    border-radius: 40px;
-    background-color: rgba(0, 0, 0, 0);
-    border: 2px solid #022D41;
-    background-color: #022D41;
-    color: white;
-  }
-
-  /* HOW TO QUALIFY */
-  .financial_empowerment_grid {
-    margin-left: -20px;
-    margin-top: -80px;
-  }
-
-  .how_to_qualify_btn_container {
-    flex-direction: row;
-    height: 70px;
-    justify-content: space-between;
-    margin-top: 75px;
-    margin-bottom: 20px;
-    margin-left: 35px;
-    margin-right: 20px;
-  }
-  .qualify_buttons {
-    background-color: #022D41;
-    padding: 8px;
-    font-size: 18px;
-    margin-right: 5px;
-    width: 113px;
-  }
-  
-  .qualify_box {
-    margin-top: -434px;
-    margin-left: 41px;
-    width: 332px;
-  }
-  
-  #qualify_page .frame_image {
-    margin-left: 30px;
-    margin-right: 20px;
-    width: 355px;
-    height: 450px;
-  }
-  
-  .download {
-    cursor: pointer;
-    text-align: center;
-    color: black;
-    margin-top: 20px;
-  }
-  
-  .download img {
-    width: 60px;
-  }
-
-  /* LOCATIONS */
-  #locations_page .section_titles {
-    margin-bottom: 0;
-    margin-top: 20px;
-  }
-
-  /* VOLUNTEER SECTION */
-  #video_container {
-    /* width: 400px; */
-    padding-top: 20px;
-  }
-
-  #video_description {
-    line-height: 20px;
-    margin-top: -2px;
-    margin-bottom: 20px;
-  }
-
-  .volunteer_content_container p {
-    line-height: 27px;
-  }
-
-  #volunteer_last_btn {
-    margin-top: 5px;
-  }
-
-  /* BENEFITS FINDER SECTION */
-  #benefits_finder_section {
-    padding: 40px;
-  }
-
-  #benefits_finder_section p, #benefits_finder_section a{
-    font-size: 20px;
-  }
-
-  /* FOOTER SECTION */
-  #footer_holder  img{
-    height: 40px;
-    padding: 5px;
-    margin-left: 0px; 
-  }
-
 }
 
 @media (min-width:30.063em) {
@@ -1221,18 +1065,8 @@ button:hover {
   .findTxHp {
     font-size: 2em;
   }
-
-
-
-
-
-
-
-
-
-
-
-  /***********         TESTIMONIALS -  P A G E    5        ***********/
+    
+/***********         TESTIMONIALS -  P A G E    5        ***********/
                         /* -------------- 5 ------------ */
 
 .testimonials-page {
@@ -1298,13 +1132,6 @@ button:hover {
   height: 100%;
 }
 
-
-
-
-
-
-
-
 }
 
 @media (min-width:40.063em) {
@@ -1340,8 +1167,8 @@ button:hover {
     /* font-size: 2.5em; */
     font-size: 2em;
   }
-
-  /***********         TESTIMONIALS -  P A G E    5        ***********/
+    
+/***********         TESTIMONIALS -  P A G E    5        ***********/
                         /* -------------- 5 ------------ */
 
 .card {
@@ -1395,6 +1222,7 @@ button:hover {
   height: 100%;
 }
 
+
 }
 
 @media (min-width:60.063em) {
@@ -1418,14 +1246,8 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
   }
-
-
-
-
-
-
-
-  /***********         TESTIMONIALS -  P A G E    5        ***********/
+    
+ /***********         TESTIMONIALS -  P A G E    5        ***********/
                         /* -------------- 5 ------------ */
 
 
@@ -1482,12 +1304,7 @@ button:hover {
   height: 100%;
 }
 
-
-
-
-
-
-
+    
 }
 
 @media (min-width:64.063em) {
@@ -1507,16 +1324,7 @@ button:hover {
     height: 70vh;
     display: block;
   }
-
-
-
-
-
-
-
-
-
-
+    
   /***********         TESTIMONIALS -  P A G E    5        ***********/
                         /* -------------- 5 ------------ */
 
@@ -1574,14 +1382,6 @@ button:hover {
   height: 100%;
 }
 
-
-
-
-
-
-
-
-
 }
 
 @media (min-width:70.063em) {
@@ -1615,15 +1415,8 @@ button:hover {
   .characters {
     height: 500px;
   }
-
-
-
-
-
-
-
-
-  /***********         TESTIMONIALS -  P A G E    5        ***********/
+    
+/***********         TESTIMONIALS -  P A G E    5        ***********/
                         /* -------------- 5 ------------ */
 .container {
   height: auto;
@@ -1678,11 +1471,6 @@ button:hover {
   padding: 5px;
   margin-left: -65%;
 }
-
-
-
-
-
 
 
 
@@ -1712,16 +1500,8 @@ button:hover {
   .characters {
     height: 600px;
   }
-
-
-
-
-
-
-
-
-
-     /***********         TESTIMONIALS -  P A G E    5        ***********/
+    
+    /***********         TESTIMONIALS -  P A G E    5        ***********/
                         /* -------------- 5 ------------ */
 .container {
   height: auto;
@@ -1779,10 +1559,6 @@ button:hover {
 
 
 
-
-
-
-
-
+    
 
 }

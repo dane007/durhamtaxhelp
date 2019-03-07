@@ -102,7 +102,7 @@
                             </div>
                 </div>
 
-       
+
         </main>
         </div>
 
@@ -115,7 +115,7 @@
                     <div class="grid-container financial_empowerment_grid">
 
                         <div class="grid-x grid-margin-x">
-                            
+
                             <div class="how_to_qualify_btn_container">
                                 <!-- Buttons -->
                                 <button id="eligible_btn" class="qualify_buttons">
@@ -132,16 +132,16 @@
                             </div>
 
                             <div class="large-9">
-                                
+
                                     <img class="frame_image" src="<?php echo get_template_directory_uri() . '/assets/img/frm1.png'; ?>" alt="frame">
-                                
+
                                 <div class="box qualify_box">
                                     <article id="article_box01" class="article_box">
                                         <h2 class="am_i_eligible_title">Eligibility Criteria:</h2>
-                                        <p class="paragraph0101">People need to be present to have their income tax returns completed.  
-                                            For example, in the case of couples, both partners need to be present, and in the case of 
+                                        <p class="paragraph0101">People need to be present to have their income tax returns completed.
+                                            For example, in the case of couples, both partners need to be present, and in the case of
                                             any children who are earning an income, those children need to be present.</p>
-                                        <p class="paragraph0201">Each clinic has specific eligibility criteria based upon 
+                                        <p class="paragraph0201">Each clinic has specific eligibility criteria based upon
                                             income level and place of residence. Please review the clinic description carefully.</p>
 
                                         <h3 class="volunteer_warning">Volunteers cannot help with income tax returns for:</h3>
@@ -154,7 +154,7 @@
                                             <li>business or rental income and expenses</li>
                                         </ul>
 
-                                        <h4 class="volunteer_CRA_Guidelines">The volunteers trained by Canada Revenue Agency 
+                                        <h4 class="volunteer_CRA_Guidelines">The volunteers trained by Canada Revenue Agency
                                             follow these guidelines:</h4>
 
                                         <ul class="volunteer_CRA_Guidelines_list">
@@ -193,8 +193,8 @@
                                     <article id="article_box03" class="article_box">
                                         <h2 class="what_to_bring_title">What to Bring:</h2>
                                         <ul class="information_slips_list">
-                                            <li>Social Insurance Number (SIN) for you, 
-                                                your spouse, and any dependents such as 
+                                            <li>Social Insurance Number (SIN) for you,
+                                                your spouse, and any dependents such as
                                                 children.</li>
                                             <li>List of  your dependents' names and dates of birth</li>
                                             <li>Details of your spouse's income</li>
@@ -215,7 +215,7 @@
                                         </ul>
                                     <!--- End "What to Bring: Information Slips" section --->
                                     </article>
-                                    
+
 
                                 </div>
 
@@ -234,7 +234,7 @@
 
 
                 </section>
-                
+
 
 
 
@@ -243,7 +243,7 @@
                     <div id='locations' class="locations-page page2">
                     <h1 class="section_titles">Locations</h1>
                         <div id="map-section" class="grid-x">
-                            
+
                             <div id="map-list" class="small-12 medium-12 large-3">
                                 <div class="map-list-option" data-id="0" data-name='divFinGrp'>
                                     <h3>Diverse Financial Group</h3>
@@ -290,12 +290,12 @@
                     $content_2 = $volunteer_content['content_2'];
                     // var_dump( $image );
 
-            
-                        
+
+
                 ?>
 
-                    <?php 
-                    $videovideo = get_field('videovideo');  
+                    <?php
+                    $videovideo = get_field('videovideo');
 
                     $attr = array(
                         'mp4'     => $videovideo,
@@ -307,7 +307,7 @@
 
                                 <h1 class="section_titles cell"><?php echo $main_title; ?></h1>
 
-                                
+
                                 <div class="volunteer grid-x grid-margin-x">
 
                                     <div class="cell small-12 large-4 volunteer_content_container">
@@ -351,7 +351,7 @@
                                         </div>
                                     </div>
                                 </div>
-                             
+
 
                                 <?php
                 }
@@ -404,9 +404,9 @@
                             </div>
 
                             <div class="cell large-11">
-                                
+
                                     <img class="frame_image" src="<?php echo get_template_directory_uri() . '/assets/img/frm1.png'; ?>" alt="frame">
-                                
+
                                 <div class="box">
 
                                     <div id="overview">
@@ -531,12 +531,12 @@
                                 <!-- <div class="grid-container"> -->
                                     <!-- card structure -->
                                     <!-- outer most div containing all smaller elements -->
-                                    <div class="cell card small-offset-0 small-12 medium-offset-1 medium-10 large-offset-0 large-6">
+                                    <div class="cell card small-offset-0 small-12 medium-offset-1 medium-10 large-offset-0  large-6">
                                         <!-- background image for text -->
                                         <img class="imageBG" src="<?php echo $imageBG['url'] ?>" alt="">
                                         <div class="grid-x grid-margin-x">
                                             <!-- larger div for text to be placed inside -->
-                                            <div class="cell small-offset-1 small-10 medium-10 large-10 textContainer">
+                                            <div class="cell small-offset-1 small-10 medium-10  large-10 textContainer">
                                                 <p class="statement">
                                                     <?php echo $statement; ?>
                                                 </p>
