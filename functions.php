@@ -34,6 +34,7 @@ function durhamtaxhelp_scripts() {
 	wp_enqueue_script( 'leaflet-js', get_template_directory_uri() . '/assets/js/vendor/leaflet.js', array( 'jquery' ), '1.4.0', true );
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/js/vendor/foundation.js', array( 'jquery' ), '6.5.1', true );
 	wp_enqueue_script( 'what-input-js', get_template_directory_uri() . '/assets/js/vendor/what-input.js', array( 'jquery' ), '5.1.2', true );
+	wp_enqueue_script( 'tweenmax-js', get_template_directory_uri() . '/assets/js/TweenMax.min.js', array( 'jquery' ), '1.20.4', true );
 	wp_enqueue_script( 'app-js', get_template_directory_uri() . '/assets/js/app.js', array( 'jquery' ), null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -196,11 +196,6 @@ let dataLocations = [{
 
 
     (function animateIntro() {
-      
-      // var tl = new TimelineLite({onComplete:myFunction});
-
-      // $("#main_site_title").hide();
-      //$("#main_site_title").fadeIn(2000);
 
       $("#main_site_title").delay(250).animate({
         opacity: 1
@@ -210,9 +205,19 @@ let dataLocations = [{
         opacity: 1
       }, 250);
 
-      //let image2 = "<?php echo get_template_directory_uri() . '/assets/img/image2.png;?>'";
-      // $(".characters img").delay(1500).attr('src', "<?php echo get_template_directory_uri() . '/assets/img/pdf.png'; ?>");
-
+      let t1 = new TimelineMax({
+        delay:1,
+        repeat:-1, ease: Power1.easeOut 
+      });
+ 
+      t1.to("#main_img_chara1",1 ,{ opacity:1 })
+        .to("#main_img_chara1",1 ,{ opacity:0,delay:1 })
+        .to("#main_img_chara2",1 ,{ opacity:1 })
+        .to("#main_img_chara2",1 ,{ opacity:0,delay:2 })
+        .to("#main_img_chara3",1 ,{ opacity:1 })
+        .to("#main_img_chara3",1 ,{ opacity:0,delay:2 })
+        .to("#main_img_chara4",1 ,{ opacity:1 })
+        .to("#main_img_chara4",1 ,{ opacity:0,delay:2 });
 
 
 
