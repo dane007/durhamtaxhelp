@@ -39,7 +39,7 @@ This will be the foundation for everything we build on. Styles, structure, plugi
 
 
 
-Getting Started
+Getting Started!
 ---------------
 
 Original Theme URL: https://underscores.me
