@@ -27,10 +27,10 @@
 				$time_tells_tech_description = get_bloginfo( 'description', 'display' );
 				if ( $time_tells_tech_description || is_customize_preview() ) :
 					?>
-                                <p class="site-description">
-                                    <?php echo $time_tells_tech_description; /* WPCS: xss ok. */ ?>
-                                </p>
-                                <?php endif; ?>
+                          <p class="site-description">
+                              <?php echo $time_tells_tech_description; /* WPCS: xss ok. */ ?>
+                          </p>
+                          <?php endif; ?>
                     </div>
 
                     <?php
@@ -41,10 +41,10 @@
 				foreach ( $home_contents as $home_content ) {
 					$title = $home_content['title'];
 					$statement = $home_content['statement'];
-                    $image1 = $home_content['image1'];
-                    $image2 = $home_content['image2'];
-                    $image3 = $home_content['image3'];
-                    $image4 = $home_content['image4'];
+          $image1 = $home_content['image1'];
+          $image2 = $home_content['image2'];
+          $image3 = $home_content['image3'];
+          $image4 = $home_content['image4'];
 					$conversion_messages = $home_content['conversion_messages'];
 					$findhelp = $home_content['find_help_button'];
 					$qualify = $home_content['convert_button'];
@@ -58,49 +58,49 @@
 					// var_dump( $image );
 				?>
 
-                            <div class="characters">
-                                <img id="main_img_chara1" src="<?php echo $image1['url'] ?>" alt="">
-                                <img id="main_img_chara2" src="<?php echo $image2['url'] ?>" alt="">
-                                <img id="main_img_chara3" src="<?php echo $image3['url'] ?>" alt="">
-                                <img id="main_img_chara4" src="<?php echo $image4['url'] ?>" alt="">
-                            </div>
-                            <!-- Main Content for Front-Page -->
+          <div class="characters">
+              <img id="main_img_chara1" src="<?php echo $image1['url'] ?>" alt="">
+              <img id="main_img_chara2" src="<?php echo $image2['url'] ?>" alt="">
+              <img id="main_img_chara3" src="<?php echo $image3['url'] ?>" alt="">
+              <img id="main_img_chara4" src="<?php echo $image4['url'] ?>" alt="">
+          </div>
+          <!-- Main Content for Front-Page -->
 
-                            <div class="intro grid-x grid-margin-x">
+          <div class="intro grid-x grid-margin-x">
 
-                                <h1 id="main_site_title" class="title small-12"><?php echo $title; ?></h1>
-                                <p class="statement fadeOn small-12">
-                                    <?php echo $statement; ?>
-                                </p>
-                                <p class="conversion fadeOn small-12 medium-12">
-                                    <?php echo $begin; ?>
-                                </p>
-                                <div class="inp fadeOn small-6 medium-4 large-4">
-                                    <input class="userInp" type="number" name="" value="" placeholder="Example: 30000">
-                                </div>
-                                <div class="btn fadeOn small-6 medium-2 large-3">
-                                    <button class="calculate" type="button" name="button">
-                                        <?php echo $qualify; ?>
-                                    </button>
-                                </div>
-                                <div class="two_button_container">
-                                    <p class="fadeOn" id="or">OR</p>
-                                    <div class="bigbtn fadeOn small-12">
-                                        <a href="#volunteer_page">
-                                            <button class="findTxHp" type="button" name="button">
-                                                <?php echo $findhelp; ?>
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <?php
+              <h1 id="main_site_title" class="title small-12"><?php echo $title; ?></h1>
+              <p class="statement fadeOn small-12">
+                  <?php echo $statement; ?>
+              </p>
+              <p class="conversion fadeOn small-12 medium-12">
+                  <?php echo $begin; ?>
+              </p>
+              <div class="inp fadeOn small-6 medium-4 large-4">
+                  <input class="userInp" type="number" name="" value="" placeholder="Example: 30000">
+              </div>
+              <div class="btn fadeOn small-6 medium-2 large-3">
+                  <button class="calculate" type="button" name="button">
+                      <?php echo $qualify; ?>
+                  </button>
+              </div>
+              <div class="two_button_container">
+                  <p class="fadeOn" id="or">OR</p>
+                  <div class="bigbtn fadeOn small-12">
+                      <a href="#volunteer_page">
+                          <button class="findTxHp" type="button" name="button">
+                              <?php echo $findhelp; ?>
+                          </button>
+                      </a>
+                  </div>
+              </div>
+              <?php
 				}
 				?>
-                                    <?php
+      <?php
 			}
 			?>
-                            </div>
-                </div>
+            </div>
+        </div>
 
 
         </main>
@@ -133,7 +133,6 @@
 
                             <div class="large-9">
 
-                                    <img class="frame_image" src="<?php echo get_template_directory_uri() . '/assets/img/frm1.png'; ?>" alt="frame">
 
                                 <div class="box qualify_box">
                                     <article id="article_box01" class="article_box">
@@ -303,57 +302,57 @@
                     );
                     ?>
 
-                                <!-- Main Content for Volunteer-Section -->
+                    <!-- Main Content for Volunteer-Section -->
 
-                                <h1 class="section_titles cell"><?php echo $main_title; ?></h1>
+                    <h1 class="section_titles cell"><?php echo $main_title; ?></h1>
 
 
-                                <div class="volunteer grid-x grid-margin-x">
+                    <div class="volunteer grid-x grid-margin-x">
 
-                                    <div class="cell small-12 large-4 volunteer_content_container">
-                                        <h4 class="volunteer_subtitles"><?php echo $title_1; ?></h4>
-                                        <p class="">
-                                            <?php echo $content_1; ?>
-                                        </p>
-                                        <div class="volunteer_button_container">
-                                            <a href="#locations_page">
-                                                <button class="volunteer_button" type="button" name="button">Organizations >></button>
-                                            </a>
-                                        </div>
-                                        <p id="volunteer_p2">To officially register or to get more information about being a volunteer, click the button below.</p>
-                                        <div class="volunteer_button_container">
-                                            <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program/lend-a-hand-individuals.html">
-                                                <button class="volunteer_button" type="button" name="button">Learn More >></button>
-                                            </a>
-                                        </div>
-                                    </div>
+                        <div class="cell small-12 large-4 volunteer_content_container">
+                            <h4 class="volunteer_subtitles"><?php echo $title_1; ?></h4>
+                            <p class="">
+                                <?php echo $content_1; ?>
+                            </p>
+                            <div class="volunteer_button_container">
+                                <a href="#locations_page">
+                                    <button class="volunteer_button" type="button" name="button">Organizations >></button>
+                                </a>
+                            </div>
+                            <p id="volunteer_p2">To officially register or to get more information about being a volunteer, click the button below.</p>
+                            <div class="volunteer_button_container">
+                                <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program/lend-a-hand-individuals.html">
+                                    <button class="volunteer_button" type="button" name="button">Learn More >></button>
+                                </a>
+                            </div>
+                        </div>
 
-                                    <div class="cell small-12 large-4">
-                                        <div id="video_container">
-                                            <div id="short_video">
-                                                <?php echo wp_video_shortcode( $attr ) ?>
-                                            </div>
-                                        </div>
-                                        <p id="video_description">
-                                            <?php echo $video_description; ?>
-                                        </p>
-                                    </div>
-
-                                    <div class="cell small-12 large-4 volunteer_content_container">
-                                        <h4 class="volunteer_subtitles"><?php echo $title_2; ?></h4>
-                                        <p class="">
-                                            <?php echo $content_2; ?>
-                                        </p>
-                                        <div id="volunteer_last_btn" class="volunteer_button_container">
-                                            <a href="https://www.canada.ca/en/revenue-agency/news/newsroom/tax-tips/tax-tips-2014/tax-clinics-your-community-organization.html">
-                                                <button class="volunteer_button" type="button" name="button">Click here >></button>
-                                            </a>
-                                        </div>
-                                    </div>
+                        <div class="cell small-12 large-4">
+                            <div id="video_container">
+                                <div id="short_video">
+                                    <?php echo wp_video_shortcode( $attr ) ?>
                                 </div>
+                            </div>
+                            <p id="video_description">
+                                <?php echo $video_description; ?>
+                            </p>
+                        </div>
+
+                        <div class="cell small-12 large-4 volunteer_content_container">
+                            <h4 class="volunteer_subtitles"><?php echo $title_2; ?></h4>
+                            <p class="">
+                                <?php echo $content_2; ?>
+                            </p>
+                            <div id="volunteer_last_btn" class="volunteer_button_container">
+                                <a href="https://www.canada.ca/en/revenue-agency/news/newsroom/tax-tips/tax-tips-2014/tax-clinics-your-community-organization.html">
+                                    <button class="volunteer_button" type="button" name="button">Click here >></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
 
-                                <?php
+                    <?php
                 }
                 ?>
                                     <?php
@@ -404,8 +403,6 @@
                             </div>
 
                             <div class="cell large-11">
-
-                                    <img class="frame_image" src="<?php echo get_template_directory_uri() . '/assets/img/frm1.png'; ?>" alt="frame">
 
                                 <div class="box">
 
@@ -528,32 +525,32 @@
 
                 ?>
 
-                                <!-- <div class="grid-container"> -->
-                                    <!-- card structure -->
-                                    <!-- outer most div containing all smaller elements -->
-                                    <div class="cell card small-offset-0 small-12 medium-offset-1 medium-10 large-offset-0  large-6">
-                                        <!-- background image for text -->
-                                        <img class="imageBG" src="<?php echo $imageBG['url'] ?>" alt="">
-                                        <div class="grid-x grid-margin-x">
-                                            <!-- larger div for text to be placed inside -->
-                                            <div class="cell small-offset-1 small-10 medium-10  large-10 textContainer">
-                                                <p class="statement">
-                                                    <?php echo $statement; ?>
-                                                </p>
-                                            </div>
+                <!-- <div class="grid-container"> -->
+                    <!-- card structure -->
+                    <!-- outer most div containing all smaller elements -->
+                    <div class="cell card small-offset-0 small-12 medium-offset-1 medium-10 large-offset-0  large-6">
+                        <!-- background image for text -->
+                        <img class="imageBG" src="<?php echo $imageBG['url'] ?>" alt="">
+                        <div class="grid-x grid-margin-x">
+                            <!-- larger div for text to be placed inside -->
+                            <div class="cell small-offset-1 small-10 medium-10  large-10 textContainer">
+                                <p class="statement">
+                                    <?php echo $statement; ?>
+                                </p>
+                            </div>
 
-                                            <!-- frame for image to be placed inside -->
-                                            <div class="cell small-offset-3 small-6 medium-6 large-6 large-offset-3 imageFrame">
-                                                <div id="frame">
-                                                    <img class="image" src="<?php echo $image['url'] ?>" alt="">
-                                                </div>
-                                            </div>
+                            <!-- frame for image to be placed inside -->
+                            <div class="cell small-offset-3 small-6 medium-6 large-6 large-offset-3 imageFrame">
+                                <div id="frame">
+                                    <img class="image" src="<?php echo $image['url'] ?>" alt="">
+                                </div>
+                            </div>
 
-                                        </div>
-                                    </div>
-                                <!-- </div> -->
+                        </div>
+                    </div>
+                <!-- </div> -->
 
-                                    <?php
+                    <?php
         }
         ?>
                                         <?php

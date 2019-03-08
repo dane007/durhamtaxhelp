@@ -52,6 +52,7 @@ let dataLocations = [{
   address: "605 Rossland Rd. E.",
   desc: "P. O. Box 623\nWhitby, ON L1N 6A3"
 }];
+
 (function($) {
 
   // Initialize Slick Slider
@@ -74,12 +75,14 @@ let dataLocations = [{
         if (userNum <= 30000) {
           CONVERSION.innerHTML = `$${userNum} is a qualified income!`;
         } else {
-          CONVERSION.innerHTML = `Sorry, $${userNum} is too high an income..`;
+          CONVERSION.innerHTML = `Sorry, $${userNum} is too high an income.`;
         }
         userInp.value = "";
       }
 
     });
+    $("#article_box02").hide();
+    $("#article_box03").hide();
 
     // $('.slider').slick({
     //   dots: true,
@@ -200,28 +203,179 @@ let dataLocations = [{
       $("#main_site_title").delay(250).animate({
         opacity: 1
       }, 500);
-  
+
       $(".fadeOn").delay(500).animate({
         opacity: 1
       }, 250);
 
       let t1 = new TimelineMax({
-        delay:1,
-        repeat:-1, ease: Power1.easeOut 
+        delay: 1,
+        repeat: -1,
+        ease: Power1.easeOut
       });
- 
-      t1.to("#main_img_chara1",1 ,{ opacity:1 })
-        .to("#main_img_chara1",1 ,{ opacity:0,delay:1 })
-        .to("#main_img_chara2",1 ,{ opacity:1 })
-        .to("#main_img_chara2",1 ,{ opacity:0,delay:2 })
-        .to("#main_img_chara3",1 ,{ opacity:1 })
-        .to("#main_img_chara3",1 ,{ opacity:0,delay:2 })
-        .to("#main_img_chara4",1 ,{ opacity:1 })
-        .to("#main_img_chara4",1 ,{ opacity:0,delay:2 });
+
+      t1.to("#main_img_chara1", 1, {
+          opacity: 1
+        })
+        .to("#main_img_chara1", 1, {
+          opacity: 0,
+          delay: 1
+        })
+        .to("#main_img_chara2", 1, {
+          opacity: 1
+        })
+        .to("#main_img_chara2", 1, {
+          opacity: 0,
+          delay: 2
+        })
+        .to("#main_img_chara3", 1, {
+          opacity: 1
+        })
+        .to("#main_img_chara3", 1, {
+          opacity: 0,
+          delay: 2
+        })
+        .to("#main_img_chara4", 1, {
+          opacity: 1
+        })
+        .to("#main_img_chara4", 1, {
+          opacity: 0,
+          delay: 2
+        });
 
 
 
     })();
+
+
+
+
+
+
+    // FINANCIAL EMPOWERMENT
+    $("#cost").hide();
+    $("#credit").hide();
+    $("#overview").show();
+    $("#tax").hide();
+    $("#bond").hide();
+    $("#arrow1").hide();
+    $("#arrow2").hide();
+    $("#arrow3").hide();
+    $("#arrow4").hide();
+
+    $(".one").click(function() {
+
+      $("#cost").show();
+      $("#overview").hide();
+      $("#credit").hide();
+      $("#tax").hide();
+      $("#bond").hide();
+      $("#arrow1").show();
+      $("#arrow2").hide();
+      $("#arrow3").hide();
+      $("#arrow4").hide();
+
+
+    });
+    $(".two").click(function() {
+
+      $("#credit").show();
+      $("#overview").hide();
+      $("#cost").hide();
+      $("#tax").hide();
+      $("#bond").hide();
+      $("#arrow2").show();
+      $("#arrow1").hide();
+      $("#arrow3").hide();
+      $("#arrow4").hide();
+
+    });
+    $(".three").click(function() {
+
+      $("#tax").show();
+      $("#overview").hide();
+      $("#cost").hide();
+      $("#credit").hide();
+      $("#bond").hide();
+      $("#arrow3").show();
+      $("#arrow2").hide();
+      $("#arrow4").hide();
+      $("#arrow1").hide();
+
+    });
+    $(".four").click(function() {
+
+      $("#bond").show();
+      $("#overview").hide();
+      $("#cost").hide();
+      $("#credit").hide();
+      $("#tax").hide();
+      $("#arrow4").show();
+      $("#arrow3").hide();
+      $("#arrow2").hide();
+      $("#arrow1").hide();
+
+    });
+
+    // HOW TO QUALIFY
+    $(function() {
+
+      $("#eligible_btn").addClass("qualify_button_selected");
+
+      $("#eligible_btn").click(function() {
+        $("#article_box01").fadeIn();
+        $("#article_box02").fadeOut();
+        $("#article_box03").fadeOut();
+
+        $("#eligible_btn").addClass("qualify_button_selected");
+        $("#eligible_btn").removeClass("qualify_button_deselected");
+
+        $("#receipts_btn").addClass("qualify_button_deselected");
+        $("#receipts_btn").removeClass("qualify_button_selected");
+
+        $("#infoSlips_btn").addClass("qualify_button_deselected");
+        $("#infoSlips_btn").removeClass("qualify_button_selected");
+
+      });
+
+
+
+      $("#receipts_btn").click(function() {
+        // Remove Classes
+
+        $("#article_box01").fadeOut();
+        $("#article_box02").fadeIn();
+        $("#article_box03").fadeOut();
+
+        $("#receipts_btn").addClass("qualify_button_selected");
+        $("#receipts_btn").removeClass("qualify_button_deselected");
+
+        $("#eligible_btn").addClass("qualify_button_deselected");
+        $("#eligible_btn").removeClass("qualify_button_selected");
+
+        $("#infoSlips_btn").addClass("qualify_button_deselected");
+        $("#infoSlips_btn").removeClass("qualify_button_selected");
+
+
+      });
+
+
+      $("#infoSlips_btn").click(function() {
+        $("#article_box01").fadeOut();
+        $("#article_box02").fadeOut();
+        $("#article_box03").delay(100).fadeIn();
+
+        $("#infoSlips_btn").addClass("qualify_button_selected");
+        $("#infoSlips_btn").removeClass("qualify_button_deselected");
+
+        $("#eligible_btn").addClass("qualify_button_deselected");
+        $("#eligible_btn").removeClass("qualify_button_selected");
+
+        $("#receipts_btn").addClass("qualify_button_deselected");
+        $("#receipts_btn").removeClass("qualify_button_selected");
+      });
+
+    });
 
 
 
@@ -242,128 +396,3 @@ let dataLocations = [{
   };
 
 })(jQuery);
-
-// FINANCIAL EMPOWERMENT
-$("#cost").hide();
-  $("#credit").hide();
-  $("#overview").show();
-  $("#tax").hide();
-  $("#bond").hide();
-  $("#arrow1").hide();
-  $("#arrow2").hide();
-  $("#arrow3").hide();
-  $("#arrow4").hide();
-
-  $(".one").click(function() {
-
-      $("#cost").show();
-      $("#overview").hide();
-      $("#credit").hide();
-      $("#tax").hide();
-      $("#bond").hide();
-      $("#arrow1").show();
-      $("#arrow2").hide();
-      $("#arrow3").hide();
-      $("#arrow4").hide();
-
-
-  });
-  $(".two").click(function() {
-
-      $("#credit").show();
-      $("#overview").hide();
-      $("#cost").hide();
-      $("#tax").hide();
-      $("#bond").hide();
-      $("#arrow2").show();
-      $("#arrow1").hide();
-      $("#arrow3").hide();
-      $("#arrow4").hide();
-
-  });
-  $(".three").click(function() {
-
-      $("#tax").show();
-      $("#overview").hide();
-      $("#cost").hide();
-      $("#credit").hide();
-      $("#bond").hide();
-      $("#arrow3").show();
-      $("#arrow2").hide();
-      $("#arrow4").hide();
-      $("#arrow1").hide();
-
-  });
-  $(".four").click(function() {
-
-      $("#bond").show();
-      $("#overview").hide();
-      $("#cost").hide();
-      $("#credit").hide();
-      $("#tax").hide();
-      $("#arrow4").show();
-      $("#arrow3").hide();
-      $("#arrow2").hide();
-      $("#arrow1").hide();
-
-  });
-
-// HOW TO QUALIFY
-  $(function() {
-
-    $("#eligible_btn").addClass("qualify_button_selected");
-
-    $( "#eligible_btn" ).click(function() {
-      $("#article_box01").fadeIn();
-      $("#article_box02").fadeOut();
-      $("#article_box03").fadeOut();
-    
-      $("#eligible_btn").addClass("qualify_button_selected");
-      $("#eligible_btn").removeClass("qualify_button_deselected");
-    
-      $("#receipts_btn").addClass("qualify_button_deselected");
-      $("#receipts_btn").removeClass("qualify_button_selected");
-    
-      $("#infoSlips_btn").addClass("qualify_button_deselected");
-      $("#infoSlips_btn").removeClass("qualify_button_selected");
-      
-    }); 
-    
-    
-    
-    $( "#receipts_btn" ).click(function() {
-      // Remove Classes
-    
-      $("#article_box01").fadeOut();
-      $("#article_box02").fadeIn();
-      $("#article_box03").fadeOut();
-    
-      $("#receipts_btn").addClass("qualify_button_selected");
-      $("#receipts_btn").removeClass("qualify_button_deselected");
-    
-      $("#eligible_btn").addClass("qualify_button_deselected");
-      $("#eligible_btn").removeClass("qualify_button_selected");
-    
-      $("#infoSlips_btn").addClass("qualify_button_deselected");
-      $("#infoSlips_btn").removeClass("qualify_button_selected");
-    
-      
-    });
-    
-    
-    $( "#infoSlips_btn" ).click(function() {
-      $("#article_box01").fadeOut();
-      $("#article_box02").fadeOut();
-      $("#article_box03").delay(100).fadeIn();
-    
-      $("#infoSlips_btn").addClass("qualify_button_selected");
-      $("#infoSlips_btn").removeClass("qualify_button_deselected");
-    
-      $("#eligible_btn").addClass("qualify_button_deselected");
-      $("#eligible_btn").removeClass("qualify_button_selected");
-    
-      $("#receipts_btn").addClass("qualify_button_deselected");
-      $("#receipts_btn").removeClass("qualify_button_selected");
-    });
-     
-    });
