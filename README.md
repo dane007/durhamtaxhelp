@@ -40,7 +40,6 @@ This will be the foundation for everything we build on. Styles, structure, plugi
 
 
 Getting Started
-Caleb was here
 ---------------
 
 Original Theme URL: https://underscores.me
