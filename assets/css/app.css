@@ -63,13 +63,6 @@ footer a, footer a:active, footer a:visited {
   position: absolute;
 }
 
-/*            M E N U            */
-/* ------------ -n- ------------ */
-.responsive-menu-boring {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
 .slider .slide {
   min-height: 600px;
   display: flex !important;
@@ -81,6 +74,98 @@ footer a, footer a:active, footer a:visited {
   background-repeat: no-repeat;
 }
 
+#qualify_page, #volunteer, #empowerment, #testimonials {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  /* border-bottom: 2px solid black; */
+}
+
+#sidebar {
+  position: absolute;
+  margin-top: 0px;
+  width: 250px;
+  height: 460px;
+  background-color: #022d41;
+  border-radius: 40px;
+}
+
+.fullVH {
+  height: 100vh;
+  align-content: flex-start;
+}
+
+#navi {
+  z-index: 2;
+  position: absolute;
+  /* margin-left: 100px; */
+  margin-top: 85px;
+}
+
+nav {
+  position: absolute;
+  margin: 50px 0px auto 0px;
+  margin-left: 20px;
+  z-index: 2;
+}
+
+a {
+  color: #27a5b7;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #022d41;
+}
+
+#footer {
+  background: #022d41;
+  width: 100vw;
+}
+
+#footer_holder {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#footer_holder img {
+  height: 100px;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+button {
+  transition: all 0.5s;
+}
+
+button:hover {
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+
+/* CUSTOM LOGO */
+.custom-logo-link img {
+  width: 300px;
+  height: auto;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+/* ANIMATION PURPOSES */
+#main_site_title, .fadeOn {
+  opacity: 0;
+}
+
+/*            M E N U            */
+/* ------------ -n- ------------ */
+.responsive-menu-boring {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
 .site-navigation {
   top: 0;
   position: absolute;
@@ -88,6 +173,11 @@ footer a, footer a:active, footer a:visited {
 
 a:visited {
   color: gray;
+}
+
+/* custom menu */
+#responsive-menu-container {
+  opacity: 0.9;
 }
 
 /*   L A N D I N G    P A G E    */
@@ -250,22 +340,13 @@ a:visited {
   color: black;
 }
 
-#qualify_page {
-  border-top: 1px solid black;
-}
-
 #volunteer_page,
 #financial_empowerment {
   min-height: auto;
 }
 
-/* custom menu */
-#responsive-menu-container {
-  opacity: 0.9;
-}
-
-/*          P A G E    1         */
-/* ------------ -1- ------------ */
+/*  H O W   T O   Q U A L I F Y  */
+/* ------------ -2- ------------ */
 .page2, .testimonials-page {
   background-color: rgba(255, 255, 255, 1);
   height: 100vh;
@@ -275,6 +356,10 @@ a:visited {
   align-content: center;
   justify-content: flex-end;
   align-items: center;
+}
+
+#qualify_page {
+  border-top: 1px solid black;
 }
 
 #qualify_page .section_titles {}
@@ -323,8 +408,8 @@ a:visited {
   width: 80px;
 }
 
-/*          P A G E    2         */
-/* ------------ -2- ------------ */
+/*        L O C A T I O N S      */
+/* ------------ -3- ------------ */
 .page2 {
   background-image: url(../img/bgBG-002.png);
   background-position: center;
@@ -441,17 +526,6 @@ map-section.leaflet-popup-content-wrapper {
   border: none;
 }
 
-/* HOW TO QUALIFY */
-#qualify_page, #volunteer, #empowerment, #testimonials {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  /* border-bottom: 2px solid black; */
-}
-
 #locations {
   width: 100vw;
   min-height: 100vh;
@@ -461,7 +535,8 @@ map-section.leaflet-popup-content-wrapper {
   align-items: center;
 }
 
-/* VOLUNTEER PAGE */
+/*  V O L U N T E E R   P A G E  */
+/* ------------ -4- ------------ */
 #volunteer_page div {
   border-radius: 10px;
 }
@@ -522,7 +597,8 @@ map-section.leaflet-popup-content-wrapper {
   border-radius: 15px;
 }
 
-/* FINANCIAL EMPOWERMENT */
+/*    F I N A N C I A L    E M P O W E R M E N T     */
+/* ---------------------- -5- ---------------------- */
 #financial_empowerment {
   padding: 0 60px;
   padding-bottom: 140px;
@@ -552,27 +628,6 @@ map-section.leaflet-popup-content-wrapper {
 
 #financial_empowerment .frame_image {
   margin-left: 330px;
-}
-
-#sidebar {
-  position: absolute;
-  margin-top: 0px;
-  width: 250px;
-  height: 460px;
-  background-color: #022d41;
-  border-radius: 40px;
-}
-
-.fullVH {
-  height: 100vh;
-  align-content: flex-start;
-}
-
-#navi {
-  z-index: 2;
-  position: absolute;
-  /* margin-left: 100px; */
-  margin-top: 85px;
 }
 
 .htq_grid {
@@ -646,13 +701,6 @@ map-section.leaflet-popup-content-wrapper {
   margin-left: 30px;
 }
 
-nav {
-  position: absolute;
-  margin: 50px 0px auto 0px;
-  margin-left: 20px;
-  z-index: 2;
-}
-
 #sideNav ol {
   margin-top: 20px;
 }
@@ -685,15 +733,6 @@ nav {
 
 .secondPara {
   padding: 20px 30px 20px 35px;
-}
-
-a {
-  color: #27a5b7;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #022d41;
 }
 
 .thirdPara {
@@ -790,11 +829,6 @@ a:hover {
   width: 5%;
 }
 
-blockqoute {
-  height: 200px;
-  width: 200px;
-}
-
 #sidebar div img {
   height: 86px;
   max-width: 280px;
@@ -817,8 +851,8 @@ blockqoute {
   margin-top: -2px;
 }
 
-/***********         TESTIMONIALS -  P A G E    5        ***********/
-/* -------------- 5 ------------ */
+/* T E S I M O N I A L S    P A G E  */
+/* -------------- -6- ------------ */
 #testimonials_h1 {
   font-family: 'Shree Devanagari 714', sans-serif;
   font-size: 50px;
@@ -939,44 +973,6 @@ blockqoute {
 #benefits_finder_section a {
   color: #022D41;
   text-decoration: underline;
-}
-
-#footer {
-  background: #022d41;
-  width: 100vw;
-}
-
-#footer_holder {
-  text-align: center;
-  padding: 10px 0;
-}
-
-#footer_holder img {
-  height: 100px;
-  padding: 5px;
-  margin-left: 20px;
-}
-
-button {
-  transition: all 0.5s;
-}
-
-button:hover {
-  opacity: 0.7;
-  transition: all 0.5s;
-}
-
-/* CUSTOM LOGO */
-.custom-logo-link img {
-  width: 300px;
-  height: auto;
-  margin-top: -10px;
-  margin-left: 10px;
-}
-
-/* ANIMATION PURPOSES */
-#main_site_title, .fadeOn {
-  opacity: 0;
 }
 
 /*          Q U E R I E S        */
