@@ -978,6 +978,11 @@ map-section.leaflet-popup-content-wrapper {
   text-decoration: underline;
 }
 
+/*          CONTACT PAGE        */
+#contactHeading {
+    text-align: center;
+}
+
 /*          Q U E R I E S        */
 /* ------------ -q- ------------ */
 @media (min-width:0em) {

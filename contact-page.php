@@ -1,0 +1,60 @@
+<?php
+/**
+ * Template Name: Contact Page
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package durhamtaxhelp
+ */
+
+get_header();
+?>
+
+	
+	
+		<?php
+		while ( have_posts() ) :
+			the_post();
+
+			get_template_part( 'template-parts/content', 'page' );
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		endwhile; // End of the loop.
+		?>
+
+
+		<?php
+		
+		if (function_exists('get_field')) {
+		  $form_id = get_field('form_id');
+		  $form_shortcode = get_field('form_shortcode');
+		  if ($form_id || $form_shortcode) {
+			?>
+			<section class="contact-form">
+			  <div class="grid-container">
+				<div class="grid-x grid-margin-x grid-margin-y">
+				  <div class="cell small-12 medium-6">
+					<h2 id="contactHeading"> Contact US </h2>
+					<?php echo do_shortcode('[ws_form id="' . $form_id . '"]'); ?>
+				  </div>
+				  
+				</div>
+			  </div>
+			</section>
+			<?php
+		  }
+		}
+		?>
+
+<?php
+get_footer();
+?>
