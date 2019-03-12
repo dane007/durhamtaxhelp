@@ -159,6 +159,22 @@ button:hover {
   opacity: 0;
 }
 
+.box {
+  overflow: auto;
+  position: relative;
+  /* border-radius: 50px; */
+  /* background-color: rgba(39, 165, 183, 0.09); */
+  /* background-image: url(../img/frm1.png);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat; */
+  border-image-source: url(../img/frm1.png);
+  border-image-slice: 27 27 27 27;
+  border-image-width: 20px 20px 20px 20px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: stretch stretch;
+}
+
 /*            M E N U            */
 /* ------------ -n- ------------ */
 .responsive-menu-boring {
@@ -362,15 +378,23 @@ a:visited {
   border-top: 1px solid black;
 }
 
+.qualify_box {
+  padding: 25px;
+  /* min-width: 90%; */
+}
+
 #qualify_page .section_titles {}
 
-/* HOW TO QUALIFY PAGE */
 .how_to_qualify_btn_container {
   margin: auto 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
+}
+
+#qualify_page .qualify_box {
   height: 100%;
 }
 
@@ -393,11 +417,6 @@ a:visited {
   /* width: 223.411px;
 	height: 80.02px; */
   background-color: #022D41;
-}
-
-.qualify_box {
-  padding: 25px;
-  /* min-width: 90%; */
 }
 
 #qualify_page .frame_image {
@@ -641,22 +660,6 @@ map-section.leaflet-popup-content-wrapper {
 /* .htq_grid .section_titles {
   margin-bottom: 0;
 } */
-.box {
-  overflow: auto;
-  position: relative;
-  /* border-radius: 50px; */
-  /* background-color: rgba(39, 165, 183, 0.09); */
-  /* background-image: url(../img/frm1.png);
-  background-size: contain;
-  background-position: left;
-  background-repeat: no-repeat; */
-  border-image-source: url(../img/frm1.png);
-  border-image-slice: 27 27 27 27;
-  border-image-width: 20px 20px 20px 20px;
-  border-image-outset: 0px 0px 0px 0px;
-  border-image-repeat: stretch stretch;
-}
-
 #overview,
 #cost,
 #credit,
@@ -1013,19 +1016,14 @@ map-section.leaflet-popup-content-wrapper {
     font-size: 1.75em;
   }
 
-  /* HOW TO QUALIFY */
   .qualify_buttons {
+    background-color: #022D41;
     padding: 14px 10px 10px 10px;
     font-size: 1.5em;
     margin-right: 5px;
     width: auto;
   }
 
-  /* .qualify_box {
-    margin-top: -434px;
-    margin-left: 41px;
-    width: 332px;
-  } */
   #qualify_page .frame_image {
     margin-left: 30px;
     margin-right: 20px;
@@ -1196,21 +1194,6 @@ map-section.leaflet-popup-content-wrapper {
     height: auto;
   }
 
-  .container {
-    background-color: transparent;
-    height: auto;
-    padding: 0 5px;
-    margin: 0;
-  }
-
-  .card {
-    /* background-color: transparent; */
-    height: 310px;
-    border: none;
-    padding: 0 5px;
-    margin-top: 0px;
-  }
-
   .imageBG {
     margin-top: 24%;
     margin-left: 0;
@@ -1293,14 +1276,8 @@ map-section.leaflet-popup-content-wrapper {
     flex-flow: column wrap;
   }
 
-  /***********         TESTIMONIALS -  P A G E    5        ***********/
-  /* -------------- 5 ------------ */
   .card {
-    /* background-color: transparent; */
     height: 330px;
-    border: none;
-    padding: 0 5px;
-    margin-top: 0px;
   }
 
   .imageBG {
@@ -1373,12 +1350,9 @@ map-section.leaflet-popup-content-wrapper {
   /***********         TESTIMONIALS -  P A G E    5        ***********/
   /* -------------- 5 ------------ */
   .card {
-    /* background-color: transparent; */
     height: 350px;
-    border: none;
     padding-top: 12px;
     padding-left: 60px;
-    margin-top: 0px;
     transform: scale(1.1);
   }
 
@@ -1451,12 +1425,9 @@ map-section.leaflet-popup-content-wrapper {
   /***********         TESTIMONIALS -  P A G E    5        ***********/
   /* -------------- 5 ------------ */
   .card {
-    /* background-color: transparent; */
     height: 350px;
-    border: none;
     padding-top: 12px;
     padding-left: 60px;
-    margin-top: 0px;
   }
 
   .imageBG {
@@ -1544,12 +1515,9 @@ map-section.leaflet-popup-content-wrapper {
   }
 
   .card {
-    /* background-color: transparent; */
     height: 360px;
-    border: none;
     padding-top: 12px;
     padding-left: 60px;
-    margin-top: 0px;
   }
 
   .imageBG {
@@ -1612,22 +1580,6 @@ map-section.leaflet-popup-content-wrapper {
 
   .characters {
     height: 600px;
-  }
-
-  /***********         TESTIMONIALS -  P A G E    5        ***********/
-  /* -------------- 5 ------------ */
-  .container {
-    height: auto;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
-
-  .card {
-    height: 360px;
-    border: none;
-    padding-top: 12px;
-    padding-left: 60px;
-    margin-top: 0px;
   }
 
   .imageBG {
