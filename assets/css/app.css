@@ -106,10 +106,24 @@ footer a, footer a:active, footer a:visited {
 }
 
 nav {
-  position: absolute;
-  margin: 50px 0px auto 0px;
-  margin-left: 20px;
+  /* position: absolute; */
+  margin: 10px;
   z-index: 2;
+}
+
+#masthead nav {
+  position: absolute;
+  margin: 10px;
+  z-index: 2;
+  right: 0;
+  width: 20%;
+}
+
+.nav-menu {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 a {
@@ -237,7 +251,9 @@ a:visited {
   height: 100%;
 } */
 #masthead {
-  display: none;
+  display: block;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .intro {
@@ -980,7 +996,7 @@ map-section.leaflet-popup-content-wrapper {
 
 /*          CONTACT PAGE        */
 #contactHeading {
-    text-align: center;
+  text-align: center;
 }
 
 /*          Q U E R I E S        */
@@ -1170,6 +1186,10 @@ map-section.leaflet-popup-content-wrapper {
     height: 20%;
     margin: 0 auto;
     flex-flow: row wrap;
+  }
+
+  #site-navigation .top-bar {
+    display: none;
   }
 }
 

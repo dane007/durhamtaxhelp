@@ -6,7 +6,7 @@
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site may use a
  * different template.
- *
+ * nav-menu
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package durhamtaxhelp
@@ -111,7 +111,7 @@
                     <?php
                         if ( function_exists( 'get_field' ) ) {
                         $qualify_contents = get_field( 'qualify_contents' );
-                        
+
                     // var_dump( $image );
                     ?>
                     <?php
@@ -133,15 +133,15 @@
 
 
 
-                        
+
                     ?>
                     <?php
-                    } 
+                    }
                     ?>
                     <h1 class="section_titles"><?php echo $qheading; ?></h1>
 
-                   
-                     
+
+
                     <div class="grid-container financial_empowerment_grid">
 
                         <div class="grid-x grid-margin-x">
@@ -261,10 +261,10 @@
                      <?php
                         }
                     ?>
-                  
+
                 </section>
 
-                
+
 
 
 
@@ -595,7 +595,7 @@
                 <?php
                         if ( function_exists( 'get_field' ) ) {
                         $benefits_contents = get_field( 'benefits_contents' );
-                        
+
                     // var_dump( $image );
                     ?>
                     <?php
@@ -603,10 +603,10 @@
                         $heading = $benefits_content['heading'];
                         $content = $benefits_content['content'];
                         $link = $benefits_content['link'];
-                        
+
                     ?>
                     <?php
-                    } 
+                    }
                     ?>
 
                     <div class="grid-container">
@@ -626,12 +626,12 @@
                         <img src="<?php echo get_template_directory_uri() . '/assets/img/logos/enactus_logo.png'; ?>" alt="Enactus Logo" />
                      </div>
 
-                     
+
 
                  </section>
 
                  <?php
-                    } 
+                    }
                     ?>
 
 

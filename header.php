@@ -29,15 +29,36 @@
 
 
 		<nav id="site-navigation" class="main-navigation menu-text">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'durhamtaxhelp' ); ?></button>
-			<?php
-			
-			wp_nav_menu( array(
-				'theme_location' => 'primary-menu',
-				'menu_id'        => 'primary-menu',
-			) );
-			
-			?>
+			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button> -->
+			<div class="row">
+				<div class="row">
+						<div class="title-bar" data-responsive-toggle="the-menu" data-hide-for="medium">
+							<button class="menu-icon" type="button" data-toggle></button>
+							<div class="title-bar-title">MENU</div>
+						</div>
+
+
+
+						<div class="top-bar" id="the-menu">
+						    <div class="top-bar-right">
+
+							    <?php
+									wp_nav_menu( array(
+										'container'      => false,
+										'menu'           => 'Primary Menu',
+										'menu_class'     => 'vertical medium-horizontal menu',
+										'theme_location' => 'primary',
+										'items_wrap'     => '<ul id="%1$s" class="%2$s" data-responsive-menu="drilldown medium-dropdown" style="width: 100%;">%3$s</ul>',
+										//Recommend setting this to false, but if you need a fallback...
+										'fallback_cb'    => 'f6_drill_menu_fallback',
+										'walker'         => new F6_DRILL_MENU_WALKER()
+									) );
+
+									?>
+						    </div>
+
+						</div>
+					</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
