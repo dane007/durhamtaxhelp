@@ -30,8 +30,6 @@ h1, h2, h3, h4, h5, h6, p, span {
   padding-bottom: 40px;
   background-color: white;
   border-top: 1px solid black;
-  min-height: 100vh;
-  min-width: 100vw;
 }
 
 .section_titles {
@@ -54,13 +52,11 @@ footer a, footer a:active, footer a:visited {
   margin: 0;
 }
 
-.site-branding {
-  top: 0px;
-  left: 0px;
-  margin: 10px;
-  height: 75px;
-  font-size: 1.25em;
-  position: absolute;
+/*            M E N U            */
+/* ------------ -n- ------------ */
+.responsive-menu-boring {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .slider .slide {
@@ -74,112 +70,9 @@ footer a, footer a:active, footer a:visited {
   background-repeat: no-repeat;
 }
 
-#qualify_page, #volunteer, #empowerment, #testimonials {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  /* border-bottom: 2px solid black; */
-}
-
-#sidebar {
-  position: absolute;
-  margin-top: 0px;
-  width: 250px;
-  height: 460px;
-  background-color: #022d41;
-  border-radius: 40px;
-}
-
-.fullVH {
-  height: 100vh;
-  align-content: flex-start;
-}
-
-#navi {
-  z-index: 2;
-  position: absolute;
-  /* margin-left: 100px; */
-  margin-top: 85px;
-}
-
-nav {
-  position: absolute;
-  margin: 50px 0px auto 0px;
-  margin-left: 20px;
-  z-index: 2;
-}
-
-a {
-  color: #27a5b7;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #022d41;
-}
-
-#footer {
-  background: #022d41;
-  width: 100vw;
-}
-
-#footer_holder {
-  text-align: center;
-  padding: 10px 0;
-}
-
-#footer_holder img {
-  height: 100px;
-  padding: 5px;
-  margin-left: 20px;
-}
-
-button {
-  transition: all 0.5s;
-}
-
-button:hover {
-  opacity: 0.7;
-  transition: all 0.5s;
-}
-
-/* CUSTOM LOGO */
-.custom-logo-link img {
-  width: 300px;
-  height: auto;
-  margin-top: -10px;
-  margin-left: 10px;
-}
-
-/* ANIMATION PURPOSES */
-#main_site_title, .fadeOn {
-  opacity: 0;
-}
-
-.box {
-  overflow: auto;
-  position: relative;
-  /* border-radius: 50px; */
-  /* background-color: rgba(39, 165, 183, 0.09); */
-  /* background-image: url(../img/frm1.png);
-  background-size: contain;
-  background-position: left;
-  background-repeat: no-repeat; */
-  border-image-source: url(../img/frm1.png);
-  border-image-slice: 27 27 27 27;
-  border-image-width: 20px 20px 20px 20px;
-  border-image-outset: 0px 0px 0px 0px;
-  border-image-repeat: stretch stretch;
-}
-
-/*            M E N U            */
-/* ------------ -n- ------------ */
-.responsive-menu-boring {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+/* custom menu */
+#responsive-menu-container {
+  opacity: 0.9;
 }
 
 .site-navigation {
@@ -187,17 +80,42 @@ button:hover {
   position: absolute;
 }
 
+.site-branding {
+  top: 0px;
+  left: 0px;
+  margin: 10px;
+  height: 75px;
+  font-size: 1.25em;
+  position: absolute;
+}
+
+.site-branding img {
+  height: 75px;
+  width: auto;
+}
+
+.site-branding a, .site-navigation a {
+  text-decoration: none;
+  color: black;
+}
+
 a:visited {
   color: gray;
 }
 
-/* custom menu */
-#responsive-menu-container {
-  opacity: 0.9;
+/*          P A G E    1         */
+/* ------------ -1- ------------ */
+.page2, .testimonials-page {
+  background-color: rgba(255, 255, 255, 1);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-/*   L A N D I N G    P A G E    */
-/* ------------ -1- ------------ */
 .page1 {
   height: 100vh;
   width: 100vw;
@@ -216,21 +134,22 @@ a:visited {
   background-size: 200% auto; */
 }
 
-.characters {
-  margin: 0 auto;
-  padding: 20px;
-  order: 2;
-  position: relative;
-  transition: all 0.6s cubic-bezier(.79, .14, .15, .86);
-}
-
 .characters img {
-  height: 100%;
+  height: 55%;
   position: absolute;
+  top: 28%;
+  left: 10%;
 }
 
 #main_img_chara2, #main_img_chara3, #main_img_chara4 {
   opacity: 0;
+}
+
+.characters {
+  margin: 0 auto;
+  padding: 20px;
+  order: 2;
+  transition: all 0.6s cubic-bezier(.79, .14, .15, .86);
 }
 
 /* .characters img {
@@ -261,6 +180,7 @@ a:visited {
 
 .userInp {
   /* width: 80%; */
+  width: 200px;
   height: 52px;
   margin: 0 auto;
   padding: 10px;
@@ -272,6 +192,8 @@ a:visited {
   color: #022D41;
   background-color: #ffc436;
   cursor: pointer;
+  width: 220px;
+  margin-left: 168px;
   /* border-radius: 40px; */
   border: 2px solid rgba(15, 91, 92, 0.6);
   padding: 14px 10px 10px 10px;
@@ -284,16 +206,17 @@ a:visited {
 
 .two_button_container {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
 }
 
 #or {
   font-size: 25px;
+  margin-right: 5px;
+  margin-top: 25px;
+  margin-left: 10px;
 }
 
 .findTxHp {
-  font-size: 1em;
+  font-size: 2em;
   transition: all 0.3s ease-out;
   padding: 14px 10px 10px 10px;
   cursor: pointer;
@@ -333,7 +256,6 @@ a:visited {
 }
 
 .bigbtn {
-  margin: 0 auto;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -346,56 +268,15 @@ a:visited {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.site-branding img {
-  height: 75px;
-  width: auto;
-}
-
-.site-branding a, .site-navigation a {
-  text-decoration: none;
-  color: black;
-}
-
-#volunteer_page,
-#financial_empowerment {
-  min-height: auto;
-}
-
-/*  H O W   T O   Q U A L I F Y  */
-/* ------------ -2- ------------ */
-.page2, .testimonials-page {
-  background-color: rgba(255, 255, 255, 1);
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-flow: row wrap;
-  align-content: center;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-#qualify_page {
-  border-top: 1px solid black;
-}
-
-.qualify_box {
-  padding: 25px;
-  /* min-width: 90%; */
-}
-
-#qualify_page .section_titles {}
-
+/* HOW TO QUALIFY PAGE */
 .how_to_qualify_btn_container {
-  margin: auto 0;
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
+  height: 250px;
   justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-#qualify_page .qualify_box {
-  height: 100%;
+  margin-top: 100px;
+  margin-right: -100px;
+  margin-left: 100px;
 }
 
 .qualify_buttons {
@@ -404,6 +285,7 @@ a:visited {
   font-size: 20px;
   color: white;
   border-radius: 25px;
+  cursor: pointer;
   cursor: pointer;
 }
 
@@ -419,6 +301,11 @@ a:visited {
   background-color: #022D41;
 }
 
+.qualify_box {
+  margin-left: 225px;
+  padding: 25px;
+}
+
 #qualify_page .frame_image {
   margin-left: 199px;
 }
@@ -427,8 +314,8 @@ a:visited {
   width: 80px;
 }
 
-/*        L O C A T I O N S      */
-/* ------------ -3- ------------ */
+/*          P A G E    2         */
+/* ------------ -2- ------------ */
 .page2 {
   background-image: url(../img/bgBG-002.png);
   background-position: center;
@@ -545,6 +432,17 @@ map-section.leaflet-popup-content-wrapper {
   border: none;
 }
 
+/* HOW TO QUALIFY */
+#how-to-qualify, #volunteer, #empowerment, #testimonials {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  /* border-bottom: 2px solid black; */
+}
+
 #locations {
   width: 100vw;
   min-height: 100vh;
@@ -554,8 +452,7 @@ map-section.leaflet-popup-content-wrapper {
   align-items: center;
 }
 
-/*  V O L U N T E E R   P A G E  */
-/* ------------ -4- ------------ */
+/* VOLUNTEER PAGE */
 #volunteer_page div {
   border-radius: 10px;
 }
@@ -581,10 +478,6 @@ map-section.leaflet-popup-content-wrapper {
   padding: 15px;
   color: white;
   font-size: 18px;
-}
-
-.volunteer.grid-x .cell:nth-child(2) {
-  margin: auto;
 }
 
 .volunteer_content_container {
@@ -616,8 +509,7 @@ map-section.leaflet-popup-content-wrapper {
   border-radius: 15px;
 }
 
-/*    F I N A N C I A L    E M P O W E R M E N T     */
-/* ---------------------- -5- ---------------------- */
+/* FINANCIAL EMPOWERMENT */
 #financial_empowerment {
   padding: 0 60px;
   padding-bottom: 140px;
@@ -649,51 +541,35 @@ map-section.leaflet-popup-content-wrapper {
   margin-left: 330px;
 }
 
-.htq_grid {
-  height: 100%;
+#sidebar {
+  position: absolute;
+  margin-top: 0px;
+  width: 250px;
+  height: 460px;
+  background-color: #022d41;
+  border-radius: 40px;
 }
 
-.htq_grid div.grid-x.grid-margin-x div.small-12.medium-8.large-9 {
-  height: 75%;
+#navi {
+  z-index: 2;
+  position: absolute;
+  /* margin-left: 100px; */
+  margin-top: 85px;
 }
 
-/* .htq_grid .section_titles {
-  margin-bottom: 0;
-} */
-#overview,
-#cost,
-#credit,
-#tax,
-#bond,
-.article_box {
-  width: 100%;
+.box {
+  overflow: auto;
   position: relative;
-  top: 0;
-  left: 0;
-  height: 100%;
+  margin-top: -440px;
+  width: 650px;
+  height: 419px;
   border-radius: 30px;
   background-color: rgba(39, 165, 183, 0.09);
-  padding: 20px;
-}
-
-#overview,
-#cost,
-#credit,
-#tax,
-#bond {
-  height: 97%;
-  width: 97%;
-  overflow: auto;
 }
 
 #financial_empowerment .box {
   margin-left: 355px;
   padding: 8px;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
 }
 
 #financial_empowerment .box p {
@@ -702,6 +578,13 @@ map-section.leaflet-popup-content-wrapper {
 
 #sideNav li {
   margin-left: 30px;
+}
+
+nav {
+  position: absolute;
+  margin: 50px 0px auto 0px;
+  margin-left: 20px;
+  z-index: 2;
 }
 
 #sideNav ol {
@@ -736,6 +619,15 @@ map-section.leaflet-popup-content-wrapper {
 
 .secondPara {
   padding: 20px 30px 20px 35px;
+}
+
+a {
+  color: #27a5b7;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #022d41;
 }
 
 .thirdPara {
@@ -832,6 +724,11 @@ map-section.leaflet-popup-content-wrapper {
   width: 5%;
 }
 
+blockqoute {
+  height: 200px;
+  width: 200px;
+}
+
 #sidebar div img {
   height: 86px;
   max-width: 280px;
@@ -854,57 +751,27 @@ map-section.leaflet-popup-content-wrapper {
   margin-top: -2px;
 }
 
-/* T E S I M O N I A L S    P A G E  */
-/* -------------- -6- ------------ */
+/***********         TESTIMONIALS -  P A G E    5        ***********/
+/* -------------- 5 ------------ */
 #testimonials_h1 {
   font-family: 'Shree Devanagari 714', sans-serif;
   font-size: 50px;
   margin-left: 10px;
 }
 
-.card {
-  height: 360px;
-  padding-top: 12px;
-  width: 100%;
-  border: none;
-  padding-left: 60px;
-  margin-top: 0px;
-  /* background: url(http://durham-tax-help.local/wp-content/uploads/2019/02/scribble.png); */
-  background-image: url(../img/fr1.jpg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.card:nth-child(1) {
-  background-image: url(../img/fr1.jpg);
-}
-
-.card:nth-child(2) {
-  background-image: url(../img/fr2.jpg);
-}
-
-.card:nth-child(3) {
-  background-image: url(../img/fr3.jpg);
-}
-
-.card:nth-child(4) {
-  background-image: url(../img/fr4.jpg);
-}
-
-.card * {
-  display: none;
-}
-
-.imageBG {
-  opacity: 1;
-}
-
 .container {
   height: auto;
   padding: 0 20px;
   margin: 0 auto;
-  width: 100%;
+}
+
+.card {
+  background-color: transparent;
+  height: 360px;
+  border: none;
+  padding-top: 12px;
+  padding-left: 60px;
+  margin-top: 0px;
 }
 
 .imageBG {
@@ -930,7 +797,7 @@ map-section.leaflet-popup-content-wrapper {
 .imageFrame {
   padding: 3px 5px;
   height: 105px;
-  background: transparent;
+  background-color: white;
   margin-top: -54%;
   border: none;
   text-align: center;
@@ -940,7 +807,7 @@ map-section.leaflet-popup-content-wrapper {
 #frame {
   width: 123px;
   height: 125px;
-  /* background-color: white; */
+  background-color: white;
   border: 2px solid #022D41;
   padding: 5px;
   margin-left: -65%;
@@ -957,11 +824,6 @@ map-section.leaflet-popup-content-wrapper {
   text-align: center;
   padding: 100px 220px 220px 220px;
   border-top: 1px solid black;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
 }
 
 #benefits_finder_section p, #benefits_finder_section a {
@@ -978,12 +840,50 @@ map-section.leaflet-popup-content-wrapper {
   text-decoration: underline;
 }
 
+#footer {
+  background: #022d41;
+}
+
+#footer_holder {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#footer_holder img {
+  height: 100px;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+button {
+  transition: all 0.5s;
+}
+
+button:hover {
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+
+/* CUSTOM LOGO */
+.custom-logo-link img {
+  width: 300px;
+  height: auto;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+/* ANIMATION PURPOSES */
+#main_site_title, .fadeOn {
+  opacity: 0;
+}
+
 /*          Q U E R I E S        */
 /* ------------ -q- ------------ */
 @media (min-width:0em) {
 
   /* smartphones, iPhone, portrait 480x320 phones */
-  /* custom menu */
+  /* Map Parts */
+  /* list of locations */
   .intro {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
@@ -997,13 +897,12 @@ map-section.leaflet-popup-content-wrapper {
     font-size: 2em;
   }
 
-  #responsive-menu-container {
-    width: 340px;
+  .statement, #map-section h3 {
+    font-size: 1.25em;
   }
 
-  /* SHARED */
-  .section_titles {
-    font-size: 30px;
+  #map-section h3 {
+    font-weight: bolder;
   }
 
   .userInp,
@@ -1016,38 +915,11 @@ map-section.leaflet-popup-content-wrapper {
     font-size: 1.75em;
   }
 
-  .qualify_buttons {
-    background-color: #022D41;
-    padding: 14px 10px 10px 10px;
-    font-size: 1.5em;
-    margin-right: 5px;
-    width: auto;
-  }
-
-  #qualify_page .frame_image {
-    margin-left: 30px;
-    margin-right: 20px;
-    width: 66%;
-    height: 65%;
-    display: none;
-  }
-
-  .download {
-    cursor: pointer;
-    text-align: center;
-    color: black;
-    margin-top: 20px;
-    padding: 20px;
-  }
-
-  .download img {
-    width: 60px;
-  }
-
   #map-list {
     height: 35vh;
   }
 
+  /* main map */
   #map-box {
     height: 60vh;
     order: -1;
@@ -1058,43 +930,8 @@ map-section.leaflet-popup-content-wrapper {
     display: none;
   }
 
-  #locations_page .section_titles {
-    margin-bottom: 0;
-    margin-top: 20px;
-  }
-
-  #video_container {
-    padding-top: 20px;
-  }
-
-  #video_description {
-    line-height: 20px;
-    margin-top: -2px;
-    margin-bottom: 20px;
-  }
-
-  .volunteer_content_container p {
-    line-height: 27px;
-  }
-
-  #volunteer_last_btn {
-    margin-top: 5px;
-  }
-
-  #benefits_finder_section {
-    padding: 40px;
-  }
-
-  #benefits_finder_section p, #benefits_finder_section a {
-    font-size: 20px;
-  }
-
-  #footer_holder img {
-    height: 40px;
-    padding: 5px;
-    margin-left: 0px;
-  }
-
+  /***********         TESTIMONIALS -  P A G E    5        ***********/
+  /* -------------- 5 ------------ */
   .testimonials-page {
     height: auto;
   }
@@ -1107,6 +944,7 @@ map-section.leaflet-popup-content-wrapper {
   }
 
   .card {
+    background-color: transparent;
     height: 310px;
     border: none;
     padding: 0 5px;
@@ -1134,6 +972,7 @@ map-section.leaflet-popup-content-wrapper {
   .imageFrame {
     padding: 2px;
     height: 85px;
+    background-color: white;
     margin-top: -71%;
     border: none;
     text-align: center;
@@ -1152,20 +991,6 @@ map-section.leaflet-popup-content-wrapper {
     /* width: 125px; */
     height: 100%;
   }
-
-  .statement, #map-section h3 {
-    font-size: 1.25em;
-  }
-
-  #map-section h3 {
-    font-weight: bolder;
-  }
-
-  .how_to_qualify_btn_container {
-    height: 20%;
-    margin: 0 auto;
-    flex-flow: row wrap;
-  }
 }
 
 @media (min-width:30.063em) {
@@ -1181,17 +1006,33 @@ map-section.leaflet-popup-content-wrapper {
 
   .userInp,
   .calculate,
-  .conversion,
-  .map-list-option h3 {
+  .conversion, .map-list-option h3 {
     font-size: 1.5em;
   }
 
   .findTxHp {
-    font-size: 1.25em;
+    font-size: 2em;
   }
 
+  /***********         TESTIMONIALS -  P A G E    5        ***********/
+  /* -------------- 5 ------------ */
   .testimonials-page {
     height: auto;
+  }
+
+  .container {
+    background-color: transparent;
+    height: auto;
+    padding: 0 5px;
+    margin: 0;
+  }
+
+  .card {
+    background-color: transparent;
+    height: 310px;
+    border: none;
+    padding: 0 5px;
+    margin-top: 0px;
   }
 
   .imageBG {
@@ -1217,6 +1058,7 @@ map-section.leaflet-popup-content-wrapper {
   .imageFrame {
     padding: 2px;
     height: 95px;
+    background-color: white;
     margin-top: -59%;
     border: none;
     text-align: center;
@@ -1225,6 +1067,7 @@ map-section.leaflet-popup-content-wrapper {
   #frame {
     width: 108px;
     height: 100px;
+    background-color: white;
     border: 2px solid #022D41;
     padding: 5px;
     margin-left: 28%;
@@ -1239,20 +1082,15 @@ map-section.leaflet-popup-content-wrapper {
 @media (min-width:40.063em) {
 
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-  .intro {
-    padding-right: 20px;
-  }
-
-  .findTxHp {
-    font-size: 1.5em;
-  }
-
   .characters {
     margin: 0 auto;
     display: block;
     order: 2;
     height: 350px;
-    width: 45%;
+  }
+
+  .intro {
+    padding-right: 20px;
   }
 
   #map-list {
@@ -1270,14 +1108,19 @@ map-section.leaflet-popup-content-wrapper {
     display: block;
   }
 
-  .how_to_qualify_btn_container {
-    height: 50%;
-    margin: auto 0;
-    flex-flow: column wrap;
+  .findTxHp {
+    /* font-size: 2.5em; */
+    font-size: 2em;
   }
 
+  /***********         TESTIMONIALS -  P A G E    5        ***********/
+  /* -------------- 5 ------------ */
   .card {
+    background-color: transparent;
     height: 330px;
+    border: none;
+    padding: 0 5px;
+    margin-top: 0px;
   }
 
   .imageBG {
@@ -1303,6 +1146,7 @@ map-section.leaflet-popup-content-wrapper {
   .imageFrame {
     padding: 2px;
     height: 95px;
+    background-color: white;
     margin-top: -50%;
     border: none;
     text-align: center;
@@ -1311,6 +1155,7 @@ map-section.leaflet-popup-content-wrapper {
   #frame {
     width: 108px;
     height: 100px;
+    background-color: white;
     border: 2px solid #022D41;
     padding: 5px;
     margin-left: 30%;
@@ -1321,8 +1166,6 @@ map-section.leaflet-popup-content-wrapper {
     height: 100%;
   }
 }
-
-@media (min-width:50.063em) {}
 
 @media (min-width:60.063em) {
 
@@ -1339,7 +1182,6 @@ map-section.leaflet-popup-content-wrapper {
     display: block;
     order: -1;
     height: 350px;
-    width: 40%;
   }
 
   #map-list, #map-info {
@@ -1350,10 +1192,12 @@ map-section.leaflet-popup-content-wrapper {
   /***********         TESTIMONIALS -  P A G E    5        ***********/
   /* -------------- 5 ------------ */
   .card {
+    background-color: transparent;
     height: 350px;
+    border: none;
     padding-top: 12px;
     padding-left: 60px;
-    transform: scale(1.1);
+    margin-top: 0px;
   }
 
   .imageBG {
@@ -1379,6 +1223,7 @@ map-section.leaflet-popup-content-wrapper {
   .imageFrame {
     padding: 2px;
     height: 95px;
+    background-color: white;
     margin-top: -68%;
     border: none;
     text-align: center;
@@ -1387,6 +1232,7 @@ map-section.leaflet-popup-content-wrapper {
   #frame {
     width: 90px;
     height: 90px;
+    background-color: white;
     border: 2px solid #022D41;
     padding: 5px;
     margin-left: 27%;
@@ -1416,18 +1262,15 @@ map-section.leaflet-popup-content-wrapper {
     display: block;
   }
 
-  .userInp,
-  .calculate,
-  .conversion {
-    font-size: 1.5em;
-  }
-
   /***********         TESTIMONIALS -  P A G E    5        ***********/
   /* -------------- 5 ------------ */
   .card {
+    background-color: transparent;
     height: 350px;
+    border: none;
     padding-top: 12px;
     padding-left: 60px;
+    margin-top: 0px;
   }
 
   .imageBG {
@@ -1453,6 +1296,7 @@ map-section.leaflet-popup-content-wrapper {
   .imageFrame {
     padding: 3px 5px;
     height: 105px;
+    background-color: white;
     margin-top: -51%;
     border: none;
     text-align: center;
@@ -1462,6 +1306,7 @@ map-section.leaflet-popup-content-wrapper {
   #frame {
     width: 123px;
     height: 125px;
+    background-color: white;
     border: 2px solid #022D41;
     padding: 5px;
     margin-left: -65%;
@@ -1488,10 +1333,9 @@ map-section.leaflet-popup-content-wrapper {
     font-size: 2em;
   }
 
-  .findTxHp {
-    font-size: 1.2em;
-  }
-
+  .userInp,
+  .calculate,
+  .conversion,
   #map-section h3 {
     font-size: 1.5em;
   }
@@ -1515,9 +1359,12 @@ map-section.leaflet-popup-content-wrapper {
   }
 
   .card {
+    background-color: transparent;
     height: 360px;
+    border: none;
     padding-top: 12px;
     padding-left: 60px;
+    margin-top: 0px;
   }
 
   .imageBG {
@@ -1543,6 +1390,7 @@ map-section.leaflet-popup-content-wrapper {
   .imageFrame {
     padding: 3px 5px;
     height: 105px;
+    background-color: white;
     margin-top: -54%;
     border: none;
     text-align: center;
@@ -1552,6 +1400,7 @@ map-section.leaflet-popup-content-wrapper {
   #frame {
     width: 123px;
     height: 125px;
+    background-color: white;
     border: 2px solid #022D41;
     padding: 5px;
     margin-left: -65%;
@@ -1573,13 +1422,31 @@ map-section.leaflet-popup-content-wrapper {
     font-size: 3em;
   }
 
-  .conversion,
-  .findTxHp {
+  .userInp,
+  .calculate,
+  .conversion {
     font-size: 2em;
   }
 
   .characters {
     height: 600px;
+  }
+
+  /***********         TESTIMONIALS -  P A G E    5        ***********/
+  /* -------------- 5 ------------ */
+  .container {
+    height: auto;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background-color: transparent;
+    height: 360px;
+    border: none;
+    padding-top: 12px;
+    padding-left: 60px;
+    margin-top: 0px;
   }
 
   .imageBG {
@@ -1605,7 +1472,7 @@ map-section.leaflet-popup-content-wrapper {
   .imageFrame {
     padding: 3px 5px;
     height: 105px;
-    background: transparent;
+    background-color: white;
     margin-top: -54%;
     border: none;
     text-align: center;
