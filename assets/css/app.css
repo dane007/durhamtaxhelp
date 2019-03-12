@@ -1015,7 +1015,6 @@ map-section.leaflet-popup-content-wrapper {
 
   /* HOW TO QUALIFY */
   .qualify_buttons {
-    background-color: #022D41;
     padding: 14px 10px 10px 10px;
     font-size: 1.5em;
     margin-right: 5px;
@@ -1051,7 +1050,6 @@ map-section.leaflet-popup-content-wrapper {
     height: 35vh;
   }
 
-  /* main map */
   #map-box {
     height: 60vh;
     order: -1;
@@ -1062,15 +1060,12 @@ map-section.leaflet-popup-content-wrapper {
     display: none;
   }
 
-  /* LOCATIONS */
   #locations_page .section_titles {
     margin-bottom: 0;
     margin-top: 20px;
   }
 
-  /* VOLUNTEER SECTION */
   #video_container {
-    /* width: 400px; */
     padding-top: 20px;
   }
 
@@ -1088,7 +1083,6 @@ map-section.leaflet-popup-content-wrapper {
     margin-top: 5px;
   }
 
-  /* BENEFITS FINDER SECTION */
   #benefits_finder_section {
     padding: 40px;
   }
@@ -1097,14 +1091,12 @@ map-section.leaflet-popup-content-wrapper {
     font-size: 20px;
   }
 
-  /* FOOTER SECTION */
   #footer_holder img {
     height: 40px;
     padding: 5px;
     margin-left: 0px;
   }
 
-  /* -------------- 5 ------------ */
   .testimonials-page {
     height: auto;
   }
@@ -1171,7 +1163,6 @@ map-section.leaflet-popup-content-wrapper {
     font-weight: bolder;
   }
 
-  /* HOW TO QUALIFY PAGE */
   .how_to_qualify_btn_container {
     height: 20%;
     margin: 0 auto;
@@ -1201,8 +1192,6 @@ map-section.leaflet-popup-content-wrapper {
     font-size: 1.25em;
   }
 
-  /***********         TESTIMONIALS -  P A G E    5        ***********/
-  /* -------------- 5 ------------ */
   .testimonials-page {
     height: auto;
   }
