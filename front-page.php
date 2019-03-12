@@ -21,16 +21,16 @@
                 <div class="page1">
                     <div class="site-branding">
                         <?php
-					// the_custom_logo();
+					    the_custom_logo();
 					?>
                             <?php
 				$time_tells_tech_description = get_bloginfo( 'description', 'display' );
 				if ( $time_tells_tech_description || is_customize_preview() ) :
 					?>
-                                <p class="site-description">
-                                    <?php echo $time_tells_tech_description; /* WPCS: xss ok. */ ?>
-                                </p>
-                                <?php endif; ?>
+                          <p class="site-description">
+                              <?php echo $time_tells_tech_description; /* WPCS: xss ok. */ ?>
+                          </p>
+                          <?php endif; ?>
                     </div>
 
                     <?php
@@ -41,7 +41,10 @@
 				foreach ( $home_contents as $home_content ) {
 					$title = $home_content['title'];
 					$statement = $home_content['statement'];
-					$image = $home_content['image'];
+          $image1 = $home_content['image1'];
+          $image2 = $home_content['image2'];
+          $image3 = $home_content['image3'];
+          $image4 = $home_content['image4'];
 					$conversion_messages = $home_content['conversion_messages'];
 					$findhelp = $home_content['find_help_button'];
 					$qualify = $home_content['convert_button'];
@@ -55,48 +58,51 @@
 					// var_dump( $image );
 				?>
 
-                            <div class="characters">
-                                <img src="<?php echo $image['url'] ?>" alt="">
-                            </div>
-                            <!-- Main Content for Front-Page -->
+          <div class="characters">
+              <img id="main_img_chara1" src="<?php echo $image1['url'] ?>" alt="">
+              <img id="main_img_chara2" src="<?php echo $image2['url'] ?>" alt="">
+              <img id="main_img_chara3" src="<?php echo $image3['url'] ?>" alt="">
+              <img id="main_img_chara4" src="<?php echo $image4['url'] ?>" alt="">
+          </div>
+          <!-- Main Content for Front-Page -->
 
-                            <div class="intro grid-x grid-margin-x">
+          <div class="intro grid-x grid-margin-x">
 
-                                <h1 id="main_site_title" class="title small-12"><?php echo $title; ?></h1>
-                                <p class="statement fadeOn small-12">
-                                    <?php echo $statement; ?>
-                                </p>
-                                <p class="conversion fadeOn small-12 medium-12">
-                                    <?php echo $begin; ?>
-                                </p>
-                                <div class="inp fadeOn small-6 medium-4 large-4">
-                                    <input class="userInp" type="number" name="" value="" placeholder="Example: 30000">
-                                </div>
-                                <div class="btn fadeOn small-6 medium-2 large-3">
-                                    <button class="calculate" type="button" name="button">
-                                        <?php echo $qualify; ?>
-                                    </button>
-                                </div>
-                                <div class="two_button_container">
-                                    <p class="fadeOn" id="or">OR</p>
-                                    <div class="bigbtn fadeOn small-12">
-                                        <a href="#locations_page">
-                                            <button class="findTxHp" type="button" name="button">
-                                                <?php echo $findhelp; ?>
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <?php
+              <h1 id="main_site_title" class="title small-12"><?php echo $title; ?></h1>
+              <p class="statement fadeOn small-12">
+                  <?php echo $statement; ?>
+              </p>
+              <p class="conversion fadeOn small-12 medium-12">
+                  <?php echo $begin; ?>
+              </p>
+              <div class="inp fadeOn small-6 medium-4 large-4">
+                  <input class="userInp" type="number" name="" value="" placeholder="Example: 30000">
+              </div>
+              <div class="btn fadeOn small-6 medium-2 large-3">
+                  <button class="calculate" type="button" name="button">
+                      <?php echo $qualify; ?>
+                  </button>
+              </div>
+              <div class="two_button_container">
+                  <p class="fadeOn" id="or">OR</p>
+                  <div class="bigbtn fadeOn small-12">
+                      <a href="#volunteer_page">
+                          <button class="findTxHp" type="button" name="button">
+                              <?php echo $findhelp; ?>
+                          </button>
+                      </a>
+                  </div>
+              </div>
+              <?php
 				}
 				?>
-                                    <?php
+      <?php
 			}
 			?>
-                            </div>
-                </div>
+            </div>
+        </div>
 
-       
+
         </main>
         </div>
 
@@ -109,7 +115,7 @@
                     <div class="grid-container financial_empowerment_grid">
 
                         <div class="grid-x grid-margin-x">
-                            
+
                             <div class="how_to_qualify_btn_container">
                                 <!-- Buttons -->
                                 <button id="eligible_btn" class="qualify_buttons">
@@ -126,16 +132,15 @@
                             </div>
 
                             <div class="large-9">
-                                
-                                    <img class="frame_image" src="<?php echo get_template_directory_uri() . '/assets/img/frm1.png'; ?>" alt="frame">
-                                
+
+
                                 <div class="box qualify_box">
                                     <article id="article_box01" class="article_box">
                                         <h2 class="am_i_eligible_title">Eligibility Criteria:</h2>
-                                        <p class="paragraph0101">People need to be present to have their income tax returns completed.  
-                                            For example, in the case of couples, both partners need to be present, and in the case of 
+                                        <p class="paragraph0101">People need to be present to have their income tax returns completed.
+                                            For example, in the case of couples, both partners need to be present, and in the case of
                                             any children who are earning an income, those children need to be present.</p>
-                                        <p class="paragraph0201">Each clinic has specific eligibility criteria based upon 
+                                        <p class="paragraph0201">Each clinic has specific eligibility criteria based upon
                                             income level and place of residence. Please review the clinic description carefully.</p>
 
                                         <h3 class="volunteer_warning">Volunteers cannot help with income tax returns for:</h3>
@@ -148,7 +153,7 @@
                                             <li>business or rental income and expenses</li>
                                         </ul>
 
-                                        <h4 class="volunteer_CRA_Guidelines">The volunteers trained by Canada Revenue Agency 
+                                        <h4 class="volunteer_CRA_Guidelines">The volunteers trained by Canada Revenue Agency
                                             follow these guidelines:</h4>
 
                                         <ul class="volunteer_CRA_Guidelines_list">
@@ -187,8 +192,8 @@
                                     <article id="article_box03" class="article_box">
                                         <h2 class="what_to_bring_title">What to Bring:</h2>
                                         <ul class="information_slips_list">
-                                            <li>Social Insurance Number (SIN) for you, 
-                                                your spouse, and any dependents such as 
+                                            <li>Social Insurance Number (SIN) for you,
+                                                your spouse, and any dependents such as
                                                 children.</li>
                                             <li>List of  your dependents' names and dates of birth</li>
                                             <li>Details of your spouse's income</li>
@@ -209,7 +214,7 @@
                                         </ul>
                                     <!--- End "What to Bring: Information Slips" section --->
                                     </article>
-                                    
+
 
                                 </div>
 
@@ -228,7 +233,7 @@
 
 
                 </section>
-                
+
 
 
 
@@ -237,7 +242,7 @@
                     <div id='locations' class="locations-page page2">
                     <h1 class="section_titles">Locations</h1>
                         <div id="map-section" class="grid-x">
-                            
+
                             <div id="map-list" class="small-12 medium-12 large-3">
                                 <div class="map-list-option" data-id="0" data-name='divFinGrp'>
                                     <h3>Diverse Financial Group</h3>
@@ -278,59 +283,76 @@
                     $title_1 = $volunteer_content['title_1'];
                     $content_1 = $volunteer_content['content_1'];
                     $video = $volunteer_content['video'];
+                    // $videovideo = $volunteer_content['videovideo'];
                     $video_description = $volunteer_content['video_description'];
                     $title_2 = $volunteer_content['title_2'];
                     $content_2 = $volunteer_content['content_2'];
                     // var_dump( $image );
+
+
+
                 ?>
 
-                                <!-- Main Content for Volunteer-Section -->
+                    <?php
+                    $videovideo = get_field('videovideo');
 
-                                <h1 class="section_titles cell"><?php echo $main_title; ?></h1>
+                    $attr = array(
+                        'mp4'     => $videovideo,
+                        'preload' => 'auto'
+                    );
+                    ?>
 
-                                <div class="volunteer grid-x grid-margin-x">
+                    <!-- Main Content for Volunteer-Section -->
 
-                                    <div class="cell small-12 large-4 volunteer_content_container">
-                                        <h4 class="volunteer_subtitles"><?php echo $title_1; ?></h4>
-                                        <p class="">
-                                            <?php echo $content_1; ?>
-                                        </p>
-                                        <div class="volunteer_button_container">
-                                            <a href="#location_page">
-                                                <button class="volunteer_button" type="button" name="button">Organizations >></button>
-                                            </a>
-                                        </div>
-                                        <p id="volunteer_p2">For FAQs and to get more in-depth information about being a volunteer, click the button below.</p>
-                                        <div class="volunteer_button_container">
-                                            <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program/lend-a-hand-individuals.html">
-                                                <button class="volunteer_button" type="button" name="button">Learn More >></button>
-                                            </a>
-                                        </div>
-                                    </div>
+                    <h1 class="section_titles cell"><?php echo $main_title; ?></h1>
 
-                                    <div class="cell small-12 large-4">
-                                        <div id="video_container">
-                                            <img src="<?php echo $video['url'] ?>" alt="">
-                                        </div>
-                                        <p id="video_description">
-                                            <?php echo $video_description; ?>
-                                        </p>
-                                    </div>
 
-                                    <div class="cell small-12 large-4 volunteer_content_container">
-                                        <h4 class="volunteer_subtitles"><?php echo $title_2; ?></h4>
-                                        <p class="">
-                                            <?php echo $content_2; ?>
-                                        </p>
-                                        <div class="volunteer_button_container">
-                                            <a href="https://www.canada.ca/en/revenue-agency/news/newsroom/tax-tips/tax-tips-2014/tax-clinics-your-community-organization.html">
-                                                <button class="volunteer_button" type="button" name="button">Click here >></button>
-                                            </a>
-                                        </div>
-                                    </div>
+                    <div class="volunteer grid-x grid-margin-x">
+
+                        <div class="cell small-12 large-4 volunteer_content_container">
+                            <h4 class="volunteer_subtitles"><?php echo $title_1; ?></h4>
+                            <p class="">
+                                <?php echo $content_1; ?>
+                            </p>
+                            <div class="volunteer_button_container">
+                                <a href="#locations_page">
+                                    <button class="volunteer_button" type="button" name="button">Organizations >></button>
+                                </a>
+                            </div>
+                            <p id="volunteer_p2">To officially register or to get more information about being a volunteer, click the button below.</p>
+                            <div class="volunteer_button_container">
+                                <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program/lend-a-hand-individuals.html">
+                                    <button class="volunteer_button" type="button" name="button">Learn More >></button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cell small-12 large-4">
+                            <div id="video_container">
+                                <div id="short_video">
+                                    <?php echo wp_video_shortcode( $attr ) ?>
                                 </div>
+                            </div>
+                            <p id="video_description">
+                                <?php echo $video_description; ?>
+                            </p>
+                        </div>
 
-                                <?php
+                        <div class="cell small-12 large-4 volunteer_content_container">
+                            <h4 class="volunteer_subtitles"><?php echo $title_2; ?></h4>
+                            <p class="">
+                                <?php echo $content_2; ?>
+                            </p>
+                            <div id="volunteer_last_btn" class="volunteer_button_container">
+                                <a href="https://www.canada.ca/en/revenue-agency/news/newsroom/tax-tips/tax-tips-2014/tax-clinics-your-community-organization.html">
+                                    <button class="volunteer_button" type="button" name="button">Click here >></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <?php
                 }
                 ?>
                                     <?php
@@ -346,10 +368,10 @@
                     <h1 class="section_titles">Financial Empowerment</h1>
 
 
-                    <div class="grid-container financial_empowerment_grid">
+                    <div class="grid-container align-center financial_empowerment_grid">
 
                         <div class="grid-x grid-margin-x">
-                            <div >
+                            <div class="cell large-1">
                                 <div id="sidebar">
                                     <div id="arrow1"><img src="<?php echo get_template_directory_uri() . '/assets/img/middle.png'; ?>"></div>
                                     <div id="arrow2"><img src="<?php echo get_template_directory_uri() . '/assets/img/middle.png'; ?>"></div>
@@ -380,10 +402,8 @@
                                 </div>
                             </div>
 
-                            <div class="large-9">
-                                
-                                    <img class="frame_image" src="<?php echo get_template_directory_uri() . '/assets/img/frm1.png'; ?>" alt="frame">
-                                
+                            <div class="cell large-11">
+
                                 <div class="box">
 
                                     <div id="overview">
@@ -488,7 +508,7 @@
                     <div class="testimonials-page">
 
                         <!-- Grid Container for positoong of testimonials cards -->
-                        <div class="grid-x grid-margin-x container">
+                        <div class="grid-x grid-margin-x container align-center">
 
                             <?php
                 if ( function_exists( 'get_field' ) ) {
@@ -504,30 +524,33 @@
                     $imageBG = $testimonial['imageBG'];
 
                 ?>
-                                    <!-- card structure -->
-                                    <!-- outer most div containing all smaller elements -->
-                                    <div class="cell card small-4 large-6">
-                                        <!-- background image for text -->
-                                        <img class="imageBG" src="<?php echo $imageBG['url'] ?>" alt="">
-                                        <div class="grid-x grid-margin-x">
-                                            <!-- larger div for text to be placed inside -->
-                                            <div class="cell small-8 large-10 textContainer">
-                                                <p class="statement">
-                                                    <?php echo $statement; ?>
-                                                </p>
-                                            </div>
 
-                                            <!-- frame for image to be placed inside -->
-                                            <div class="cell small-4 large-6 large-offset-2 imageFrame">
-                                                <div id="frame">
-                                                    <img class="image" src="<?php echo $image['url'] ?>" alt="">
-                                                </div>
-                                            </div>
+                <!-- <div class="grid-container"> -->
+                    <!-- card structure -->
+                    <!-- outer most div containing all smaller elements -->
+                    <div class="cell card small-offset-0 small-12 medium-offset-1 medium-10 large-offset-0  large-6">
+                        <!-- background image for text -->
+                        <img class="imageBG" src="<?php echo $imageBG['url'] ?>" alt="">
+                        <div class="grid-x grid-margin-x">
+                            <!-- larger div for text to be placed inside -->
+                            <div class="cell small-offset-1 small-10 medium-10  large-10 textContainer">
+                                <p class="statement">
+                                    <?php echo $statement; ?>
+                                </p>
+                            </div>
 
-                                        </div>
-                                    </div>
+                            <!-- frame for image to be placed inside -->
+                            <div class="cell small-offset-3 small-6 medium-6 large-6 large-offset-3 imageFrame">
+                                <div id="frame">
+                                    <img class="image" src="<?php echo $image['url'] ?>" alt="">
+                                </div>
+                            </div>
 
-                                    <?php
+                        </div>
+                    </div>
+                <!-- </div> -->
+
+                    <?php
         }
         ?>
                                         <?php
@@ -538,9 +561,11 @@
 
                 <!-- Benefits Finder -->
                 <section id="benefits_finder_section">
-                    <h1 class="section_titles">Government of Canada Benefits Finder</h1>
-                    <p>Answer questions to get a customized list of benefits for which you may be eligible. The Benefits Finder may suggest benefits from federal, provincial or territorial governments, and does not collect or track your information. The more questions you answer, the more customized your results will be.</p>
-                    <a href="https://srv138.services.gc.ca/daf/q?id=e9c78bbd-255d-42a0-a8a0-3b60f96d9965&GoCTemplateCulture=en-CA" id="questionnaire_link">Click here to start the questionnaire.</a>
+                    <div class="grid-container">
+                        <h1 class="section_titles">Government of Canada Benefits Finder</h1>
+                        <p>Answer questions to get a customized list of benefits for which you may be eligible. The Benefits Finder may suggest benefits from federal, provincial or territorial governments, and does not collect or track your information. The more questions you answer, the more customized your results will be.</p>
+                        <a href="https://srv138.services.gc.ca/daf/q?id=e9c78bbd-255d-42a0-a8a0-3b60f96d9965&GoCTemplateCulture=en-CA" id="questionnaire_link">Click here to start the questionnaire.</a>
+                    </div>
                  </section>
 
                  <section id="footer">

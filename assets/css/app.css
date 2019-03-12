@@ -21,11 +21,32 @@ h1, h2, h3, h4, h5, h6, p, span {
   margin: 0;
 }
 
+.content-area {
+  max-width: 1280px;
+}
+
 .content_sections {
   padding-top: 30px;
   padding-bottom: 40px;
   background-color: white;
   border-top: 1px solid black;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+#qualify_page {
+  border-top: 1px solid black;
+}
+
+/* #benefits_finder_section {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+} */
+#volunteer_page,
+#financial_empowerment {
+  min-height: auto;
 }
 
 .section_titles {
@@ -64,6 +85,11 @@ footer a, footer a:active, footer a:visited {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* custom menu */
+#responsive-menu-container {
+  opacity: 0.9;
 }
 
 .site-navigation {
@@ -129,13 +155,22 @@ a:visited {
   margin: 0 auto;
   padding: 20px;
   order: 2;
+  position: relative;
   transition: all 0.6s cubic-bezier(.79, .14, .15, .86);
 }
 
 .characters img {
   height: 100%;
+  position: absolute;
 }
 
+#main_img_chara2, #main_img_chara3, #main_img_chara4 {
+  opacity: 0;
+}
+
+/* .characters img {
+  height: 100%;
+} */
 #masthead {
   display: none;
 }
@@ -161,7 +196,6 @@ a:visited {
 
 .userInp {
   /* width: 80%; */
-  width: 200px;
   height: 52px;
   margin: 0 auto;
   padding: 10px;
@@ -173,8 +207,6 @@ a:visited {
   color: #022D41;
   background-color: #ffc436;
   cursor: pointer;
-  width: 220px;
-  margin-left: 168px;
   /* border-radius: 40px; */
   border: 2px solid rgba(15, 91, 92, 0.6);
   padding: 14px 10px 10px 10px;
@@ -187,17 +219,16 @@ a:visited {
 
 .two_button_container {
   display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
 #or {
   font-size: 25px;
-  margin-right: 5px;
-  margin-top: 25px;
-  margin-left: 10px;
 }
 
 .findTxHp {
-  font-size: 2em;
+  font-size: 1em;
   transition: all 0.3s ease-out;
   padding: 14px 10px 10px 10px;
   cursor: pointer;
@@ -211,7 +242,7 @@ a:visited {
 
 .findTxHp:hover {
   color: white;
-  background-color:#022D41;
+  background-color: #022D41;
   border: 2px solid #0F5B5C;
 }
 
@@ -237,6 +268,7 @@ a:visited {
 }
 
 .bigbtn {
+  margin: 0 auto;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -249,17 +281,18 @@ a:visited {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+#qualify_page .section_titles {}
 
 /* HOW TO QUALIFY PAGE */
 .how_to_qualify_btn_container {
+  margin: auto 0;
   display: flex;
-  flex-direction: column;
-  height: 250px;
+  flex-flow: column nowrap;
   justify-content: space-between;
-  margin-top: 100px;
-  margin-right: -100px;
-  margin-left: 100px;
+  align-items: center;
+  height: 100%;
 }
+
 .qualify_buttons {
   background-color: #022D41;
   padding: 20px;
@@ -267,48 +300,32 @@ a:visited {
   color: white;
   border-radius: 25px;
   cursor: pointer;
-  cursor: pointer;
 }
 
 .qualify_button_selected {
-	/* width: 223.411px;
+  /* width: 223.411px;
 	height: 80.02px; */
-	background-color: #19868E;
+  background-color: #19868E;
 }
 
 .qualify_button_deselected {
-	/* width: 223.411px;
+  /* width: 223.411px;
 	height: 80.02px; */
-	background-color: #022D41;
+  background-color: #022D41;
 }
 
 .qualify_box {
-  margin-left: 225px;
   padding: 25px;
+  /* min-width: 90%; */
 }
 
 #qualify_page .frame_image {
   margin-left: 199px;
 }
 
-.download {
-  cursor: pointer;
-  padding-left: 180px;
-  color: black;
-}
-
 .download img {
   width: 80px;
 }
-
-
-
-
-
-
-
-
-
 
 /*          P A G E    2         */
 /* ------------ -2- ------------ */
@@ -429,7 +446,7 @@ map-section.leaflet-popup-content-wrapper {
 }
 
 /* HOW TO QUALIFY */
-#how-to-qualify, #volunteer, #empowerment, #testimonials {
+#qualify_page, #volunteer, #empowerment, #testimonials {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -461,7 +478,7 @@ map-section.leaflet-popup-content-wrapper {
 
 #video_container {
   /* width: 400px; */
-  padding-top: 22px;
+  padding-top: 60px;
 }
 
 #video_description {
@@ -474,6 +491,10 @@ map-section.leaflet-popup-content-wrapper {
   padding: 15px;
   color: white;
   font-size: 18px;
+}
+
+.volunteer.grid-x .cell:nth-child(2) {
+  margin: auto;
 }
 
 .volunteer_content_container {
@@ -505,17 +526,11 @@ map-section.leaflet-popup-content-wrapper {
   border-radius: 15px;
 }
 
-
-
-
 /* FINANCIAL EMPOWERMENT */
 #financial_empowerment {
   padding: 0 60px;
   padding-bottom: 140px;
 }
-.financial_empowerment_grid {
-  margin-left: 80px;
-} 
 
 #financial_empowerment .section_titles {
   margin-top: 40px;
@@ -527,260 +542,284 @@ map-section.leaflet-popup-content-wrapper {
   padding-top: 5px;
   font-size: 30px;
   color: #27a5b7;
- }
+}
 
- #overview p {
+#overview p {
   font-size: 18px;
   padding: 10px 15px 0px 35px;
   color: #022d41;
- }
+}
 
- .frame_image {
+.frame_image {
   width: 700px;
- }
+}
 
- #financial_empowerment .frame_image {
- margin-left: 330px;
- }
+#financial_empowerment .frame_image {
+  margin-left: 330px;
+}
 
- #sidebar {
+#sidebar {
   position: absolute;
   margin-top: 0px;
   width: 250px;
   height: 460px;
   background-color: #022d41;
   border-radius: 40px;
- 
- }
+}
 
- #navi {
+.fullVH {
+  height: 100vh;
+  align-content: flex-start;
+}
+
+#navi {
   z-index: 2;
   position: absolute;
   /* margin-left: 100px; */
   margin-top: 85px;
- }
+}
 
+.htq_grid {
+  height: 100%;
+}
+
+.htq_grid div.grid-x.grid-margin-x div.small-12.medium-8.large-9 {
+  height: 75%;
+}
+
+/* .htq_grid .section_titles {
+  margin-bottom: 0;
+} */
 .box {
-   overflow: auto;
+  overflow: auto;
   position: relative;
-  margin-top: -440px;
-  width: 650px;
-  height: 419px;
+  /* border-radius: 50px; */
+  /* background-color: rgba(39, 165, 183, 0.09); */
+  /* background-image: url(../img/frm1.png);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat; */
+  border-image-source: url(../img/frm1.png);
+  border-image-slice: 27 27 27 27;
+  border-image-width: 20px 20px 20px 20px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: stretch stretch;
+}
+
+#overview,
+#cost,
+#credit,
+#tax,
+#bond,
+.article_box {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
   border-radius: 30px;
   background-color: rgba(39, 165, 183, 0.09);
- }
+  padding: 20px;
+}
 
- #financial_empowerment .box {
-    margin-left: 355px;
-    padding: 8px;
- }
+#overview,
+#cost,
+#credit,
+#tax,
+#bond {
+  height: 97%;
+  width: 97%;
+  overflow: auto;
+}
 
- #financial_empowerment .box p {
+#financial_empowerment .box {
+  margin-left: 355px;
+  padding: 8px;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#financial_empowerment .box p {
   font-size: 16px;
 }
 
- #sideNav li {
+#sideNav li {
   margin-left: 30px;
- }
- 
- nav {
+}
+
+nav {
   position: absolute;
-  
   margin: 50px 0px auto 0px;
   margin-left: 20px;
   z-index: 2;
- }
- #sideNav ol{
-margin-top: 20px;
 }
- #sideNav ol li {
+
+#sideNav ol {
+  margin-top: 20px;
+}
+
+#sideNav ol li {
   margin-top: 40px;
   font-size: 18px;
   color: white;
   z-index: 2;
- }
- 
- #sideNav li:hover {
+}
+
+#sideNav li:hover {
   cursor: pointer;
   opacity: 0.6;
- }
- 
- #cost {
+}
+
+#cost {
   font-size: 16px;
   color: #022d41;
- }
- 
- 
- .firstPara {
- 
+}
+
+.firstPara {
   margin: 10px 8px 0px 10px;
   padding: 10px;
- 
- }
+}
 
- #cost ul {
+#cost ul {
   margin-left: 70px;
- }
- 
- .secondPara {
- 
+}
+
+.secondPara {
   padding: 20px 30px 20px 35px;
- 
- }
- 
- a {
+}
+
+a {
   color: #27a5b7;
   text-decoration: none;
- }
- 
- a:hover {
-  color: #022d41;
- 
- }
- 
- .thirdPara {
- 
-  padding: 25px 30px 30px 30px;
- 
- }
+}
 
- #arrow1 {
+a:hover {
+  color: #022d41;
+}
+
+.thirdPara {
+  padding: 25px 30px 30px 30px;
+}
+
+#arrow1 {
   position: absolute;
   left: -1px;
   /*2    top: 43%;*/
   top: 11%;
   z-index: 1;
- 
- /* width:20px; */
- }
- 
- 
- #arrow2 {
+  /* width:20px; */
+}
+
+#arrow2 {
   position: absolute;
   left: -1px;
   top: 31%;
   z-index: 1;
- 
- }
- 
- #arrow3 {
+}
+
+#arrow3 {
   position: absolute;
   left: -1px;
   top: 48%;
   z-index: 1;
- 
- }
- 
- #arrow4 {
+}
+
+#arrow4 {
   position: absolute;
   left: -1px;
   top: 68%;
   z-index: 1;
- }
+}
 
- #credit li {
+#credit li {
   margin-left: 80px;
- }
- 
- #bond {
+}
+
+#bond {
   color: #022d41;
   font-size: 10px;
- }
- 
- .fourthPara {
- 
-  padding: 30px 30px 30px 30px;
- 
- }
- 
- .sixthPara {
- 
-  padding: 20px 30px 20px 35px;
- font-size: 15px;
- line-height: 22px;
- }
- 
- #credit {
-  color: #022d41;
- }
+}
 
- #tax h1 {
+.fourthPara {
+  padding: 30px 30px 30px 30px;
+}
+
+.sixthPara {
+  padding: 20px 30px 20px 35px;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+#credit {
+  color: #022d41;
+}
+
+#tax h1 {
   font-size: 30px;
   padding: 30px;
- 
- }
- 
- #tax p {
+}
+
+#tax p {
   font-size: 20px;
   margin-left: 20px;
   padding-top: 20px;
   padding: 0px 10px 0px 10px;
- }
+}
 
- .filingPdf {
-
+.filingPdf {
   margin-left: 190px;
   margin-top: 20px;
   font-size: 25px;
- }
- 
- .filingPdf img {
+}
+
+.filingPdf img {
   position: absolute;
   margin-left: -264.5px;
   margin-top: -10px;
   width: 5%;
- }
- 
- .RefundPdf {
+}
+
+.RefundPdf {
   margin-left: 195px;
   font-size: 25px;
- }
- 
- 
- 
- .RefundPdf img {
+}
+
+.RefundPdf img {
   position: absolute;
   margin-left: -269px;
   margin-top: -10px;
   width: 5%;
- }
- 
- blockqoute {
+}
+
+blockqoute {
   height: 200px;
   width: 200px;
- }
+}
 
- #sidebar div img {
-   height: 86px;
-   max-width: 280px;
- }
+#sidebar div img {
+  height: 86px;
+  max-width: 280px;
+}
 
- #arrow1 img{
-   width: 900px;
-   margin-top: 22px;
- }
+#arrow1 img {
+  width: 900px;
+  margin-top: 22px;
+}
 
- #arrow2 img{
+#arrow2 img {
   margin-top: 16px;
 }
 
-#arrow3 img{
+#arrow3 img {
   margin-top: 6px;
 }
 
-#arrow4 img{
+#arrow4 img {
   margin-top: -2px;
 }
-
-
-
-
-
-
-
-
-
-
 
 /***********         TESTIMONIALS -  P A G E    5        ***********/
 /* -------------- 5 ------------ */
@@ -790,56 +829,88 @@ margin-top: 20px;
   margin-left: 10px;
 }
 
-.container {
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
 .card {
-  background-color: transparent;
-  height: 330px;
+  height: 360px;
+  padding-top: 12px;
+  width: 100%;
   border: none;
   padding-left: 60px;
   margin-top: 0px;
+  /* background: url(http://durham-tax-help.local/wp-content/uploads/2019/02/scribble.png); */
+  background-image: url(../img/fr1.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card:nth-child(1) {
+  background-image: url(../img/fr1.jpg);
+}
+
+.card:nth-child(2) {
+  background-image: url(../img/fr2.jpg);
+}
+
+.card:nth-child(3) {
+  background-image: url(../img/fr3.jpg);
+}
+
+.card:nth-child(4) {
+  background-image: url(../img/fr4.jpg);
+}
+
+.card * {
+  display: none;
 }
 
 .imageBG {
-  margin-top: 125px;
-  margin-left: -45px;
+  opacity: 1;
+}
+
+.container {
+  height: auto;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.imageBG {
+  margin-top: 23%;
+  margin-left: -1%;
 }
 
 .textContainer>p {
   font-family: 'Shree Devanagari 714', sans-serif;
   font-size: 17px;
-  margin-top: 75px;
+  margin-top: 14%;
   text-align: center;
   padding: 18px 25px;
   font-weight: 600;
 }
 
 .textContainer {
-  margin-top: -235px;
+  margin-top: -37%;
   height: 250px;
   border: 2px solid #022D41;
 }
 
 .imageFrame {
-  padding: 5px;
-  height: 120px;
-  background-color: white;
-  margin-top: -315px;
+  padding: 3px 5px;
+  height: 105px;
+  background: transparent;
+  margin-top: -54%;
   border: none;
   text-align: center;
-  padding-left: 135px;
+  padding-left: 25%;
 }
 
 #frame {
-  width: 148px;
-  height: 140px;
-  background-color: white;
+  width: 123px;
+  height: 125px;
+  /* background-color: white; */
   border: 2px solid #022D41;
   padding: 5px;
-  margin-left: -84px;
+  margin-left: -65%;
 }
 
 .image {
@@ -847,44 +918,47 @@ margin-top: 20px;
   height: 100%;
 }
 
-
-
-
 /* BENEFITS FINDER SECTION */
 #benefits_finder_section {
-  background:#c7f5f9;
+  background: #c7f5f9;
   text-align: center;
   padding: 100px 220px 220px 220px;
   border-top: 1px solid black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
-#benefits_finder_section p, #benefits_finder_section a{
+#benefits_finder_section p, #benefits_finder_section a {
   font-size: 20px;
 }
 
-#benefits_finder_section p{
+#benefits_finder_section p {
   color: #127375;
   margin-bottom: 20px;
 }
 
-#benefits_finder_section  a {
+#benefits_finder_section a {
   color: #022D41;
   text-decoration: underline;
 }
 
 #footer {
   background: #022d41;
+  width: 100vw;
 }
 
-#footer_holder{
+#footer_holder {
   text-align: center;
   padding: 10px 0;
 }
 
-#footer_holder  img{
+#footer_holder img {
   height: 100px;
   padding: 5px;
-  margin-left: 20px; 
+  margin-left: 20px;
 }
 
 button {
@@ -896,24 +970,25 @@ button:hover {
   transition: all 0.5s;
 }
 
-
+/* CUSTOM LOGO */
+.custom-logo-link img {
+  width: 300px;
+  height: auto;
+  margin-top: -10px;
+  margin-left: 10px;
+}
 
 /* ANIMATION PURPOSES */
 #main_site_title, .fadeOn {
   opacity: 0;
 }
 
-
-
-
-
 /*          Q U E R I E S        */
 /* ------------ -q- ------------ */
 @media (min-width:0em) {
 
   /* smartphones, iPhone, portrait 480x320 phones */
-  /* Map Parts */
-  /* list of locations */
+  /* custom menu */
   .intro {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
@@ -927,12 +1002,13 @@ button:hover {
     font-size: 2em;
   }
 
-  .statement, #map-section h3 {
-    font-size: 1.25em;
+  #responsive-menu-container {
+    width: 340px;
   }
 
-  #map-section h3 {
-    font-weight: bolder;
+  /* SHARED */
+  .section_titles {
+    font-size: 30px;
   }
 
   .userInp,
@@ -943,6 +1019,40 @@ button:hover {
 
   .findTxHp {
     font-size: 1.75em;
+  }
+
+  /* HOW TO QUALIFY */
+  .qualify_buttons {
+    background-color: #022D41;
+    padding: 14px 10px 10px 10px;
+    font-size: 1.5em;
+    margin-right: 5px;
+    width: auto;
+  }
+
+  /* .qualify_box {
+    margin-top: -434px;
+    margin-left: 41px;
+    width: 332px;
+  } */
+  #qualify_page .frame_image {
+    margin-left: 30px;
+    margin-right: 20px;
+    width: 66%;
+    height: 65%;
+    display: none;
+  }
+
+  .download {
+    cursor: pointer;
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .download img {
+    width: 60px;
   }
 
   #map-list {
@@ -959,6 +1069,122 @@ button:hover {
     height: 25vh;
     display: none;
   }
+
+  /* LOCATIONS */
+  #locations_page .section_titles {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+
+  /* VOLUNTEER SECTION */
+  #video_container {
+    /* width: 400px; */
+    padding-top: 20px;
+  }
+
+  #video_description {
+    line-height: 20px;
+    margin-top: -2px;
+    margin-bottom: 20px;
+  }
+
+  .volunteer_content_container p {
+    line-height: 27px;
+  }
+
+  #volunteer_last_btn {
+    margin-top: 5px;
+  }
+
+  /* BENEFITS FINDER SECTION */
+  #benefits_finder_section {
+    padding: 40px;
+  }
+
+  #benefits_finder_section p, #benefits_finder_section a {
+    font-size: 20px;
+  }
+
+  /* FOOTER SECTION */
+  #footer_holder img {
+    height: 40px;
+    padding: 5px;
+    margin-left: 0px;
+  }
+
+  /* -------------- 5 ------------ */
+  .testimonials-page {
+    height: auto;
+  }
+
+  .container {
+    background-color: transparent;
+    height: auto;
+    padding: 0 5px;
+    margin: 0;
+  }
+
+  .card {
+    height: 310px;
+    border: none;
+    padding: 0 5px;
+    margin-top: 0px;
+  }
+
+  .imageBG {
+    margin-top: 34%;
+    margin-left: 0;
+  }
+
+  .textContainer>p {
+    font-size: 13px;
+    margin-top: 14%;
+    text-align: left;
+    padding: 20px 5px;
+  }
+
+  .textContainer {
+    margin-top: -45%;
+    height: 205px;
+    border: 2px solid #022D41;
+  }
+
+  .imageFrame {
+    padding: 2px;
+    height: 85px;
+    margin-top: -71%;
+    border: none;
+    text-align: center;
+  }
+
+  #frame {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border: 2px solid #022D41;
+    padding: 5px;
+    margin-left: 25%;
+  }
+
+  .image {
+    /* width: 125px; */
+    height: 100%;
+  }
+
+  .statement, #map-section h3 {
+    font-size: 1.25em;
+  }
+
+  #map-section h3 {
+    font-weight: bolder;
+  }
+
+  /* HOW TO QUALIFY PAGE */
+  .how_to_qualify_btn_container {
+    height: 20%;
+    margin: 0 auto;
+    flex-flow: row wrap;
+  }
 }
 
 @media (min-width:30.063em) {
@@ -974,27 +1200,95 @@ button:hover {
 
   .userInp,
   .calculate,
-  .conversion, .map-list-option h3 {
+  .conversion,
+  .map-list-option h3 {
     font-size: 1.5em;
   }
 
   .findTxHp {
-    font-size: 2em;
+    font-size: 1.25em;
+  }
+
+  /***********         TESTIMONIALS -  P A G E    5        ***********/
+  /* -------------- 5 ------------ */
+  .testimonials-page {
+    height: auto;
+  }
+
+  .container {
+    background-color: transparent;
+    height: auto;
+    padding: 0 5px;
+    margin: 0;
+  }
+
+  .card {
+    /* background-color: transparent; */
+    height: 310px;
+    border: none;
+    padding: 0 5px;
+    margin-top: 0px;
+  }
+
+  .imageBG {
+    margin-top: 24%;
+    margin-left: 0;
+  }
+
+  .textContainer>p {
+    font-family: 'Shree Devanagari 714', sans-serif;
+    font-size: 17px;
+    margin-top: 19%;
+    text-align: center;
+    padding: 18px 25px;
+    font-weight: 800;
+  }
+
+  .textContainer {
+    margin-top: -46%;
+    height: 265px;
+    border: 2px solid #022D41;
+  }
+
+  .imageFrame {
+    padding: 2px;
+    height: 95px;
+    margin-top: -59%;
+    border: none;
+    text-align: center;
+  }
+
+  #frame {
+    width: 108px;
+    height: 100px;
+    border: 2px solid #022D41;
+    padding: 5px;
+    margin-left: 28%;
+  }
+
+  .image {
+    /* width: 125px; */
+    height: 100%;
   }
 }
 
 @media (min-width:40.063em) {
 
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .intro {
+    padding-right: 20px;
+  }
+
+  .findTxHp {
+    font-size: 1.5em;
+  }
+
   .characters {
     margin: 0 auto;
     display: block;
     order: 2;
     height: 350px;
-  }
-
-  .intro {
-    padding-right: 20px;
+    width: 45%;
   }
 
   #map-list {
@@ -1012,12 +1306,65 @@ button:hover {
     display: block;
   }
 
-  .findTxHp {
-    /* font-size: 2.5em; */
-    font-size: 2em;
+  .how_to_qualify_btn_container {
+    height: 50%;
+    margin: auto 0;
+    flex-flow: column wrap;
   }
 
+  /***********         TESTIMONIALS -  P A G E    5        ***********/
+  /* -------------- 5 ------------ */
+  .card {
+    /* background-color: transparent; */
+    height: 330px;
+    border: none;
+    padding: 0 5px;
+    margin-top: 0px;
+  }
+
+  .imageBG {
+    margin-top: 21%;
+    margin-left: 0;
+  }
+
+  .textContainer>p {
+    font-family: 'Shree Devanagari 714', sans-serif;
+    font-size: 19px;
+    margin-top: 12%;
+    text-align: center;
+    padding: 18px 25px;
+    font-weight: 800;
+  }
+
+  .textContainer {
+    margin-top: -35%;
+    height: 235px;
+    border: 2px solid #022D41;
+  }
+
+  .imageFrame {
+    padding: 2px;
+    height: 95px;
+    margin-top: -50%;
+    border: none;
+    text-align: center;
+  }
+
+  #frame {
+    width: 108px;
+    height: 100px;
+    border: 2px solid #022D41;
+    padding: 5px;
+    margin-left: 30%;
+  }
+
+  .image {
+    /* width: 125px; */
+    height: 100%;
+  }
 }
+
+@media (min-width:50.063em) {}
 
 @media (min-width:60.063em) {
 
@@ -1034,11 +1381,65 @@ button:hover {
     display: block;
     order: -1;
     height: 350px;
+    width: 40%;
   }
 
   #map-list, #map-info {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
+  }
+
+  /***********         TESTIMONIALS -  P A G E    5        ***********/
+  /* -------------- 5 ------------ */
+  .card {
+    /* background-color: transparent; */
+    height: 350px;
+    border: none;
+    padding-top: 12px;
+    padding-left: 60px;
+    margin-top: 0px;
+    transform: scale(1.1);
+  }
+
+  .imageBG {
+    margin-top: 30%;
+    margin-left: -1%;
+  }
+
+  .textContainer>p {
+    font-family: 'Shree Devanagari 714', sans-serif;
+    font-size: 15px;
+    margin-top: 18%;
+    text-align: center;
+    padding: 18px 25px;
+    font-weight: 600;
+  }
+
+  .textContainer {
+    margin-top: -46%;
+    height: 250px;
+    border: 2px solid #022D41;
+  }
+
+  .imageFrame {
+    padding: 2px;
+    height: 95px;
+    margin-top: -68%;
+    border: none;
+    text-align: center;
+  }
+
+  #frame {
+    width: 90px;
+    height: 90px;
+    border: 2px solid #022D41;
+    padding: 5px;
+    margin-left: 27%;
+  }
+
+  .image {
+    /* width: 125px; */
+    height: 100%;
   }
 }
 
@@ -1059,6 +1460,65 @@ button:hover {
     height: 70vh;
     display: block;
   }
+
+  .userInp,
+  .calculate,
+  .conversion {
+    font-size: 1.5em;
+  }
+
+  /***********         TESTIMONIALS -  P A G E    5        ***********/
+  /* -------------- 5 ------------ */
+  .card {
+    /* background-color: transparent; */
+    height: 350px;
+    border: none;
+    padding-top: 12px;
+    padding-left: 60px;
+    margin-top: 0px;
+  }
+
+  .imageBG {
+    margin-top: 20%;
+    margin-left: -1%;
+  }
+
+  .textContainer>p {
+    font-family: 'Shree Devanagari 714', sans-serif;
+    font-size: 17px;
+    margin-top: 14%;
+    text-align: center;
+    padding: 18px 25px;
+    font-weight: 600;
+  }
+
+  .textContainer {
+    margin-top: -36%;
+    height: 250px;
+    border: 2px solid #022D41;
+  }
+
+  .imageFrame {
+    padding: 3px 5px;
+    height: 105px;
+    margin-top: -51%;
+    border: none;
+    text-align: center;
+    padding-left: 25%;
+  }
+
+  #frame {
+    width: 123px;
+    height: 125px;
+    border: 2px solid #022D41;
+    padding: 5px;
+    margin-left: -65%;
+  }
+
+  .image {
+    /* width: 125px; */
+    height: 100%;
+  }
 }
 
 @media (min-width:70.063em) {
@@ -1076,9 +1536,10 @@ button:hover {
     font-size: 2em;
   }
 
-  .userInp,
-  .calculate,
-  .conversion,
+  .findTxHp {
+    font-size: 1.2em;
+  }
+
   #map-section h3 {
     font-size: 1.5em;
   }
@@ -1091,6 +1552,60 @@ button:hover {
 
   .characters {
     height: 500px;
+  }
+
+  /***********         TESTIMONIALS -  P A G E    5        ***********/
+  /* -------------- 5 ------------ */
+  .container {
+    height: auto;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  .card {
+    /* background-color: transparent; */
+    height: 360px;
+    border: none;
+    padding-top: 12px;
+    padding-left: 60px;
+    margin-top: 0px;
+  }
+
+  .imageBG {
+    margin-top: 23%;
+    margin-left: -1%;
+  }
+
+  .textContainer>p {
+    font-family: 'Shree Devanagari 714', sans-serif;
+    font-size: 17px;
+    margin-top: 14%;
+    text-align: center;
+    padding: 18px 25px;
+    font-weight: 600;
+  }
+
+  .textContainer {
+    margin-top: -37%;
+    height: 250px;
+    border: 2px solid #022D41;
+  }
+
+  .imageFrame {
+    padding: 3px 5px;
+    height: 105px;
+    margin-top: -54%;
+    border: none;
+    text-align: center;
+    padding-left: 25%;
+  }
+
+  #frame {
+    width: 123px;
+    height: 125px;
+    border: 2px solid #022D41;
+    padding: 5px;
+    margin-left: -65%;
   }
 }
 
@@ -1109,13 +1624,67 @@ button:hover {
     font-size: 3em;
   }
 
-  .userInp,
-  .calculate,
-  .conversion {
+  .conversion,
+  .findTxHp {
     font-size: 2em;
   }
 
   .characters {
     height: 600px;
+  }
+
+  /***********         TESTIMONIALS -  P A G E    5        ***********/
+  /* -------------- 5 ------------ */
+  .container {
+    height: auto;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  .card {
+    height: 360px;
+    border: none;
+    padding-top: 12px;
+    padding-left: 60px;
+    margin-top: 0px;
+  }
+
+  .imageBG {
+    margin-top: 23%;
+    margin-left: -1%;
+  }
+
+  .textContainer>p {
+    font-family: 'Shree Devanagari 714', sans-serif;
+    font-size: 17px;
+    margin-top: 14%;
+    text-align: center;
+    padding: 18px 25px;
+    font-weight: 600;
+  }
+
+  .textContainer {
+    margin-top: -37%;
+    height: 250px;
+    border: 2px solid #022D41;
+  }
+
+  .imageFrame {
+    padding: 3px 5px;
+    height: 105px;
+    background: transparent;
+    margin-top: -54%;
+    border: none;
+    text-align: center;
+    padding-left: 25%;
+  }
+
+  #frame {
+    width: 123px;
+    height: 125px;
+    background-color: white;
+    border: 2px solid #022D41;
+    padding: 5px;
+    margin-left: -65%;
   }
 }
