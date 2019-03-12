@@ -102,9 +102,38 @@
             </div>
         </div>
 
+		
+		<?php 
+		if( function_exists( 'get_field' ) ){
+			$form_id        = get_field( 'form_id' );
+			$form_shortcode = get_field( 'form_shortcode' );
+			if ( $form_id || $form_shortcode ){
+			?>
+			<section class="contact-form">
+					<div class="grid-container">
+						<div class="grid-x grid-margin-x grid-margin-y">
+							<div class="cell small-12 medium-6">
+								<h2>FORM ID</h2>
+								<?php echo do_shortcode( '[ws_form id="' . $form_id . '"]' ); ?>
+							</div>
+
+							<div class="cell small-12 medium-6">
+								<h2>FORM SHORTCODE</h2>
+								<?php echo $form_shortcode; ?>
+							</div>
+						</div>
+					</div>
+				</section>
+				<?php
+			}
+
+		}
+		
+		?>
+
+        </div>
 
         </main>
-        </div>
 
 
                 <section class="content_sections" id="qualify_page">
@@ -574,6 +603,12 @@
                         <img src="<?php echo get_template_directory_uri() . '/assets/img/logos/North House Logo_Colour.jpg'; ?>" alt="North House Logo" />
                         <img src="<?php echo get_template_directory_uri() . '/assets/img/logos/JHS_Logo_65px_high.png'; ?>" alt="John Howard Logo" />
                         <img src="<?php echo get_template_directory_uri() . '/assets/img/logos/enactus_logo.png'; ?>" alt="Enactus Logo" />
+						 <?php if ( get_theme_mod( 'underscores_facebook_url' ) ) { ?>
+						<a class="icon facebook" href="<?php echo get_theme_mod( 'underscores_facebook_url' ); ?>" target="_blank">Facebook</a>
+						<?php } ?>
+						  <?php if ( get_theme_mod( 'underscores_twitter_url' ) ) { ?>
+						<a class="icon twitter" href="<?php echo get_theme_mod( 'underscores_twitter_url' ); ?>" target="_blank">Twitter</a>
+						<?php } ?>
                      </div>
                  </section>
 

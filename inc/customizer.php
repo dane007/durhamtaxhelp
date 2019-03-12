@@ -11,6 +11,62 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function durhamtaxhelp_customize_register( $wp_customize ) {
+	
+	//Social Media Section
+	$wp_customize->add_section(
+	 'underscores_social_media',
+	 array(
+		'title'		=> 'Social Media',
+		'capability'=> 'edit_theme_options',
+	 )
+	);
+	
+	//Social Media Setting
+	$wp_customize->add_setting(
+	 'underscores_facebook_url',
+	 array(
+		'default' => 'https://www.facebook.com',
+		'transport' => 'refresh',
+	 )
+	);
+
+	//Social Media Control
+	$wp_customize->add_control(
+	 new WP_Customize_Control(
+		$wp_customize,
+		'underscores_facebook_url',
+		array(
+		 'label' => 'Facebook',
+		 'type' => 'text',
+		 'section' => 'underscores_social_media',
+		)
+	 )
+	);
+
+	//Social Media Setting (Twitter)
+	$wp_customize->add_setting(
+	 'underscores_twitter_url',
+	 array(
+		'default' => 'https://www.twitter.com',
+		'transport' => 'refresh',
+	 )
+	);
+
+	//Social Media Control (Twitter)
+	$wp_customize->add_control(
+	 new WP_Customize_Control(
+		$wp_customize,
+		'underscores_twitter_url',
+		array(
+		 'label' => 'Twitter',
+		 'type' => 'text',
+		 'section' => 'underscores_social_media',
+		)
+	 )
+	);
+
+
+	
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
