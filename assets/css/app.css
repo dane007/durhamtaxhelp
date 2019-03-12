@@ -34,21 +34,6 @@ h1, h2, h3, h4, h5, h6, p, span {
   min-width: 100vw;
 }
 
-#qualify_page {
-  border-top: 1px solid black;
-}
-
-/* #benefits_finder_section {
-  height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-} */
-#volunteer_page,
-#financial_empowerment {
-  min-height: auto;
-}
-
 .section_titles {
   text-align: center;
   margin-bottom: 20px;
@@ -69,11 +54,13 @@ footer a, footer a:active, footer a:visited {
   margin: 0;
 }
 
-/*            M E N U            */
-/* ------------ -n- ------------ */
-.responsive-menu-boring {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+.site-branding {
+  top: 0px;
+  left: 0px;
+  margin: 10px;
+  height: 75px;
+  font-size: 1.25em;
+  position: absolute;
 }
 
 .slider .slide {
@@ -87,9 +74,112 @@ footer a, footer a:active, footer a:visited {
   background-repeat: no-repeat;
 }
 
-/* custom menu */
-#responsive-menu-container {
-  opacity: 0.9;
+#qualify_page, #volunteer, #empowerment, #testimonials {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  /* border-bottom: 2px solid black; */
+}
+
+#sidebar {
+  position: absolute;
+  margin-top: 0px;
+  width: 250px;
+  height: 460px;
+  background-color: #022d41;
+  border-radius: 40px;
+}
+
+.fullVH {
+  height: 100vh;
+  align-content: flex-start;
+}
+
+#navi {
+  z-index: 2;
+  position: absolute;
+  /* margin-left: 100px; */
+  margin-top: 85px;
+}
+
+nav {
+  position: absolute;
+  margin: 50px 0px auto 0px;
+  margin-left: 20px;
+  z-index: 2;
+}
+
+a {
+  color: #27a5b7;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #022d41;
+}
+
+#footer {
+  background: #022d41;
+  width: 100vw;
+}
+
+#footer_holder {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#footer_holder img {
+  height: 100px;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+button {
+  transition: all 0.5s;
+}
+
+button:hover {
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+
+/* CUSTOM LOGO */
+.custom-logo-link img {
+  width: 300px;
+  height: auto;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+/* ANIMATION PURPOSES */
+#main_site_title, .fadeOn {
+  opacity: 0;
+}
+
+.box {
+  overflow: auto;
+  position: relative;
+  /* border-radius: 50px; */
+  /* background-color: rgba(39, 165, 183, 0.09); */
+  /* background-image: url(../img/frm1.png);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat; */
+  border-image-source: url(../img/frm1.png);
+  border-image-slice: 27 27 27 27;
+  border-image-width: 20px 20px 20px 20px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: stretch stretch;
+}
+
+/*            M E N U            */
+/* ------------ -n- ------------ */
+.responsive-menu-boring {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .site-navigation {
@@ -97,42 +187,17 @@ footer a, footer a:active, footer a:visited {
   position: absolute;
 }
 
-.site-branding {
-  top: 0px;
-  left: 0px;
-  margin: 10px;
-  height: 75px;
-  font-size: 1.25em;
-  position: absolute;
-}
-
-.site-branding img {
-  height: 75px;
-  width: auto;
-}
-
-.site-branding a, .site-navigation a {
-  text-decoration: none;
-  color: black;
-}
-
 a:visited {
   color: gray;
 }
 
-/*          P A G E    1         */
-/* ------------ -1- ------------ */
-.page2, .testimonials-page {
-  background-color: rgba(255, 255, 255, 1);
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-flow: row wrap;
-  align-content: center;
-  justify-content: flex-end;
-  align-items: center;
+/* custom menu */
+#responsive-menu-container {
+  opacity: 0.9;
 }
 
+/*   L A N D I N G    P A G E    */
+/* ------------ -1- ------------ */
 .page1 {
   height: 100vh;
   width: 100vw;
@@ -281,15 +346,55 @@ a:visited {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.site-branding img {
+  height: 75px;
+  width: auto;
+}
+
+.site-branding a, .site-navigation a {
+  text-decoration: none;
+  color: black;
+}
+
+#volunteer_page,
+#financial_empowerment {
+  min-height: auto;
+}
+
+/*  H O W   T O   Q U A L I F Y  */
+/* ------------ -2- ------------ */
+.page2, .testimonials-page {
+  background-color: rgba(255, 255, 255, 1);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#qualify_page {
+  border-top: 1px solid black;
+}
+
+.qualify_box {
+  padding: 25px;
+  /* min-width: 90%; */
+}
+
 #qualify_page .section_titles {}
 
-/* HOW TO QUALIFY PAGE */
 .how_to_qualify_btn_container {
   margin: auto 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
+}
+
+#qualify_page .qualify_box {
   height: 100%;
 }
 
@@ -314,11 +419,6 @@ a:visited {
   background-color: #022D41;
 }
 
-.qualify_box {
-  padding: 25px;
-  /* min-width: 90%; */
-}
-
 #qualify_page .frame_image {
   margin-left: 199px;
 }
@@ -327,8 +427,8 @@ a:visited {
   width: 80px;
 }
 
-/*          P A G E    2         */
-/* ------------ -2- ------------ */
+/*        L O C A T I O N S      */
+/* ------------ -3- ------------ */
 .page2 {
   background-image: url(../img/bgBG-002.png);
   background-position: center;
@@ -445,17 +545,6 @@ map-section.leaflet-popup-content-wrapper {
   border: none;
 }
 
-/* HOW TO QUALIFY */
-#qualify_page, #volunteer, #empowerment, #testimonials {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  /* border-bottom: 2px solid black; */
-}
-
 #locations {
   width: 100vw;
   min-height: 100vh;
@@ -465,7 +554,8 @@ map-section.leaflet-popup-content-wrapper {
   align-items: center;
 }
 
-/* VOLUNTEER PAGE */
+/*  V O L U N T E E R   P A G E  */
+/* ------------ -4- ------------ */
 #volunteer_page div {
   border-radius: 10px;
 }
@@ -526,7 +616,8 @@ map-section.leaflet-popup-content-wrapper {
   border-radius: 15px;
 }
 
-/* FINANCIAL EMPOWERMENT */
+/*    F I N A N C I A L    E M P O W E R M E N T     */
+/* ---------------------- -5- ---------------------- */
 #financial_empowerment {
   padding: 0 60px;
   padding-bottom: 140px;
@@ -558,27 +649,6 @@ map-section.leaflet-popup-content-wrapper {
   margin-left: 330px;
 }
 
-#sidebar {
-  position: absolute;
-  margin-top: 0px;
-  width: 250px;
-  height: 460px;
-  background-color: #022d41;
-  border-radius: 40px;
-}
-
-.fullVH {
-  height: 100vh;
-  align-content: flex-start;
-}
-
-#navi {
-  z-index: 2;
-  position: absolute;
-  /* margin-left: 100px; */
-  margin-top: 85px;
-}
-
 .htq_grid {
   height: 100%;
 }
@@ -590,22 +660,6 @@ map-section.leaflet-popup-content-wrapper {
 /* .htq_grid .section_titles {
   margin-bottom: 0;
 } */
-.box {
-  overflow: auto;
-  position: relative;
-  /* border-radius: 50px; */
-  /* background-color: rgba(39, 165, 183, 0.09); */
-  /* background-image: url(../img/frm1.png);
-  background-size: contain;
-  background-position: left;
-  background-repeat: no-repeat; */
-  border-image-source: url(../img/frm1.png);
-  border-image-slice: 27 27 27 27;
-  border-image-width: 20px 20px 20px 20px;
-  border-image-outset: 0px 0px 0px 0px;
-  border-image-repeat: stretch stretch;
-}
-
 #overview,
 #cost,
 #credit,
@@ -650,13 +704,6 @@ map-section.leaflet-popup-content-wrapper {
   margin-left: 30px;
 }
 
-nav {
-  position: absolute;
-  margin: 50px 0px auto 0px;
-  margin-left: 20px;
-  z-index: 2;
-}
-
 #sideNav ol {
   margin-top: 20px;
 }
@@ -689,15 +736,6 @@ nav {
 
 .secondPara {
   padding: 20px 30px 20px 35px;
-}
-
-a {
-  color: #27a5b7;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #022d41;
 }
 
 .thirdPara {
@@ -794,11 +832,6 @@ a:hover {
   width: 5%;
 }
 
-blockqoute {
-  height: 200px;
-  width: 200px;
-}
-
 #sidebar div img {
   height: 86px;
   max-width: 280px;
@@ -821,8 +854,8 @@ blockqoute {
   margin-top: -2px;
 }
 
-/***********         TESTIMONIALS -  P A G E    5        ***********/
-/* -------------- 5 ------------ */
+/* T E S I M O N I A L S    P A G E  */
+/* -------------- -6- ------------ */
 #testimonials_h1 {
   font-family: 'Shree Devanagari 714', sans-serif;
   font-size: 50px;
@@ -945,44 +978,6 @@ blockqoute {
   text-decoration: underline;
 }
 
-#footer {
-  background: #022d41;
-  width: 100vw;
-}
-
-#footer_holder {
-  text-align: center;
-  padding: 10px 0;
-}
-
-#footer_holder img {
-  height: 100px;
-  padding: 5px;
-  margin-left: 20px;
-}
-
-button {
-  transition: all 0.5s;
-}
-
-button:hover {
-  opacity: 0.7;
-  transition: all 0.5s;
-}
-
-/* CUSTOM LOGO */
-.custom-logo-link img {
-  width: 300px;
-  height: auto;
-  margin-top: -10px;
-  margin-left: 10px;
-}
-
-/* ANIMATION PURPOSES */
-#main_site_title, .fadeOn {
-  opacity: 0;
-}
-
 /*          Q U E R I E S        */
 /* ------------ -q- ------------ */
 @media (min-width:0em) {
@@ -1021,7 +1016,6 @@ button:hover {
     font-size: 1.75em;
   }
 
-  /* HOW TO QUALIFY */
   .qualify_buttons {
     background-color: #022D41;
     padding: 14px 10px 10px 10px;
@@ -1030,11 +1024,6 @@ button:hover {
     width: auto;
   }
 
-  /* .qualify_box {
-    margin-top: -434px;
-    margin-left: 41px;
-    width: 332px;
-  } */
   #qualify_page .frame_image {
     margin-left: 30px;
     margin-right: 20px;
@@ -1059,7 +1048,6 @@ button:hover {
     height: 35vh;
   }
 
-  /* main map */
   #map-box {
     height: 60vh;
     order: -1;
@@ -1070,15 +1058,12 @@ button:hover {
     display: none;
   }
 
-  /* LOCATIONS */
   #locations_page .section_titles {
     margin-bottom: 0;
     margin-top: 20px;
   }
 
-  /* VOLUNTEER SECTION */
   #video_container {
-    /* width: 400px; */
     padding-top: 20px;
   }
 
@@ -1096,7 +1081,6 @@ button:hover {
     margin-top: 5px;
   }
 
-  /* BENEFITS FINDER SECTION */
   #benefits_finder_section {
     padding: 40px;
   }
@@ -1105,14 +1089,12 @@ button:hover {
     font-size: 20px;
   }
 
-  /* FOOTER SECTION */
   #footer_holder img {
     height: 40px;
     padding: 5px;
     margin-left: 0px;
   }
 
-  /* -------------- 5 ------------ */
   .testimonials-page {
     height: auto;
   }
@@ -1179,7 +1161,6 @@ button:hover {
     font-weight: bolder;
   }
 
-  /* HOW TO QUALIFY PAGE */
   .how_to_qualify_btn_container {
     height: 20%;
     margin: 0 auto;
@@ -1209,25 +1190,8 @@ button:hover {
     font-size: 1.25em;
   }
 
-  /***********         TESTIMONIALS -  P A G E    5        ***********/
-  /* -------------- 5 ------------ */
   .testimonials-page {
     height: auto;
-  }
-
-  .container {
-    background-color: transparent;
-    height: auto;
-    padding: 0 5px;
-    margin: 0;
-  }
-
-  .card {
-    /* background-color: transparent; */
-    height: 310px;
-    border: none;
-    padding: 0 5px;
-    margin-top: 0px;
   }
 
   .imageBG {
@@ -1312,14 +1276,8 @@ button:hover {
     flex-flow: column wrap;
   }
 
-  /***********         TESTIMONIALS -  P A G E    5        ***********/
-  /* -------------- 5 ------------ */
   .card {
-    /* background-color: transparent; */
     height: 330px;
-    border: none;
-    padding: 0 5px;
-    margin-top: 0px;
   }
 
   .imageBG {
@@ -1392,12 +1350,9 @@ button:hover {
   /***********         TESTIMONIALS -  P A G E    5        ***********/
   /* -------------- 5 ------------ */
   .card {
-    /* background-color: transparent; */
     height: 350px;
-    border: none;
     padding-top: 12px;
     padding-left: 60px;
-    margin-top: 0px;
     transform: scale(1.1);
   }
 
@@ -1470,12 +1425,9 @@ button:hover {
   /***********         TESTIMONIALS -  P A G E    5        ***********/
   /* -------------- 5 ------------ */
   .card {
-    /* background-color: transparent; */
     height: 350px;
-    border: none;
     padding-top: 12px;
     padding-left: 60px;
-    margin-top: 0px;
   }
 
   .imageBG {
@@ -1563,12 +1515,9 @@ button:hover {
   }
 
   .card {
-    /* background-color: transparent; */
     height: 360px;
-    border: none;
     padding-top: 12px;
     padding-left: 60px;
-    margin-top: 0px;
   }
 
   .imageBG {
@@ -1631,22 +1580,6 @@ button:hover {
 
   .characters {
     height: 600px;
-  }
-
-  /***********         TESTIMONIALS -  P A G E    5        ***********/
-  /* -------------- 5 ------------ */
-  .container {
-    height: auto;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
-
-  .card {
-    height: 360px;
-    border: none;
-    padding-top: 12px;
-    padding-left: 60px;
-    margin-top: 0px;
   }
 
   .imageBG {
