@@ -317,6 +317,36 @@ let dataLocations = [{
 
     });
 
+    $(".navbar a, .navbar li,.menu").click(function() {
+
+      if ($(this).attr("data-click-state") == 1) {
+
+
+        $(this).attr("data-click-state", 0);
+
+        TweenMax.to(".slide-right", 0.5, {
+          x: 0,
+          ease: Sine.easeOut
+
+        });
+
+      } else {
+
+        $(this).attr("data-click-state", 1);
+
+
+
+        TweenMax.to(".slide-right", 0.5, {
+          x: -500,
+          ease: Sine.easeOutS
+
+
+        });
+      }
+
+
+    });
+
     // HOW TO QUALIFY
     $(function() {
 
@@ -394,5 +424,27 @@ let dataLocations = [{
       });
 
   };
+
+
+  // N A V   C O N T R O L L E R
+
+  $('.title-bar').click(function() {
+    // get the menu
+    let menu = document.querySelector('.row .top-bar');
+
+    // if menu is opened
+    if (menu.classList.contains("opened")) {
+      $('.top-bar')
+        .css('height', '100px')
+        .removeClass("opened")
+        .slideUp();
+    } else {
+      $('.top-bar')
+        .css('height', '100px')
+        .addClass("opened")
+        .slideDown();
+    }
+
+  })
 
 })(jQuery);

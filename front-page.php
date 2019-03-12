@@ -6,7 +6,7 @@
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site may use a
  * different template.
- *
+ * nav-menu
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package durhamtaxhelp
@@ -24,11 +24,11 @@
 					    the_custom_logo();
 					?>
                             <?php
-				$time_tells_tech_description = get_bloginfo( 'description', 'display' );
-				if ( $time_tells_tech_description || is_customize_preview() ) :
+				$durham_tax_help = get_bloginfo( 'description', 'display' );
+				if ( $durham_tax_help || is_customize_preview() ) :
 					?>
                           <p class="site-description">
-                              <?php echo $time_tells_tech_description; /* WPCS: xss ok. */ ?>
+                              <?php echo $durham_tax_help; /* WPCS: xss ok. */ ?>
                           </p>
                           <?php endif; ?>
                     </div>
@@ -41,19 +41,19 @@
 				foreach ( $home_contents as $home_content ) {
 					$title = $home_content['title'];
 					$statement = $home_content['statement'];
-          $image1 = $home_content['image1'];
-          $image2 = $home_content['image2'];
-          $image3 = $home_content['image3'];
-          $image4 = $home_content['image4'];
+                    $image1 = $home_content['image1'];
+                    $image2 = $home_content['image2'];
+                    $image3 = $home_content['image3'];
+                    $image4 = $home_content['image4'];
 					$conversion_messages = $home_content['conversion_messages'];
 					$findhelp = $home_content['find_help_button'];
 					$qualify = $home_content['convert_button'];
 
-          // Conversion statements
-          $begin = $conversion_messages['begin'];
-          // $failed = $conversion_messages['failed'];
-          // $failed = $conversion_messages['success'];
-          // $invalid = $conversion_messages['invalid'];
+                    // Conversion statements
+                    $begin = $conversion_messages['begin'];
+                    // $failed = $conversion_messages['failed'];
+                    // $failed = $conversion_messages['success'];
+                    // $invalid = $conversion_messages['invalid'];
 
 					// var_dump( $image );
 				?>
@@ -137,8 +137,38 @@
 
 
                 <section class="content_sections" id="qualify_page">
+                    <?php
+                        if ( function_exists( 'get_field' ) ) {
+                        $qualify_contents = get_field( 'qualify_contents' );
 
-                    <h1 class="section_titles">How to Qualify</h1>
+                    // var_dump( $image );
+                    ?>
+                    <?php
+                    foreach( $qualify_contents as $qualify_content ) {
+                        $qheading = $qualify_content['heading'];
+                        $heading1 = $qualify_content['heading1'];
+                        $statement = $qualify_content['statement'];
+                        $paragraph1_heading = $qualify_content['paragraph1_heading'];
+                        $paragraph1_content = $qualify_content['paragraph1_content'];
+                        $paragraph2_heading = $qualify_content['paragraph2_heading'];
+                        $paragraph2_content = $qualify_content['paragraph2_content'];
+                        $paragraph3_heading = $qualify_content['paragraph2_heading'];
+                        $paragraph3_content = $qualify_content['paragraph3_content'];
+                        $heading2 = $qualify_content['heading2'];
+                        $content2 = $qualify_content['content2'];
+                        $heading3 = $qualify_content['heading3'];
+                        $content3 = $qualify_content['content3'];
+
+
+
+
+
+                    ?>
+                    <?php
+                    }
+                    ?>
+                    <h1 class="section_titles"><?php echo $qheading; ?></h1>
+
 
 
                     <div class="grid-container financial_empowerment_grid">
@@ -165,47 +195,43 @@
 
                                 <div class="box qualify_box">
                                     <article id="article_box01" class="article_box">
-                                        <h2 class="am_i_eligible_title">Eligibility Criteria:</h2>
-                                        <p class="paragraph0101">People need to be present to have their income tax returns completed.
-                                            For example, in the case of couples, both partners need to be present, and in the case of
-                                            any children who are earning an income, those children need to be present.</p>
-                                        <p class="paragraph0201">Each clinic has specific eligibility criteria based upon
-                                            income level and place of residence. Please review the clinic description carefully.</p>
+                                        <h2 class="am_i_eligible_title"><?php echo $heading1; ?></h2>
+                                        <p class="paragraph0101"><?php echo $statement; ?></p>
+                                        <!-- <p class="paragraph0201">Each clinic has specific eligibility criteria based upon
+                                            income level and place of residence. Please review the clinic description carefully.</p> -->
 
-                                        <h3 class="volunteer_warning">Volunteers cannot help with income tax returns for:</h3>
+                                        <h3 class="volunteer_warning"><?php echo $paragraph1_heading; ?></h3>
 
                                         <ul class="volunteer_warning_list">
-                                            <li>deceased individuals</li>
+                                        <?php echo $paragraph1_content; ?>
+                                            <!-- <li>deceased individuals</li>
                                             <li>bankruptcies</li>
                                             <li>capital gains or losses</li>
                                             <li>employment expenses</li>
-                                            <li>business or rental income and expenses</li>
+                                            <li>business or rental income and expenses</li> -->
                                         </ul>
 
-                                        <h4 class="volunteer_CRA_Guidelines">The volunteers trained by Canada Revenue Agency
-                                            follow these guidelines:</h4>
+                                        <h4 class="volunteer_CRA_Guidelines"><?php echo $paragraph2_heading; ?></h4>
 
                                         <ul class="volunteer_CRA_Guidelines_list">
-                                            <li>Individual $30,000 or less</li>
-                                            <li>Married or Common-Law couple $40,000 or less</li>
-                                            <li>Single Parent with 1 child $35,000 or less (add $2,500 per additional child)</li>
-                                            <li>Interest income limited to under $1,000</li>
+                                        <?php echo $paragraph2_content; ?>
                                         </ul>
 
-                                        <h5 class="chartered_Accountant_Guidelines">The Chartered Accountant volunteers
-                                            follow these guidelines:</h5>
+                                        <h5 class="chartered_Accountant_Guidelines"><?php echo $paragraph3_heading; ?></h5>
 
                                         <ul class="chartered_Accountant_Guidelines_list">
-                                            <li>Individual with no dependents $25,000 or less</li>
+                                        <?php echo $paragraph3_content; ?>
                                         </ul>
                                         <!--- End "Am I Eligible" section --->
                                     </article>
 
 
                                     <article id="article_box02" class="article_box">
-                                        <h2 class="what_to_bring_title">What to Bring:</h2>
+                                        <h2 class="what_to_bring_title"><?php echo $heading2; ?></h2>
                                         <ul class="receipts_list">
-                                            <li>Rent or property taxes paid, where you lived, and the name of your landlord</li>
+
+                                        <?php echo $content2; ?>
+                                            <!-- <li>Rent or property taxes paid, where you lived, and the name of your landlord</li>
                                             <li>Charitable or political donation receipts</li>
                                             <li>Child care expenses</li>
                                             <li>Disability Tax Credit Certificate (T2001)</li>
@@ -213,15 +239,17 @@
                                             <li>Medical and dental expenses</li>
                                             <li>RRSP contributions</li>
                                             <li>Your previous year’s Income Tax Return</li>
-                                            <li>Your previous year’s Notice of Assessment</li>
+                                            <li>Your previous year’s Notice of Assessment</li> -->
                                         </ul>
                                     <!--- End "What to Bring: Receipts" section --->
                                     </article>
 
                                     <article id="article_box03" class="article_box">
-                                        <h2 class="what_to_bring_title">What to Bring:</h2>
+                                        <h2 class="what_to_bring_title"><?php echo $heading3; ?></h2>
                                         <ul class="information_slips_list">
-                                            <li>Social Insurance Number (SIN) for you,
+
+                                        <?php echo $content3; ?>
+                                            <!-- <li>Social Insurance Number (SIN) for you,
                                                 your spouse, and any dependents such as
                                                 children.</li>
                                             <li>List of  your dependents' names and dates of birth</li>
@@ -239,7 +267,7 @@
                                             <li>T5 – Statement of Investment Income</li>
                                             <li>T5007 – Statement of Benefits</li>
                                             <li>RC62 – Universal child care benefit statement</li>
-                                            <li>PT5007 (statement of benefits)</li>
+                                            <li>PT5007 (statement of benefits)</li> -->
                                         </ul>
                                     <!--- End "What to Bring: Information Slips" section --->
                                     </article>
@@ -259,9 +287,12 @@
                         <p>Click here to download in PDF format.</p>
                      </div>
 
-
+                     <?php
+                        }
+                    ?>
 
                 </section>
+
 
 
 
@@ -590,10 +621,29 @@
 
                 <!-- Benefits Finder -->
                 <section id="benefits_finder_section">
+                <?php
+                        if ( function_exists( 'get_field' ) ) {
+                        $benefits_contents = get_field( 'benefits_contents' );
+
+                    // var_dump( $image );
+                    ?>
+                    <?php
+                    foreach( $benefits_contents as $benefits_content ) {
+                        $heading = $benefits_content['heading'];
+                        $content = $benefits_content['content'];
+                        $link = $benefits_content['link'];
+
+                    ?>
+                    <?php
+                    }
+                    ?>
+
                     <div class="grid-container">
-                        <h1 class="section_titles">Government of Canada Benefits Finder</h1>
-                        <p>Answer questions to get a customized list of benefits for which you may be eligible. The Benefits Finder may suggest benefits from federal, provincial or territorial governments, and does not collect or track your information. The more questions you answer, the more customized your results will be.</p>
-                        <a href="https://srv138.services.gc.ca/daf/q?id=e9c78bbd-255d-42a0-a8a0-3b60f96d9965&GoCTemplateCulture=en-CA" id="questionnaire_link">Click here to start the questionnaire.</a>
+                        <h1 class="section_titles"><?php echo $heading; ?></h1>
+                        <p> <?php echo $content; ?> </p>
+                        <a href="https://srv138.services.gc.ca/daf/q?id=e9c78bbd-255d-42a0-a8a0-3b60f96d9965&GoCTemplateCulture=en-CA" id="questionnaire_link">
+                        <?php echo $link; ?>
+                        </a>
                     </div>
                  </section>
 
@@ -610,7 +660,14 @@
 						<a class="icon twitter" href="<?php echo get_theme_mod( 'underscores_twitter_url' ); ?>" target="_blank">Twitter</a>
 						<?php } ?>
                      </div>
+
+
+
                  </section>
+
+                 <?php
+                    }
+                    ?>
 
 
                 </div>
