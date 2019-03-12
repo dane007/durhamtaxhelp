@@ -36,8 +36,10 @@ if ( ! function_exists( 'durhamtaxhelp_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'durhamtaxhelp' ),
+			'primary-menu' => esc_html__( 'Primary Menu', 'durhamtaxhelp' ),
 		) );
+		
+
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

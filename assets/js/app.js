@@ -317,6 +317,36 @@ let dataLocations = [{
 
     });
 
+    $(".navbar a, .navbar li,.menu").click(function() {
+
+      if ($(this).attr("data-click-state") == 1) {
+
+
+          $(this).attr("data-click-state", 0);
+
+          TweenMax.to(".slide-right", 0.5, {
+              x: 0,
+              ease: Sine.easeOut
+
+          });
+
+      } else {
+
+          $(this).attr("data-click-state", 1);
+
+
+
+          TweenMax.to(".slide-right", 0.5, {
+              x: -500,
+              ease: Sine.easeOutS
+
+
+          });
+      }
+
+
+  });
+
     // HOW TO QUALIFY
     $(function() {
 
