@@ -1,4 +1,4 @@
-const GO_BTN = document.querySelector('body .map-list-option');
+// const GO_BTN = document.querySelector('body .map-list-option');
 const CONVERSION = document.querySelector('body .landing-page .conversion');
 const CALCULATE = document.querySelector('body .landing-page .calculate');
 
@@ -102,7 +102,7 @@ let dataLocations = [{
     }).addTo(mymap);
 
     // Create new array to store data locations and their popUp structure
-    let locations = []
+    let locations = [];
 
     // For all location items, add them to a location array with different map options...
     // - Take the dataLocations and use the values to assign popUp structure
@@ -112,7 +112,7 @@ let dataLocations = [{
       <h4>${dataLocations[i].name}</h4>
       <h5>${dataLocations[i].address}</h5>
       <h6>${dataLocations[i].desc}</63>
-      </div>`)
+      </div>`);
     }
 
 
@@ -401,7 +401,7 @@ let dataLocations = [{
         animation: true
       });
 
-  };
+  }
 
 
   // N A V   C O N T R O L L E R
@@ -418,11 +418,11 @@ let dataLocations = [{
         .slideUp();
     } else {
       $('.top-bar')
-        .css('height', '100px')
+        .css('height', '250px')
         .addClass("opened")
         .slideDown();
     }
 
-  })
+  });
 
 })(jQuery);

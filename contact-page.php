@@ -2,10 +2,7 @@
 /**
  * Template Name: Contact Page
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * This is the custom template for the contact page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
