@@ -102,34 +102,6 @@
             </div>
         </div>
 
-		
-		<?php 
-		if( function_exists( 'get_field' ) ){
-			$form_id        = get_field( 'form_id' );
-			$form_shortcode = get_field( 'form_shortcode' );
-			if ( $form_id || $form_shortcode ){
-			?>
-			<section class="contact-form">
-					<div class="grid-container">
-						<div class="grid-x grid-margin-x grid-margin-y">
-							<div class="cell small-12 medium-6">
-								<h2>FORM ID</h2>
-								<?php echo do_shortcode( '[ws_form id="' . $form_id . '"]' ); ?>
-							</div>
-
-							<div class="cell small-12 medium-6">
-								<h2>FORM SHORTCODE</h2>
-								<?php echo $form_shortcode; ?>
-							</div>
-						</div>
-					</div>
-				</section>
-				<?php
-			}
-
-		}
-		
-		?>
 
         </div>
 
@@ -197,18 +169,11 @@
                                     <article id="article_box01" class="article_box">
                                         <h2 class="am_i_eligible_title"><?php echo $heading1; ?></h2>
                                         <p class="paragraph0101"><?php echo $statement; ?></p>
-                                        <!-- <p class="paragraph0201">Each clinic has specific eligibility criteria based upon
-                                            income level and place of residence. Please review the clinic description carefully.</p> -->
 
                                         <h3 class="volunteer_warning"><?php echo $paragraph1_heading; ?></h3>
 
                                         <ul class="volunteer_warning_list">
                                         <?php echo $paragraph1_content; ?>
-                                            <!-- <li>deceased individuals</li>
-                                            <li>bankruptcies</li>
-                                            <li>capital gains or losses</li>
-                                            <li>employment expenses</li>
-                                            <li>business or rental income and expenses</li> -->
                                         </ul>
 
                                         <h4 class="volunteer_CRA_Guidelines"><?php echo $paragraph2_heading; ?></h4>
@@ -231,15 +196,6 @@
                                         <ul class="receipts_list">
 
                                         <?php echo $content2; ?>
-                                            <!-- <li>Rent or property taxes paid, where you lived, and the name of your landlord</li>
-                                            <li>Charitable or political donation receipts</li>
-                                            <li>Child care expenses</li>
-                                            <li>Disability Tax Credit Certificate (T2001)</li>
-                                            <li>Interest paid on student loans</li>
-                                            <li>Medical and dental expenses</li>
-                                            <li>RRSP contributions</li>
-                                            <li>Your previous year’s Income Tax Return</li>
-                                            <li>Your previous year’s Notice of Assessment</li> -->
                                         </ul>
                                     <!--- End "What to Bring: Receipts" section --->
                                     </article>
@@ -249,25 +205,6 @@
                                         <ul class="information_slips_list">
 
                                         <?php echo $content3; ?>
-                                            <!-- <li>Social Insurance Number (SIN) for you,
-                                                your spouse, and any dependents such as
-                                                children.</li>
-                                            <li>List of  your dependents' names and dates of birth</li>
-                                            <li>Details of your spouse's income</li>
-                                            <li>Details of your dependent's income</li>
-                                            <li>Direct deposit information for your refund, such as a void cheque</li>
-                                            <li>Anything you think might be needed for your income taxes</li>
-                                            <li>T3 - Statement of Trust Income</li>
-                                            <li>T4 – Statement of Remuneration Paid – received for paid employment</li>
-                                            <li>T4A – Statement of Pension, Retirement, Annuity, and Other Income</li>
-                                            <li>T4(OAS) – Old Age Security</li>
-                                            <li>T4A(P) – Canada Pension</li>
-                                            <li>T4RSP – Registered Retirement Savings</li>
-                                            <li>T4RIFT4U – Income from Retirement Savings</li>
-                                            <li>T5 – Statement of Investment Income</li>
-                                            <li>T5007 – Statement of Benefits</li>
-                                            <li>RC62 – Universal child care benefit statement</li>
-                                            <li>PT5007 (statement of benefits)</li> -->
                                         </ul>
                                     <!--- End "What to Bring: Information Slips" section --->
                                     </article>
@@ -348,8 +285,6 @@
                     $title_2 = $volunteer_content['title_2'];
                     $content_2 = $volunteer_content['content_2'];
                     // var_dump( $image );
-
-
 
                 ?>
 

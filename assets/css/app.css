@@ -250,11 +250,11 @@ a:visited {
 /* .characters img {
   height: 100%;
 } */
-#masthead {
-  display: block;
-  display: flex;
-  flex-flow: row wrap;
-}
+
+
+/* #masthead {
+  display: none;
+} */
 
 .intro {
   transition: all 0.6s cubic-bezier(.79, .14, .15, .86);

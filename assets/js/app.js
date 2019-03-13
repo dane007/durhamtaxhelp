@@ -84,14 +84,6 @@ let dataLocations = [{
     $("#article_box02").hide();
     $("#article_box03").hide();
 
-    // $('.slider').slick({
-    //   dots: true,
-    //   infinite: true,
-    //   speed: 300,
-    //   slidesToShow: 1,
-    //   adaptiveHeight: true
-    // });
-
     function isPosNum(num) {
       return !isNaN(num) && num > 0;
     }
@@ -192,12 +184,6 @@ let dataLocations = [{
       $("#map-info").html(content);
     });
 
-
-
-
-
-
-
     (function animateIntro() {
 
       $("#main_site_title").delay(250).animate({
@@ -246,11 +232,6 @@ let dataLocations = [{
 
 
     })();
-
-
-
-
-
 
     // FINANCIAL EMPOWERMENT
     $("#cost").hide();
@@ -406,9 +387,6 @@ let dataLocations = [{
       });
 
     });
-
-
-
 
   });
 
