@@ -920,50 +920,6 @@ map-section.leaflet-popup-content-wrapper {
     width: 100%;
 }
 
-.imageBG {
-    margin-top: 23%;
-    margin-left: -1%;
-}
-
-.textContainer>p {
-    font-family: 'Shree Devanagari 714', sans-serif;
-    font-size: 17px;
-    margin-top: 14%;
-    text-align: center;
-    padding: 18px 25px;
-    font-weight: 600;
-}
-
-.textContainer {
-    margin-top: -37%;
-    height: 250px;
-    border: 2px solid #022D41;
-}
-
-.imageFrame {
-    padding: 3px 5px;
-    height: 105px;
-    background: transparent;
-    margin-top: -54%;
-    border: none;
-    text-align: center;
-    padding-left: 25%;
-}
-
-#frame {
-    width: 123px;
-    height: 125px;
-    /* background-color: white; */
-    border: 2px solid #022D41;
-    padding: 5px;
-    margin-left: -65%;
-}
-
-.image {
-    /* width: 125px; */
-    height: 100%;
-}
-
 /* BENEFITS FINDER SECTION */
 #benefits_finder_section {
     background: #c7f5f9;
@@ -1130,47 +1086,7 @@ map-section.leaflet-popup-content-wrapper {
         padding: 0 5px;
         margin-top: 0px;
     }
-
-    .imageBG {
-        margin-top: 34%;
-        margin-left: 0;
-    }
-
-    .textContainer>p {
-        font-size: 13px;
-        margin-top: 14%;
-        text-align: left;
-        padding: 20px 5px;
-    }
-
-    .textContainer {
-        margin-top: -45%;
-        height: 205px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 2px;
-        height: 85px;
-        margin-top: -71%;
-        border: none;
-        text-align: center;
-    }
-
-    #frame {
-        width: 80px;
-        height: 80px;
-        background-color: white;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: 25%;
-    }
-
-    .image {
-        /* width: 125px; */
-        height: 100%;
-    }
-
+    
     .statement, #map-section h3 {
         font-size: 1.25em;
     }
@@ -1212,50 +1128,6 @@ map-section.leaflet-popup-content-wrapper {
         font-size: 1.25em;
     }
 
-    .testimonials-page {
-        height: auto;
-    }
-
-    .imageBG {
-        margin-top: 24%;
-        margin-left: 0;
-    }
-
-    .textContainer>p {
-        font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 17px;
-        margin-top: 19%;
-        text-align: center;
-        padding: 18px 25px;
-        font-weight: 800;
-    }
-
-    .textContainer {
-        margin-top: -46%;
-        height: 265px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 2px;
-        height: 95px;
-        margin-top: -59%;
-        border: none;
-        text-align: center;
-    }
-
-    #frame {
-        width: 108px;
-        height: 100px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: 28%;
-    }
-
-    .image {
-        /* width: 125px; */
-        height: 100%;
-    }
 }
 
 @media (min-width:40.063em) {
@@ -1302,46 +1174,6 @@ map-section.leaflet-popup-content-wrapper {
         height: 330px;
     }
 
-    .imageBG {
-        margin-top: 21%;
-        margin-left: 0;
-    }
-
-    .textContainer>p {
-        font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 19px;
-        margin-top: 12%;
-        text-align: center;
-        padding: 18px 25px;
-        font-weight: 800;
-    }
-
-    .textContainer {
-        margin-top: -35%;
-        height: 235px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 2px;
-        height: 95px;
-        margin-top: -50%;
-        border: none;
-        text-align: center;
-    }
-
-    #frame {
-        width: 108px;
-        height: 100px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: 30%;
-    }
-
-    .image {
-        /* width: 125px; */
-        height: 100%;
-    }
 }
 
 @media (min-width:50.063em) {}
@@ -1378,46 +1210,7 @@ map-section.leaflet-popup-content-wrapper {
         transform: scale(1.1);
     }
 
-    .imageBG {
-        margin-top: 30%;
-        margin-left: -1%;
-    }
-
-    .textContainer>p {
-        font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 15px;
-        margin-top: 18%;
-        text-align: center;
-        padding: 18px 25px;
-        font-weight: 600;
-    }
-
-    .textContainer {
-        margin-top: -46%;
-        height: 250px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 2px;
-        height: 95px;
-        margin-top: -68%;
-        border: none;
-        text-align: center;
-    }
-
-    #frame {
-        width: 90px;
-        height: 90px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: 27%;
-    }
-
-    .image {
-        /* width: 125px; */
-        height: 100%;
-    }
+    
 }
 
 @media (min-width:64.063em) {
@@ -1452,47 +1245,7 @@ map-section.leaflet-popup-content-wrapper {
         padding-left: 60px;
     }
 
-    .imageBG {
-        margin-top: 20%;
-        margin-left: -1%;
-    }
-
-    .textContainer>p {
-        font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 17px;
-        margin-top: 14%;
-        text-align: center;
-        padding: 18px 25px;
-        font-weight: 600;
-    }
-
-    .textContainer {
-        margin-top: -36%;
-        height: 250px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 3px 5px;
-        height: 105px;
-        margin-top: -51%;
-        border: none;
-        text-align: center;
-        padding-left: 25%;
-    }
-
-    #frame {
-        width: 123px;
-        height: 125px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: -65%;
-    }
-
-    .image {
-        /* width: 125px; */
-        height: 100%;
-    }
+    
 }
 
 @media (min-width:70.063em) {
@@ -1542,42 +1295,6 @@ map-section.leaflet-popup-content-wrapper {
         padding-left: 60px;
     }
 
-    .imageBG {
-        margin-top: 23%;
-        margin-left: -1%;
-    }
-
-    .textContainer>p {
-        font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 17px;
-        margin-top: 14%;
-        text-align: center;
-        padding: 18px 25px;
-        font-weight: 600;
-    }
-
-    .textContainer {
-        margin-top: -37%;
-        height: 250px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 3px 5px;
-        height: 105px;
-        margin-top: -54%;
-        border: none;
-        text-align: center;
-        padding-left: 25%;
-    }
-
-    #frame {
-        width: 123px;
-        height: 125px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: -65%;
-    }
 }
 
 @media (min-width:100.063em) {
@@ -1604,42 +1321,5 @@ map-section.leaflet-popup-content-wrapper {
         height: 600px;
     }
 
-    .imageBG {
-        margin-top: 23%;
-        margin-left: -1%;
-    }
-
-    .textContainer>p {
-        font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 17px;
-        margin-top: 14%;
-        text-align: center;
-        padding: 18px 25px;
-        font-weight: 600;
-    }
-
-    .textContainer {
-        margin-top: -37%;
-        height: 250px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 3px 5px;
-        height: 105px;
-        background: transparent;
-        margin-top: -54%;
-        border: none;
-        text-align: center;
-        padding-left: 25%;
-    }
-
-    #frame {
-        width: 123px;
-        height: 125px;
-        background-color: white;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: -65%;
-    }
+    
 }
