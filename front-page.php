@@ -109,8 +109,6 @@
 
 
 
-
-
                 <!-- Qualify Page -->
                 <?php
             		get_template_part( 'template-parts/content-qualify', 'page' );
