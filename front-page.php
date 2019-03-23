@@ -57,7 +57,6 @@
 
 					// var_dump( $image );
 				?>
-
           <div class="characters">
               <img id="main_img_chara1" src="<?php echo $image1['url'] ?>" alt="">
               <img id="main_img_chara2" src="<?php echo $image2['url'] ?>" alt="">
