@@ -115,6 +115,16 @@ nav {
     right: 0;
     width: 40px;
     opacity: 0.8;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 0;
+    overflow: hidden;
+    transition: opacity 1s ease;
+    transition: border 1s ease;
+    /* border: 2px solid #022d41; */
+}
+
+#masthead nav:hover {
+    opacity: 1;
 }
 
 .icon {

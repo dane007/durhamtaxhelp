@@ -201,9 +201,6 @@ let dataLocations = [{
             });
 
             t1.to("#main_img_chara1", 1, {
-                    opacity: 1
-                })
-                .to("#main_img_chara1", 1, {
                     opacity: 0,
                     delay: 1
                 })
@@ -227,6 +224,9 @@ let dataLocations = [{
                 .to("#main_img_chara4", 1, {
                     opacity: 0,
                     delay: 2
+                })
+                .to("#main_img_chara1", 1, {
+                    opacity: 1
                 });
 
 
@@ -443,7 +443,7 @@ let dataLocations = [{
 
             $("#masthead nav")
                 .animate({
-                    width: '20%'
+                    width: '20%',
                 }, 1000);
 
             $(".title-bar")
