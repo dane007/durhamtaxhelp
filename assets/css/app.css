@@ -909,10 +909,6 @@ map-section.leaflet-popup-content-wrapper {
     display: none;
 }
 
-.imageBG {
-    opacity: 1;
-}
-
 .container {
     height: auto;
     padding: 0 20px;
@@ -1283,12 +1279,6 @@ map-section.leaflet-popup-content-wrapper {
 
     /***********         TESTIMONIALS -  P A G E    5        ***********/
     /* -------------- 5 ------------ */
-    .container {
-        height: auto;
-        padding: 0 20px;
-        margin: 0 auto;
-    }
-
     .card {
         height: 360px;
         padding-top: 12px;
