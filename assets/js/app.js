@@ -402,13 +402,7 @@ let dataLocations = [{
             });
 
     }
-    /*
 
-    .title-bar-title {
-        display: none;
-        opacity: 0;
-    }
-    */
 
 
     // N A V   C O N T R O L L E R
