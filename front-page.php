@@ -21,12 +21,12 @@
                 <div class="page1">
                     <div class="site-branding">
                         <?php
-					    the_custom_logo();
-					?>
-                            <?php
-				$durham_tax_help = get_bloginfo( 'description', 'display' );
-				if ( $durham_tax_help || is_customize_preview() ) :
-					?>
+              					    the_custom_logo();
+              					?>
+                                          <?php
+              				$durham_tax_help = get_bloginfo( 'description', 'display' );
+              				if ( $durham_tax_help || is_customize_preview() ) :
+              					?>
                           <p class="site-description">
                               <?php echo $durham_tax_help; /* WPCS: xss ok. */ ?>
                           </p>
@@ -37,10 +37,10 @@
 					if ( function_exists( 'get_field' ) ) {
 					$home_contents = get_field( 'home_contents' );
 				?>
-                        <?php
-				foreach ( $home_contents as $home_content ) {
-					$title = $home_content['title'];
-					$statement = $home_content['statement'];
+                          <?php
+  				foreach ( $home_contents as $home_content ) {
+  					$title = $home_content['title'];
+  					$statement = $home_content['statement'];
                     $image1 = $home_content['image1'];
                     $image2 = $home_content['image2'];
                     $image3 = $home_content['image3'];
