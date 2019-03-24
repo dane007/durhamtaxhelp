@@ -40,33 +40,33 @@
 		<?php
 		}
 		?>
-		<h1 class="section_titles"><?php echo $qheading; ?></h1>
 
 
 
-		<div class="grid-container financial_empowerment_grid">
+		<div class="grid-container htq_grid">
 
-				<div class="grid-x grid-margin-x">
+				<div class="grid-x grid-margin-x fullVH">
+					<h1 class="section_titles small-12"><?php echo $qheading; ?></h1>
 
-						<div class="how_to_qualify_btn_container">
+						<div class="how_to_qualify_btn_container small-12 medium-4 large-3 grid-x">
 								<!-- Buttons -->
-								<button id="eligible_btn" class="qualify_buttons">
+								<button id="eligible_btn" class="qualify_buttons small-3 medium-12">
 										Am I Eligible?
 								</button>
 
-								<button id="receipts_btn" class="qualify_buttons">
+								<button id="receipts_btn" class="qualify_buttons small-3 medium-12">
 									 Receipts
 								</button>
 
-								<button id="infoSlips_btn" class="qualify_buttons">
+								<button id="infoSlips_btn" class="qualify_buttons small-3 medium-12">
 										Information Slips
 								</button>
 						</div>
 
-						<div class="large-9">
+						<div class="small-12 medium-8 large-9 qualify_box">
 
 
-								<div class="box qualify_box">
+								<div class="qualify_box box">
 										<article id="article_box01" class="article_box">
 												<h2 class="am_i_eligible_title"><?php echo $heading1; ?></h2>
 												<p class="paragraph0101"><?php echo $statement; ?></p>
@@ -109,21 +109,20 @@
 												</ul>
 										<!--- End "What to Bring: Information Slips" section --->
 										</article>
-
+										<div class="download">
+										 <a href="<?php echo get_template_directory_uri() . '/assets/img/TaxFilingChecklist.pdf'; ?>" download>
+														<img src="<?php echo get_template_directory_uri() . '/assets/img/pdfDLImg.png'; ?>" />
+														<p class="dlPDF">Click here to download in PDF format.</p>
+										 </a>
+										 </div>
 
 								</div>
 
 						</div>
+
 				</div>
 
 		</div>
-
-		<div class="download">
-		 <a href="<?php echo get_template_directory_uri() . '/assets/img/TaxFilingChecklist.pdf'; ?>" download>
-						<img src="<?php echo get_template_directory_uri() . '/assets/img/pdf.png'; ?>" />
-		 </a>
-				<p>Click here to download in PDF format.</p>
-		 </div>
 
 		 <?php
 				}

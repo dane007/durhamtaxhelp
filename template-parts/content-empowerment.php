@@ -16,7 +16,7 @@
 		<div class="grid-container align-center financial_empowerment_grid">
 
 				<div class="grid-x grid-margin-x">
-						<div class="cell large-1">
+						<div class="cell small-3 sidebar">
 								<div id="sidebar">
 										<div id="arrow1"><img src="<?php echo get_template_directory_uri() . '/assets/img/middle.png'; ?>"></div>
 										<div id="arrow2"><img src="<?php echo get_template_directory_uri() . '/assets/img/middle.png'; ?>"></div>
@@ -47,7 +47,7 @@
 								</div>
 						</div>
 
-						<div class="cell large-11">
+						<div class="cell small-9">
 
 								<div class="box">
 
