@@ -82,6 +82,7 @@ footer a, footer a:active, footer a:visited {
 
 .sidebar {
     /* position: absolute; */
+    margin: 20px;
     margin-top: 0;
     /* width: 250px; */
     height: 460px;
@@ -734,6 +735,12 @@ map-section.leaflet-popup-content-wrapper {
     padding-bottom: 140px;
 }
 
+.activeEmp {
+    transition: all 0.5s ease;
+    background-color: #30a5b6;
+    border-radius: 20px;
+}
+
 #financial_empowerment .section_titles {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -841,7 +848,10 @@ map-section.leaflet-popup-content-wrapper {
     font-size: 18px;
     color: white;
     z-index: 2;
-    margin: 20px;
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
 }
 
 #sideNav li:hover {
@@ -1269,6 +1279,23 @@ map-section.leaflet-popup-content-wrapper {
     #site-navigation .top-bar {
         display: none;
     }
+
+    .sidebar {
+        height: auto;
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    #financial_empowerment {
+        padding: 20px;
+        padding-top: 30px;
+    }
+
+    #sideNav ol {
+        flex-flow: row wrap;
+    }
 }
 
 @media (min-width:30.063em) {
@@ -1448,6 +1475,26 @@ and (orientation: landscape) -w-
     #sidebar div img {
         height: 76px;
         width: 300px;
+    }
+
+    .sidebar {
+        height: 460px
+    }
+
+    #financial_empowerment {
+        padding: 60px;
+    }
+
+    #sideNav ol {
+        flex-flow: column nowrap;
+    }
+
+    .active {
+        background-color: transparent;
+    }
+
+    #sidebar {
+        display: block;
     }
 }
 
