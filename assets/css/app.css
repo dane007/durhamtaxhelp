@@ -1001,12 +1001,13 @@ map-section.leaflet-popup-content-wrapper {
     padding-left: 60px;
     margin-top: 0;
     /* background: url(http://durham-tax-help.local/wp-content/uploads/2019/02/scribble.png); */
-    background-image: url(../img/fr1.jpg);
-    background-position: center;
+    /* background-image: url(../img/fr1.jpg); */
+    /* background-position: center;
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
+/*
 .testimonials-page .card:nth-child(1) {
     background-image: url(../img/fr1.jpg);
 }
@@ -1025,8 +1026,7 @@ map-section.leaflet-popup-content-wrapper {
 
 .testimonials-page .card * {
     display: none;
-}
-
+} */
 .testimonials-page .imageBG {
     opacity: 1;
 }
