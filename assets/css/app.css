@@ -1489,7 +1489,7 @@ and (orientation: landscape) -w-
         flex-flow: column nowrap;
     }
 
-    .active {
+    .activeEmp {
         background-color: transparent;
     }
 
