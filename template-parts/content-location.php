@@ -14,7 +14,8 @@
         $args = array(
             'post_type' => 'locations',
         );
-
+		
+		// WP Query variable to hold the args variable.
         $locations = new wp_Query( $args );
 
         if ( $locations->have_posts() ) {
