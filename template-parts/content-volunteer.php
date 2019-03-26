@@ -42,7 +42,16 @@
 
                     <!-- Main Content for Volunteer-Section -->
 
-                    <h1 class="section_titles cell"><?php echo $main_title; ?></h1>
+                    <h1 class="section_titles cell">
+
+                    <?php 
+                    if($main_title){
+                    ?>
+                    <?php echo $main_title; ?></h1>
+
+                    <?php
+                     }
+                    ?>
 
 
                     <div class="volunteer grid-x grid-margin-x">
@@ -50,7 +59,17 @@
                         <div class="cell small-12 large-4 volunteer_content_container">
                             <h4 class="volunteer_subtitles"><?php echo $title_1; ?></h4>
                             <p class="">
-                                <?php echo $content_1; ?>
+                            
+                            <?php 
+                            if($content_1){
+                            ?>
+        
+                            <?php echo $content_1; ?>
+
+                            <?php
+                            }
+                            ?>
+
                             </p>
                             <div class="volunteer_button_container">
                                 <a href="#locations_page">
@@ -68,18 +87,57 @@
                         <div class="cell small-12 large-4">
                             <div id="video_container">
                                 <div id="short_video">
+
+                                    <?php 
+                                    if($attr ){
+                                    ?>
+        
                                     <?php echo wp_video_shortcode( $attr ) ?>
+
+                                    <?php
+                                      }
+                                    ?>
+
                                 </div>
                             </div>
                             <p id="video_description">
+
+                                <?php 
+                                if($video_description ){
+                                ?>
+
                                 <?php echo $video_description; ?>
+
+                                <?php 
+                                }
+                                ?>
                             </p>
                         </div>
 
                         <div class="cell small-12 large-4 volunteer_content_container">
-                            <h4 class="volunteer_subtitles"><?php echo $title_2; ?></h4>
+                            <h4 class="volunteer_subtitles">
+
+                            <?php 
+                            if($title_2 ){
+                            ?>
+
+                            <?php echo $title_2; ?></h4>
+
+                            <?php 
+                            }
+                            ?>
+
                             <p class="">
-                                <?php echo $content_2; ?>
+
+                            <?php 
+                            if($content_2 ){
+                            ?>
+                            <?php echo $content_2; ?>
+                            
+                            <?php 
+                            }
+                            ?>
+
                             </p>
                             <div id="volunteer_last_btn" class="volunteer_button_container">
                                 <a href="https://www.canada.ca/en/revenue-agency/news/newsroom/tax-tips/tax-tips-2014/tax-clinics-your-community-organization.html">
