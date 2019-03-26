@@ -54,17 +54,19 @@
 										<div id="overview">
 
 												<h1> Overview</h1>
-												<p>Financial empowerment is an approach to poverty reduction that focuses
-		on improving the financial security of low-income people. It does this by introducing
-		a set of interventions that together help low-income Canadians to
-		grow their incomes, improve their credit scores, savings and debt levels, and
-		build wealth through education, employment, entrepreneurship and improved
-		housing.<br />
-		<br />Financial empowerment isn’t like most other poverty reduction approaches.
-		It focuses on helping low-income people participate and feel included in
-		our financial system. It increases their opportunities and knowledge, and
-		fosters behaviours that are critical to their economic security and their ability
-		to invest in their future.</p>
+												<p>     
+												        Financial empowerment is an approach to poverty reduction that focuses
+														on improving the financial security of low-income people. It does this by introducing
+														a set of interventions that together help low-income Canadians to
+														grow their incomes, improve their credit scores, savings and debt levels, and
+														build wealth through education, employment, entrepreneurship and improved
+														housing.<br />
+														<br />Financial empowerment isn’t like most other poverty reduction approaches.
+														It focuses on helping low-income people participate and feel included in
+														our financial system. It increases their opportunities and knowledge, and
+														fosters behaviours that are critical to their economic security and their ability
+														to invest in their future.
+												</p>
 
 										</div>
 

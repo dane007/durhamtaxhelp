@@ -46,7 +46,27 @@
 		<div class="grid-container htq_grid">
 
 				<div class="grid-x grid-margin-x fullVH">
-					<h1 class="section_titles small-12"><?php echo $qheading; ?></h1>
+					<h1 class="section_titles small-12">
+					
+					
+					<?php
+
+                    if ($qheading) {
+
+                        ?>
+
+                        <?php echo $qheading; ?>
+
+
+                    </h1>
+
+                    <?php
+
+                    
+
+                    }
+
+                    ?>
 
 						<div class="how_to_qualify_btn_container small-12 medium-4 large-3 grid-x">
 								<!-- Buttons -->
