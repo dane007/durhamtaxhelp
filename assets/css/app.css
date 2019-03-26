@@ -1003,93 +1003,31 @@ map-section.leaflet-popup-content-wrapper {
     margin-left: 10px;
 }
 
-.testimonials-page .card {
-    height: 360px;
-    padding-top: 12px;
-    /* width: 100%; */
-    border: none;
-    padding-left: 60px;
-    margin-top: 0;
-    /* background: url(http://durham-tax-help.local/wp-content/uploads/2019/02/scribble.png); */
-    /* background-image: url(../img/fr1.jpg); */
-    /* background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat; */
+.card {
+    padding-left: 20px;
+    border: 0;
+}
+.imageBG {
+    width: 90%;
 }
 
-/*
-.testimonials-page .card:nth-child(1) {
-    background-image: url(../img/fr1.jpg);
+.peopleImg {
+    width: 17%;
+    border: 2px solid black;
+    padding: 10px;
+    position: relative;
+    top: 10%;
+    left: 33%;
+    
 }
 
-.testimonials-page .card:nth-child(2) {
-    background-image: url(../img/fr2.jpg);
-}
-
-.testimonials-page .card:nth-child(3) {
-    background-image: url(../img/fr3.jpg);
-}
-
-.testimonials-page .card:nth-child(4) {
-    background-image: url(../img/fr4.jpg);
-}
-
-.testimonials-page .card * {
-    display: none;
-} */
-.testimonials-page .imageBG {
-    opacity: 1;
-}
-
-.testimonials-page .container {
-    height: auto;
-    padding: 0 20px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.testimonials-page .imageBG {
-    margin-top: 23%;
-    margin-left: -1%;
-}
-
-.testimonials-page .textContainer>p {
+.testimony {
+    position: relative;
+    top: -34%;
     font-family: 'Shree Devanagari 714', sans-serif;
-    font-size: 17px;
-    margin-top: 14%;
-    text-align: center;
-    padding: 18px 25px;
-    font-weight: 600;
-}
-
-.testimonials-page .textContainer {
-    margin-top: -37%;
-    height: 250px;
-    border: 2px solid #022D41;
-}
-
-.testimonials-page .imageFrame {
-    padding: 3px 5px;
-    height: 105px;
-    background: transparent;
-    margin-top: -54%;
-    border: none;
-    text-align: center;
-    padding-left: 25%;
-}
-
-.testimonials-page #frame {
-    width: 123px;
-    height: 125px;
-    /* background-color: white; */
-    border: 2px solid #022D41;
-    padding: 5px;
-    margin-left: -65%;
-}
-
-.testimonials-page .image {
-    /* width: 125px; */
-    height: 100%;
+    font-size: 18px;
+    text-align: justify;
+    padding-right: 15px;
 }
 
 /* BENEFITS FINDER SECTION */
@@ -1230,45 +1168,26 @@ map-section.leaflet-popup-content-wrapper {
         height: auto;
     }
 
-    .testimonials-page .container {
-        background-color: transparent;
-        margin: 0;
+
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
+        position: relative;
+        top: 10%;
+        left: 33%;
+
     }
 
-    .testimonials-page .card {
-        height: 310px;
-        padding: 0 5px;
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 18px;
+        text-align: justify;
+        padding-right: 15px;
     }
-
-    .testimonials-page .imageBG {
-        margin-top: 34%;
-        margin-left: 0;
-    }
-
-    .testimonials-page .textContainer>p {
-        font-size: 13px;
-        text-align: left;
-        padding: 20px 5px;
-    }
-
-    .testimonials-page .textContainer {
-        margin-top: -45%;
-        height: 205px;
-    }
-
-    .testimonials-page .imageFrame {
-        padding: 2px;
-        height: 85px;
-        margin-top: -71%;
-    }
-
-    .testimonials-page #frame {
-        width: 80px;
-        height: 80px;
-        background-color: white;
-        margin-left: 25%;
-    }
-
+    
     .statement, #map-section h3 {
         font-size: 1.25em;
     }
@@ -1331,45 +1250,7 @@ map-section.leaflet-popup-content-wrapper {
         height: auto;
     }
 
-    .imageBG {
-        margin-top: 24%;
-        margin-left: 0;
-    }
-
-    .textContainer>p {
-        font-size: 17px;
-        margin-top: 19%;
-        text-align: center;
-        padding: 18px 25px;
-        font-weight: 800;
-    }
-
-    .textContainer {
-        margin-top: -46%;
-        height: 265px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 2px;
-        height: 95px;
-        margin-top: -59%;
-        border: none;
-        text-align: center;
-    }
-
-    #frame {
-        width: 108px;
-        height: 100px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: 28%;
-    }
-
-    .image {
-        /* width: 125px; */
-        height: 100%;
-    }
+   
 
     .how_to_qualify_btn_container {
         height: 50%;
@@ -1420,46 +1301,7 @@ and (orientation: landscape) -w-
         flex-flow: column wrap;
     }
 
-    .card {
-        height: 330px;
-    }
-
-    .imageBG {
-        margin-top: 21%;
-        margin-left: 0;
-    }
-
-    .textContainer>p {
-        font-size: 19px;
-        margin-top: 12%;
-    }
-
-    .textContainer {
-        margin-top: -35%;
-        height: 235px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 2px;
-        height: 95px;
-        margin-top: -50%;
-        border: none;
-        text-align: center;
-    }
-
-    #frame {
-        width: 108px;
-        height: 100px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: 30%;
-    }
-
-    .image {
-        /* width: 125px; */
-        height: 100%;
-    }
+    
 }
 
 /*
@@ -1528,52 +1370,7 @@ and (orientation: landscape) -w-
         border-radius: 30px;
     }
 
-    /***********         TESTIMONIALS -  P A G E    5        ***********/
-    /* -------------- 5 ------------ */
-    .card {
-        height: 350px;
-        padding-top: 12px;
-        padding-left: 60px;
-        transform: scale(1.1);
-    }
-
-    .imageBG {
-        margin-top: 30%;
-        margin-left: -1%;
-    }
-
-    .textContainer>p {
-        font-size: 15px;
-        margin-top: 18%;
-        font-weight: 600;
-    }
-
-    .textContainer {
-        margin-top: -46%;
-        height: 250px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 2px;
-        height: 95px;
-        margin-top: -68%;
-        border: none;
-        text-align: center;
-    }
-
-    #frame {
-        width: 90px;
-        height: 90px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: 27%;
-    }
-
-    .image {
-        /* width: 125px; */
-        height: 100%;
-    }
+    
 }
 
 @media (min-width:64.063em) {
@@ -1600,51 +1397,7 @@ and (orientation: landscape) -w-
         font-size: 1.5em;
     }
 
-    /***********         TESTIMONIALS -  P A G E    5        ***********/
-    /* -------------- 5 ------------ */
-    .card {
-        height: 350px;
-        padding-top: 12px;
-        padding-left: 60px;
-    }
-
-    .imageBG {
-        margin-top: 20%;
-        margin-left: -1%;
-    }
-
-    .textContainer>p {
-        font-size: 17px;
-        margin-top: 14%;
-    }
-
-    .textContainer {
-        margin-top: -36%;
-        height: 250px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 3px 5px;
-        height: 105px;
-        margin-top: -51%;
-        border: none;
-        text-align: center;
-        padding-left: 25%;
-    }
-
-    #frame {
-        width: 123px;
-        height: 125px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: -65%;
-    }
-
-    .image {
-        /* width: 125px; */
-        height: 100%;
-    }
+   
 }
 
 @media (min-width:70.063em) {
@@ -1680,47 +1433,7 @@ and (orientation: landscape) -w-
         height: 500px;
     }
 
-    /***********         TESTIMONIALS -  P A G E    5        ***********/
-    /* -------------- 5 ------------ */
-    .card {
-        height: 360px;
-        padding-top: 12px;
-        padding-left: 60px;
-    }
-
-    .imageBG {
-        margin-top: 23%;
-        margin-left: -1%;
-    }
-
-    .textContainer>p {
-        font-size: 17px;
-        margin-top: 14%;
-        font-weight: 600;
-    }
-
-    .textContainer {
-        margin-top: -37%;
-        height: 250px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 3px 5px;
-        height: 105px;
-        margin-top: -54%;
-        border: none;
-        text-align: center;
-        padding-left: 25%;
-    }
-
-    #frame {
-        width: 123px;
-        height: 125px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: -65%;
-    }
+    
 }
 
 @media (min-width:100.063em) {
@@ -1747,38 +1460,5 @@ and (orientation: landscape) -w-
         height: 600px;
     }
 
-    .imageBG {
-        margin-top: 23%;
-        margin-left: -1%;
-    }
-
-    .textContainer>p {
-        font-size: 17px;
-        margin-top: 14%;
-    }
-
-    .textContainer {
-        margin-top: -37%;
-        height: 250px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 3px 5px;
-        height: 105px;
-        background: transparent;
-        margin-top: -54%;
-        border: none;
-        text-align: center;
-        padding-left: 25%;
-    }
-
-    #frame {
-        width: 123px;
-        height: 125px;
-        background-color: white;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: -65%;
-    }
+    
 }
