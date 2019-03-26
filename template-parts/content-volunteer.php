@@ -12,7 +12,7 @@
                 <!-- Volunteer Section -->
                 <section class="content_sections" id="volunteer_page">
                     <div class="volunteer grid-container">
-
+					<!-- If field group exists, show contents -->
                         <?php
                     if ( function_exists( 'get_field' ) ) {
                     $volunteer_contents = get_field( 'volunteer_contents' );
@@ -30,10 +30,11 @@
                     // var_dump( $image );
 
                 ?>
-
+					<!-- get video field -->
                     <?php
                     $videovideo = get_field('videovideo');
 
+					// set attributes for video
                     $attr = array(
                         'mp4'     => $videovideo,
                         'preload' => 'auto'
@@ -41,9 +42,10 @@
                     ?>
 
                     <!-- Main Content for Volunteer-Section -->
-
+					
                     <h1 class="section_titles cell">
-
+					
+					<!-- If main title exists, show it -->
                     <?php 
                     if($main_title){
                     ?>
@@ -53,13 +55,14 @@
                      }
                     ?>
 
-
+					<!-- Volunteer contents-->
                     <div class="volunteer grid-x grid-margin-x">
 
                         <div class="cell small-12 large-4 volunteer_content_container">
                             <h4 class="volunteer_subtitles"><?php echo $title_1; ?></h4>
                             <p class="">
                             
+							<!-- If content exists, show it -->
                             <?php 
                             if($content_1){
                             ?>
@@ -71,6 +74,7 @@
                             ?>
 
                             </p>
+							<!-- Holds a button for the volunteer page -->
                             <div class="volunteer_button_container">
                                 <a href="#locations_page">
                                     <button class="volunteer_button" type="button" name="button">Organizations >></button>
@@ -83,11 +87,13 @@
                                 </a>
                             </div>
                         </div>
-
+						
+						<!-- Video container -->
                         <div class="cell small-12 large-4">
                             <div id="video_container">
                                 <div id="short_video">
-
+									
+									<!-- If video exists, show it. -->
                                     <?php 
                                     if($attr ){
                                     ?>
@@ -100,8 +106,10 @@
 
                                 </div>
                             </div>
+							<!-- Video description container -->
                             <p id="video_description">
-
+								
+								<!-- If video description exists, show it. -->
                                 <?php 
                                 if($video_description ){
                                 ?>
@@ -114,9 +122,11 @@
                             </p>
                         </div>
 
+						<!-- Content section 2 -->
                         <div class="cell small-12 large-4 volunteer_content_container">
                             <h4 class="volunteer_subtitles">
-
+							
+							<!-- If content exists, show it-->
                             <?php 
                             if($title_2 ){
                             ?>
