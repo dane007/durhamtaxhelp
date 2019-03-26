@@ -91,19 +91,26 @@
 												<h2 class="am_i_eligible_title">
 												
 												<?php
-
                                                 if ($heading1) {
-
                                                 ?>
-												<?php echo $heading1; ?></h2>
-												<?php
 
+												<?php echo $heading1; ?></h2>
+
+												<?php
+												}
+												?>
+												<p class="paragraph0101">
+												
+												<?php
+												if($statement){
+                                                ?>	
+												}
+												<?php echo $statement; ?></p>
+
+												<?php
 												}
 
 												?>
-
-												<p class="paragraph0101"><?php echo $statement; ?></p>
-
 												<h3 class="volunteer_warning"><?php echo $paragraph1_heading; ?></h3>
 
 												<ul class="volunteer_warning_list">
