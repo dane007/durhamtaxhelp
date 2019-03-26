@@ -431,13 +431,13 @@ let dataLocations = [{
 
         } else {
             $('.top-bar')
-                .css('height', '150px')
+                .css('height', '100vh')
                 .addClass("opened")
                 .slideDown(1000);
 
             $("#masthead nav")
                 .animate({
-                    width: '20%',
+                    width: '50%',
                 }, 1000);
 
             $(".title-bar")
@@ -451,16 +451,31 @@ let dataLocations = [{
     });
 
     // list items
-    const li1 = document.querySelector('#menu-main-navigation li:nth-child(1) a');
-    const li2 = document.querySelector('#menu-main-navigation li:nth-child(2) a');
+    const li1 = document.querySelector('#menu-main-navigation li:nth-child(1) a'),
+        li2 = document.querySelector('#menu-main-navigation li:nth-child(2) a'),
+        li3 = document.querySelector('#menu-main-navigation li:nth-child(3) a'),
+        li4 = document.querySelector('#menu-main-navigation li:nth-child(4) a'),
+        li5 = document.querySelector('#menu-main-navigation li:nth-child(5) a'),
+        li6 = document.querySelector('#menu-main-navigation li:nth-child(6) a'),
+        li7 = document.querySelector('#menu-main-navigation li:nth-child(7) a');
 
     // list content
-    let li1_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/home_icon.png" alt="">Home Page';
-    let li2_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/volunteer_icon.png" alt="">Contact Page';
+    let li1_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/home_icon.png" alt="">';
+    let li2_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/volunteer_icon.png" alt="">';
+    let li3_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/qualify_icon.png" alt="">';
+    let li4_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/locations_icon.png" alt="">';
+    let li5_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/volunteer_icon.png" alt="">';
+    let li6_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/financial_icon.png" alt="">';
+    let li7_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/testimonial_icon.png" alt="">';
 
     // add icons to nav
-    li1.innerHTML = li1_content;
-    li2.innerHTML = li2_content;
+    li1.innerHTML = li1_content + li1.innerHTML;
+    li2.innerHTML = li2_content + li2.innerHTML;
+    li3.innerHTML = li3_content + li3.innerHTML;
+    li4.innerHTML = li4_content + li4.innerHTML;
+    li5.innerHTML = li5_content + li5.innerHTML;
+    li6.innerHTML = li6_content + li6.innerHTML;
+    li7.innerHTML = li7_content + li7.innerHTML;
 
 
 
