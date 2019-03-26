@@ -484,5 +484,10 @@ let dataLocations = [{
         }
     });
 
+    // Testimonial cards
+    const nCards = document.querySelectorAll(".testimonials-page .card");
+    console.log(nCards);
+
+
 
 })(jQuery);
