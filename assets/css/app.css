@@ -1474,7 +1474,7 @@ and (orientation: landscape) -w-
         position: relative;
         top: -34%;
         font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 18px;
+        font-size: 23px;
         text-align: justify;
         padding-right: 15px;
     }
@@ -1526,7 +1526,7 @@ and (orientation: landscape) -w-
         position: relative;
         top: -34%;
         font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 16px;
+        font-size: 24px;
         text-align: justify;
         padding-right: 15px;
     }
@@ -1569,7 +1569,7 @@ and (orientation: landscape) -w-
         position: relative;
         top: -34%;
         font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 18px;
+        font-size: 40px;
         text-align: justify;
         padding-right: 15px;
     }
