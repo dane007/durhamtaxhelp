@@ -1377,8 +1377,19 @@ and (orientation: landscape) -w-
         display: block;
     }
 
-    .testimony p {
-        font-size: 1.05em;
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 24px;
+        text-align: justify;
+        padding-right: 65px;
     }
 }
 
@@ -1403,6 +1414,21 @@ and (orientation: landscape) -w-
     #map-list, #map-info {
         background-color: rgba(255, 255, 255, 0.7);
         border-radius: 30px;
+    }
+    
+    .peopleImg {
+        width: 17%;
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 22px;
+        text-align: justify;
+        padding-right: 15px;
     }
 }
 
