@@ -21,7 +21,13 @@
                 <div class="page1">
                     <div class="site-branding">
                         <?php
-              					    the_custom_logo();
+                        // if theres no logo, write Durham Tax Help
+                        if (function_exists( 'the_custom_logo' ) ) {
+                					the_custom_logo();
+                        }
+                        else{
+                          echo "Durham Tax Help";
+                        }
               					?>
                                           <?php
               				$durham_tax_help = get_bloginfo( 'description', 'display' );
@@ -35,7 +41,7 @@
                               <?php echo $durham_tax_help; /* WPCS: xss ok. */ ?> </p>
 
                           <?php
-                          } 
+                          }
                           ?>
 
                           <?php endif; ?>
@@ -84,7 +90,7 @@
               <?php echo $title; ?></h1>
 
               <?php
-               } 
+               }
               ?>
               <p class="statement fadeOn small-12">
 
@@ -95,7 +101,7 @@
 
               <?php
               }
-              ?>   
+              ?>
 
               <p class="conversion fadeOn small-12 medium-12">
 
@@ -140,7 +146,7 @@
 
                         <?php
                          }
-                        ?>      
+                        ?>
                           </button>
                       </a>
                   </div>
