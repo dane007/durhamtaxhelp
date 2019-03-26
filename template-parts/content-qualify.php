@@ -205,7 +205,7 @@
 												<?php
 												if($heading3){
 												?>
-												
+
 												<?php echo $heading3; ?></h2>
 
 												<?php
@@ -214,7 +214,15 @@
 
 												<ul class="information_slips_list">
 
+												<?php
+												if($content3){
+												?>
 												<?php echo $content3; ?>
+
+												<?php
+												}
+												?>
+												
 												</ul>
 										<!--- End "What to Bring: Information Slips" section --->
 										</article>
