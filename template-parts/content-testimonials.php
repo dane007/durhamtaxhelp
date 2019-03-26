@@ -18,6 +18,7 @@
             <!-- Grid Container for positoong of testimonials cards -->
             <div class="grid-x grid-margin-x container cardContainer">
 
+				<!-- If field group exists, get its contents -->
                 <?php
                 if ( function_exists( 'get_field' ) ) {
                 $testimonials = get_field( 'testimonials' );
@@ -49,7 +50,7 @@
                            <!-- container div for statement testimonial -->
                                 <div class="cell testimony small-10 small-offset-1 medium-10 medium-offset-1 large-9 large-offset-1">
 
-
+								<!-- If statement exists, show it-->
                                 <?php
                                 if($statement){
                                 ?>
