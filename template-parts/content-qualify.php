@@ -9,13 +9,18 @@
 
 ?>
 
+<!-- Content section holds the content of qualify page -->
 <section class="content_sections" id="qualify_page">
+		
+		<!-- Gets the content of the fields if they exist -->
 		<?php
 				if ( function_exists( 'get_field' ) ) {
 				$qualify_contents = get_field( 'qualify_contents' );
 
-		// var_dump( $image );
+		
 		?>
+
+		
 		<?php
 		foreach( $qualify_contents as $qualify_content ) {
 				$qheading = $qualify_content['heading'];
@@ -48,7 +53,7 @@
 				<div class="grid-x grid-margin-x fullVH">
 					<h1 class="section_titles small-12">
 					
-					
+					<!-- If heading exists, show heading -->
 					<?php
                     if ($qheading) {
                     ?>
@@ -65,7 +70,8 @@
                     }
 
                     ?>
-
+						
+						<!-- Container for holding the buttons for each article of information -->
 						<div class="how_to_qualify_btn_container small-12 medium-4 large-3 grid-x">
 								<!-- Buttons -->
 								<button id="eligible_btn" class="qualify_buttons small-3 medium-12">
@@ -80,14 +86,15 @@
 										Information Slips
 								</button>
 						</div>
-
+						
+						<!-- Holds the qualify box -->
 						<div class="small-12 medium-8 large-9 qualify_box">
 
 
 								<div class="qualify_box box">
 										<article id="article_box01" class="article_box">
 												<h2 class="am_i_eligible_title">
-												
+												<!-- If the content exists, show said content -->
 												<?php
                                                 if ($heading1) {
                                                 ?>
@@ -227,6 +234,7 @@
 										<!--- End "What to Bring: Information Slips" section --->
 										</article>
 										<div class="download">
+										<!-- Get the images to indicate that the document can be downloaded in PDF format -->
 										 <a href="<?php echo get_template_directory_uri() . '/assets/img/TaxFilingChecklist.pdf'; ?>" download>
 														<img src="<?php echo get_template_directory_uri() . '/assets/img/pdfDLImg.png'; ?>" />
 														<p class="dlPDF">Click here to download in PDF format.</p>
