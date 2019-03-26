@@ -50,10 +50,8 @@
 					
 					
 					<?php
-
                     if ($qheading) {
-
-                        ?>
+                    ?>
 
                         <?php echo $qheading; ?>
 
@@ -118,19 +116,49 @@
 												?>
 
 												<?php echo $paragraph1_heading; ?></h3>
-												
+
 												<?php
 												}
 												?>
 
 												<ul class="volunteer_warning_list">
+
+												<?php
+												if($paragraph1_content){
+												?>
+
 												<?php echo $paragraph1_content; ?>
+
+												<?php
+												}
+												?>
+
 												</ul>
 
-												<h4 class="volunteer_CRA_Guidelines"><?php echo $paragraph2_heading; ?></h4>
+												<h4 class="volunteer_CRA_Guidelines">
+
+												<?php
+												if($paragraph2_heading){
+												?>
+
+												<?php echo $paragraph2_heading; ?></h4>
+
+												<?php
+												}
+												?>
 
 												<ul class="volunteer_CRA_Guidelines_list">
+
+												<?php
+												if($paragraph2_content){
+												?>
+
 												<?php echo $paragraph2_content; ?>
+
+												<?php
+												}
+												?>
+												
 												</ul>
 
 												<h5 class="chartered_Accountant_Guidelines"><?php echo $paragraph3_heading; ?></h5>
