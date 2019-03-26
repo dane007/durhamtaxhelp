@@ -182,10 +182,19 @@
 												<?php
 												}
 												?>
-												
+
 												<ul class="receipts_list">
 
+												<?php
+												if($content2){
+												?>
+
 												<?php echo $content2; ?>
+												
+												<?php
+												}
+												?>
+
 												</ul>
 										<!--- End "What to Bring: Receipts" section --->
 										</article>
