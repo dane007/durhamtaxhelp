@@ -182,19 +182,47 @@
 												<?php
 												}
 												?>
-												
+
 												<ul class="receipts_list">
 
+												<?php
+												if($content2){
+												?>
+
 												<?php echo $content2; ?>
+
+												<?php
+												}
+												?>
+
 												</ul>
 										<!--- End "What to Bring: Receipts" section --->
 										</article>
 
 										<article id="article_box03" class="article_box">
-												<h2 class="what_to_bring_title"><?php echo $heading3; ?></h2>
+												<h2 class="what_to_bring_title">
+
+												<?php
+												if($heading3){
+												?>
+
+												<?php echo $heading3; ?></h2>
+
+												<?php
+												}
+												?>
+
 												<ul class="information_slips_list">
 
+												<?php
+												if($content3){
+												?>
 												<?php echo $content3; ?>
+
+												<?php
+												}
+												?>
+												
 												</ul>
 										<!--- End "What to Bring: Information Slips" section --->
 										</article>
