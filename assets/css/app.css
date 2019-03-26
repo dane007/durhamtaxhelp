@@ -1176,20 +1176,17 @@ map-section.leaflet-popup-content-wrapper {
 
     .peopleImg {
         width: 17%;
-        border: 2px solid black;
-        padding: 10px;
-        position: relative;
-        top: 10%;
-        left: 33%;
+        border: 1px solid black;
+        padding: 5px;
     }
 
     .testimony {
         position: relative;
         top: -34%;
         font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 18px;
+        font-size: 17px;
         text-align: justify;
-        padding-right: 15px;
+        padding-right: 35px;
     }
 
     .statement, #map-section h3 {
@@ -1407,6 +1404,24 @@ and (orientation: landscape) -w-
         margin: 0 auto;
         width: 90%;
     }
+    
+    .peopleImg {
+        width: 17%;
+        border: 1px solid black;
+        padding: 10px;
+        position: relative;
+        top: 10%;
+        left: 33%;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 18px;
+        text-align: justify;
+        padding-right: 15px;
+    }
 }
 
 @media (min-width:70.063em) {
@@ -1441,6 +1456,24 @@ and (orientation: landscape) -w-
     .characters {
         height: 500px;
     }
+    
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
+        position: relative;
+        top: 10%;
+        left: 33%;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 16px;
+        text-align: justify;
+        padding-right: 15px;
+    }
 }
 
 @media (min-width:100.063em) {
@@ -1465,5 +1498,23 @@ and (orientation: landscape) -w-
 
     .characters {
         height: 600px;
+    }
+    
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
+        position: relative;
+        top: 10%;
+        left: 33%;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 18px;
+        text-align: justify;
+        padding-right: 15px;
     }
 }
