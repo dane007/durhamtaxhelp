@@ -1258,6 +1258,21 @@ map-section.leaflet-popup-content-wrapper {
     .how_to_qualify_btn_container {
         height: 50%;
     }
+    
+    .peopleImg {
+        width: 17%;
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 13px;
+        text-align: justify;
+        padding-right: 25px;
+    }
 }
 
 /*
@@ -1302,6 +1317,21 @@ and (orientation: landscape) -w-
         height: 50%;
         margin: auto 0;
         flex-flow: column wrap;
+    }
+    
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 24px;
+        text-align: justify;
+        padding-right: 65px;
     }
 }
 
