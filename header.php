@@ -26,7 +26,7 @@
 
 	<header id="masthead" class="site-header">
 
-
+     
 
 		<nav id="site-navigation" class="main-navigation menu-text">
 			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button> -->
@@ -37,7 +37,7 @@
 							<div class="title-bar-title">MENU</div>
 						</div>
 
-
+					
 
 						<div class="top-bar" id="the-menu">
 						    <div class="top-bar-right">

@@ -28,11 +28,42 @@
 		?>
 
 		<div class="grid-container">
-				<h1 class="section_titles"><?php echo $heading; ?></h1>
+				<h1 class="section_titles">
+
+				<?php
+                if($heading){
+                ?>
+
+				<?php echo $heading; ?></h1>
+
+				<?php
+				}
+                ?>
+
+
+
+				<?php
+                if($content){
+                ?>
+
 				<p> <?php echo $content; ?> </p>
+
+				<?php
+				}
+                ?>
+
 				<a href="https://srv138.services.gc.ca/daf/q?id=e9c78bbd-255d-42a0-a8a0-3b60f96d9965&GoCTemplateCulture=en-CA" id="questionnaire_link">
+
+				<?php
+                if($link){
+                ?>
+				
 				<?php echo $link; ?>
 				</a>
+
+				<?php
+				}
+                ?>
 		</div>
  </section>
 
