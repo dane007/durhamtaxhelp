@@ -48,9 +48,17 @@
 
                            <!-- container div for statement testimonial -->
                                 <div class="cell testimony small-10 small-offset-1 medium-10 medium-offset-1 large-9 large-offset-1">
-																	<p>
-                                    <?php echo $statement; ?>
-																		</p>
+
+
+                                <?php
+                                if($statement){
+                                ?>
+								<p><?php echo $statement; ?></p>
+
+                                <?php
+                                }
+                                ?>
+
                                 </div>
 
                             </div>
