@@ -158,7 +158,7 @@
 												<?php
 												}
 												?>
-												
+
 												</ul>
 
 												<h5 class="chartered_Accountant_Guidelines"><?php echo $paragraph3_heading; ?></h5>
@@ -171,7 +171,18 @@
 
 
 										<article id="article_box02" class="article_box">
-												<h2 class="what_to_bring_title"><?php echo $heading2; ?></h2>
+												<h2 class="what_to_bring_title">
+
+												<?php
+												if($heading2){
+												?>
+
+												<?php echo $heading2; ?></h2>
+
+												<?php
+												}
+												?>
+												
 												<ul class="receipts_list">
 
 												<?php echo $content2; ?>
