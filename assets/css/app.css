@@ -1224,9 +1224,6 @@ map-section.leaflet-popup-content-wrapper {
         flex-flow: row wrap;
     }
 
-    .testimony p {
-        font-size: .6em;
-    }
 }
 
 @media (min-width:30.063em) {
@@ -1455,11 +1452,6 @@ and (orientation: landscape) -w-
     .conversion {
         font-size: 1.5em;
     }
-
-    .testimony p {
-        margin: 0 auto;
-        width: 90%;
-    }
     
     .peopleImg {
         width: 17%;
@@ -1526,7 +1518,7 @@ and (orientation: landscape) -w-
         position: relative;
         top: -34%;
         font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 24px;
+        font-size: 18px;
         text-align: justify;
         padding-right: 15px;
     }
@@ -1569,7 +1561,7 @@ and (orientation: landscape) -w-
         position: relative;
         top: -34%;
         font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 40px;
+        font-size: 25px;
         text-align: justify;
         padding-right: 15px;
     }
