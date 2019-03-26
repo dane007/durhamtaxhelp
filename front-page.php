@@ -28,8 +28,16 @@
               				if ( $durham_tax_help || is_customize_preview() ) :
               					?>
                           <p class="site-description">
-                              <?php echo $durham_tax_help; /* WPCS: xss ok. */ ?>
-                          </p>
+
+                          <?php
+                          if ( $durham_tax_help){
+                          ?>
+                              <?php echo $durham_tax_help; /* WPCS: xss ok. */ ?> </p>
+
+                          <?php
+                          } 
+                          ?>
+
                           <?php endif; ?>
                     </div>
 
@@ -67,19 +75,55 @@
 
           <div class="intro grid-x grid-margin-x">
 
-              <h1 id="main_site_title" class="title small-12"><?php echo $title; ?></h1>
+              <h1 id="main_site_title" class="title small-12">
+
+              <?php
+              if ($title){
+              ?>
+
+              <?php echo $title; ?></h1>
+
+              <?php
+               } 
+              ?>
               <p class="statement fadeOn small-12">
-                  <?php echo $statement; ?>
-              </p>
+
+              <?php
+              if ( $statement){
+              ?>
+                  <?php echo $statement; ?></p>
+
+              <?php
+              }
+              ?>   
+
               <p class="conversion fadeOn small-12 medium-12">
-                  <?php echo $begin; ?>
-              </p>
+
+              <?php
+              if ( $begin){
+              ?>
+
+              <?php echo $begin; ?></p>
+
+              <?php
+              }
+              ?>
+
               <div class="inp fadeOn small-6 medium-4 large-4">
                   <input class="userInp" type="number" name="" value="" placeholder="Example: 30000">
               </div>
               <div class="btn fadeOn small-6 medium-2 large-3">
                   <button class="calculate" type="button" name="button">
-                      <?php echo $qualify; ?>
+
+              <?php
+              if ( $qualify){
+              ?>
+              <?php echo $qualify; ?>
+
+              <?php
+              }
+              ?>
+
                   </button>
               </div>
               <div class="two_button_container">
@@ -87,7 +131,16 @@
                   <div class="bigbtn fadeOn small-12">
                       <a href="#volunteer_page">
                           <button class="findTxHp" type="button" name="button">
+
+
+                        <?php
+                        if ( $findhelp){
+                        ?>
                               <?php echo $findhelp; ?>
+
+                        <?php
+                         }
+                        ?>      
                           </button>
                       </a>
                   </div>
