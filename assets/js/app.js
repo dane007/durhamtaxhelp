@@ -462,4 +462,27 @@ let dataLocations = [{
     li1.innerHTML = li1_content;
     li2.innerHTML = li2_content;
 
+
+
+    // Financial Empowerment Controllers
+    $("#sideNav li").click(function() {
+        let list = document.querySelectorAll("#sideNav li"); // grab li's
+        console.log(list); // show all the li's (array)
+
+        list.forEach(function(i) {
+            console.log(i); // items in array
+            i.classList.remove("activeEmp"); // remove active
+        })
+
+        // add class if already active or not
+        if (this.classList.contains("activeEmp")) {
+            // this.classList.remove("active");
+            console.log("already active");
+        } else {
+            this.classList.add("activeEmp");
+            console.log("made active");
+        }
+    });
+
+
 })(jQuery);
