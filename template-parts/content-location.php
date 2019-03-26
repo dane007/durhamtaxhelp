@@ -12,7 +12,7 @@
 
 <?php
         $args = array(
-            'post_type' => 'review',
+            'post_type' => 'locations',
         );
 		
 		// WP Query variable to hold the args variable.
@@ -24,7 +24,7 @@
                 // the_title();
 				// the_content();
 				
-				$locationCutomizeds = get_field('location');
+				$locationCutomizeds = get_field('locations');
 
 				if(!empty($locationCutomizeds)){
 
@@ -49,12 +49,12 @@
 
 						<div id="map-list" class="small-12 medium-12 large-3">
 								<div class="map-list-option" data-id="0" data-name='divFinGrp'>
-										<h3>Diverse Financial Group</h3>
-										<h4>190 Harwood Avenue South (inside G Centre), Ajax</h4>
+										<h3><?php echo $locationName; ?></h3>
+										<h4></h4>
 								</div>
 								<div class="map-list-option" data-id="1" data-name='durhamComLegClin'>
-										<h3>Durham Community Legal Clinic</h3>
-										<h4>200 John Street West, Unit B1, Oshawa</h4>
+										<h3></h3>
+										<h4></h4>
 								</div>
 						</div>
 
@@ -63,11 +63,7 @@
 						</div>
 
 						<div id="map-info" class="small-12 medium-12 large-3">
-								<h3>Diverse Financial Group</h3>
-								<h4>190 Harwood Avenue South (inside G Centre), Ajax</h4>
-								<p>By apointment only</p>
-								<p>Current and prior year returns</p>
-								<p>call 647-887-8725</p>
+								
 						</div>
 				</div>
 		</div>
