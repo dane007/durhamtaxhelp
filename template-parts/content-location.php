@@ -20,9 +20,24 @@
         if ( $locations->have_posts() ) {
             while ( $locations->have_posts() ) {
                 $locations->the_post();
-                the_title();
-                the_content();
-            }
+                // the_title();
+				// the_content();
+				
+				$locationCutomizeds = get_field('location');
+
+				if(!empty($locationCutomizeds)){
+
+					foreach($locationCutomizeds as $locationCutomized){
+						$locationName= $locationCutomized['name'];
+						$locationAddress = $locationCutomized['address'];
+						$locationInformation = $locationCutomized['information'];
+						
+					}
+
+
+				}
+			}
+			wp_reset_postdata();
         }
         ?>
 
