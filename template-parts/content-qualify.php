@@ -88,7 +88,20 @@
 
 								<div class="qualify_box box">
 										<article id="article_box01" class="article_box">
-												<h2 class="am_i_eligible_title"><?php echo $heading1; ?></h2>
+												<h2 class="am_i_eligible_title">
+												
+												<?php
+
+                                                if ($heading1) {
+
+                                                ?>
+												<?php echo $heading1; ?></h2>
+												<?php
+
+												}
+
+												?>
+
 												<p class="paragraph0101"><?php echo $statement; ?></p>
 
 												<h3 class="volunteer_warning"><?php echo $paragraph1_heading; ?></h3>
