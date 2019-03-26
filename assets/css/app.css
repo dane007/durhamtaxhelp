@@ -115,17 +115,12 @@ nav {
     z-index: 2000;
     right: 0;
     width: 40px;
-    opacity: 0.8;
     border: 2px solid rgba(0, 0, 0, 0);
     border-radius: 0;
     overflow: hidden;
     transition: opacity 1s ease;
     transition: border 1s ease;
     /* border: 2px solid #022d41; */
-}
-
-#masthead nav:hover {
-    opacity: 1;
 }
 
 .icon {
@@ -146,11 +141,13 @@ nav {
 }
 
 .top-bar {
+    flex-flow: column nowrap;
     /* transition: all .3s cubic-bezier(.79, .14, .15, .86); */
 }
 
 .opened {
     border-radius: 0;
+    opacity: 1;
 }
 
 .title-bar-title {
@@ -1203,6 +1200,11 @@ map-section.leaflet-popup-content-wrapper {
         flex-flow: row wrap;
     }
 
+    #menu-main-navigation {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
     #site-navigation .top-bar {
         display: none;
     }
@@ -1255,7 +1257,7 @@ map-section.leaflet-popup-content-wrapper {
     .how_to_qualify_btn_container {
         height: 50%;
     }
-    
+
     .peopleImg {
         width: 17%;
         border: 1px solid black;
@@ -1315,7 +1317,7 @@ and (orientation: landscape) -w-
         margin: auto 0;
         flex-flow: column wrap;
     }
-    
+
     .peopleImg {
         width: 17%;
         border: 2px solid black;
@@ -1412,7 +1414,7 @@ and (orientation: landscape) -w-
         background-color: rgba(255, 255, 255, 0.7);
         border-radius: 30px;
     }
-    
+
     .peopleImg {
         width: 17%;
         border: 1px solid black;
@@ -1504,7 +1506,7 @@ and (orientation: landscape) -w-
     .characters {
         height: 500px;
     }
-    
+
     .peopleImg {
         width: 17%;
         border: 2px solid black;
@@ -1547,7 +1549,7 @@ and (orientation: landscape) -w-
     .characters {
         height: 600px;
     }
-    
+
     .peopleImg {
         width: 17%;
         border: 2px solid black;
