@@ -40,7 +40,18 @@
 				}
                 ?>
 
+
+
+				<?php
+                if($content){
+                ?>
+
 				<p> <?php echo $content; ?> </p>
+
+				<?php
+				}
+                ?>
+				
 				<a href="https://srv138.services.gc.ca/daf/q?id=e9c78bbd-255d-42a0-a8a0-3b60f96d9965&GoCTemplateCulture=en-CA" id="questionnaire_link">
 				<?php echo $link; ?>
 				</a>
