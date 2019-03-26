@@ -18,12 +18,15 @@
 				<div class="grid-x grid-margin-x">
 						<div class="cell small-12 medium-3 sidebar">
 								<div id="sidebar">
+
+										<!-- Used for placing arrows for navigation-->
 										<div id="arrow1"><img src="<?php echo get_template_directory_uri() . '/assets/img/middle.png'; ?>"></div>
 										<div id="arrow2"><img src="<?php echo get_template_directory_uri() . '/assets/img/middle.png'; ?>"></div>
 										<div id="arrow3"><img src="<?php echo get_template_directory_uri() . '/assets/img/middle.png'; ?>"></div>
 										<div id="arrow4"><img src="<?php echo get_template_directory_uri() . '/assets/img/middle.png'; ?>"></div>
 								</div>
-
+								<!-- This content is used for 
+									 implementing the side navigation -->
 								<div id="sideNav">
 
 										<nav>
@@ -50,7 +53,8 @@
 						<div class="cell small-12 medium-9">
 
 								<div class="box">
-
+										<!-- Overview text for the content
+											 of finanical empowerment. -->
 										<div id="overview">
 
 												<h1> Overview</h1>
