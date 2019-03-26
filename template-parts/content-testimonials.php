@@ -16,7 +16,7 @@
         <div class="testimonials-page">
 
             <!-- Grid Container for positoong of testimonials cards -->
-            <div class="grid-x grid-margin-x container">
+            <div class="grid-x grid-margin-x container cardContainer">
 
                 <?php
                 if ( function_exists( 'get_field' ) ) {
@@ -37,20 +37,22 @@
                         <div class="cell card small-offset-0 small-12 medium-offset-1 medium-10 large-offset-0  large-6">
                             <div class="grid-x grid-margin-x container">
                                 <!-- frame for image to be placed inside -->
-                                <div class="cell peopleImg small-4 medium-4 large-3">
+                                <div class="cell peopleImg small-3 medium-3 large-3">
                                     <img class="image" src="<?php echo $image['url'] ?>" alt="">
                                 </div>
-                                
+
                             <!-- background image for text -->
-                                <div class="cell backImg small-12 medium-12 large-12">  
+                                <div class="cell backImg small-12 medium-12 large-12">
                                     <img class="imageBG" src="<?php echo $imageBG['url'] ?>" alt="">
                                 </div>
-                                
-                           <!-- container div for statement testimonial -->     
-                                <div class="cell testimony small-10 small-offset-1 medium-10 medium-offset-1 large-9 large-offset-1">  
+
+                           <!-- container div for statement testimonial -->
+                                <div class="cell testimony small-10 small-offset-1 medium-10 medium-offset-1 large-9 large-offset-1">
+																	<p>
                                     <?php echo $statement; ?>
+																		</p>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <?php

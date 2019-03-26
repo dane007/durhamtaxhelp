@@ -1003,10 +1003,19 @@ map-section.leaflet-popup-content-wrapper {
     margin-left: 10px;
 }
 
-.card {
-    padding-left: 20px;
+.testimonials-page .cardContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.testimonials-page .card {
+    display: flex;
+    justify-content: center;
+    /* padding-left: 20px; */
     border: 0;
 }
+
 .imageBG {
     width: 90%;
 }
@@ -1018,7 +1027,6 @@ map-section.leaflet-popup-content-wrapper {
     position: relative;
     top: 10%;
     left: 33%;
-    
 }
 
 .testimony {
@@ -1066,8 +1074,6 @@ map-section.leaflet-popup-content-wrapper {
 .contact-form {
     margin-left: 33%;
 }
-
-
 
 /*          Q U E R I E S        */
 /* ------------ -q- ------------ */
@@ -1168,7 +1174,6 @@ map-section.leaflet-popup-content-wrapper {
         height: auto;
     }
 
-
     .peopleImg {
         width: 17%;
         border: 2px solid black;
@@ -1176,7 +1181,6 @@ map-section.leaflet-popup-content-wrapper {
         position: relative;
         top: 10%;
         left: 33%;
-
     }
 
     .testimony {
@@ -1187,7 +1191,7 @@ map-section.leaflet-popup-content-wrapper {
         text-align: justify;
         padding-right: 15px;
     }
-    
+
     .statement, #map-section h3 {
         font-size: 1.25em;
     }
@@ -1222,6 +1226,10 @@ map-section.leaflet-popup-content-wrapper {
     #sideNav ol {
         flex-flow: row wrap;
     }
+
+    .testimony p {
+        font-size: .6em;
+    }
 }
 
 @media (min-width:30.063em) {
@@ -1249,8 +1257,6 @@ map-section.leaflet-popup-content-wrapper {
     .testimonials-page {
         height: auto;
     }
-
-   
 
     .how_to_qualify_btn_container {
         height: 50%;
@@ -1300,8 +1306,6 @@ and (orientation: landscape) -w-
         margin: auto 0;
         flex-flow: column wrap;
     }
-
-    
 }
 
 /*
@@ -1345,6 +1349,10 @@ and (orientation: landscape) -w-
     #sidebar {
         display: block;
     }
+
+    .testimony p {
+        font-size: 1.05em;
+    }
 }
 
 @media (min-width:60.063em) {
@@ -1369,8 +1377,6 @@ and (orientation: landscape) -w-
         background-color: rgba(255, 255, 255, 0.7);
         border-radius: 30px;
     }
-
-    
 }
 
 @media (min-width:64.063em) {
@@ -1397,7 +1403,10 @@ and (orientation: landscape) -w-
         font-size: 1.5em;
     }
 
-   
+    .testimony p {
+        margin: 0 auto;
+        width: 90%;
+    }
 }
 
 @media (min-width:70.063em) {
@@ -1432,8 +1441,6 @@ and (orientation: landscape) -w-
     .characters {
         height: 500px;
     }
-
-    
 }
 
 @media (min-width:100.063em) {
@@ -1459,6 +1466,4 @@ and (orientation: landscape) -w-
     .characters {
         height: 600px;
     }
-
-    
 }
