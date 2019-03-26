@@ -1184,7 +1184,7 @@ map-section.leaflet-popup-content-wrapper {
         position: relative;
         top: -34%;
         font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 17px;
+        font-size: 10px;
         text-align: justify;
         padding-right: 35px;
     }
@@ -1266,7 +1266,7 @@ map-section.leaflet-popup-content-wrapper {
         position: relative;
         top: -34%;
         font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 13px;
+        font-size: 12px;
         text-align: justify;
         padding-right: 25px;
     }
@@ -1326,7 +1326,7 @@ and (orientation: landscape) -w-
         position: relative;
         top: -34%;
         font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 24px;
+        font-size: 18px;
         text-align: justify;
         padding-right: 65px;
     }
@@ -1423,7 +1423,7 @@ and (orientation: landscape) -w-
         position: relative;
         top: -34%;
         font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 22px;
+        font-size: 14px;
         text-align: justify;
         padding-right: 15px;
     }
@@ -1466,7 +1466,7 @@ and (orientation: landscape) -w-
         position: relative;
         top: -34%;
         font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 23px;
+        font-size: 16px;
         text-align: justify;
         padding-right: 15px;
     }
