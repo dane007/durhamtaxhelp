@@ -190,7 +190,7 @@
 												?>
 
 												<?php echo $content2; ?>
-												
+
 												<?php
 												}
 												?>
@@ -200,7 +200,18 @@
 										</article>
 
 										<article id="article_box03" class="article_box">
-												<h2 class="what_to_bring_title"><?php echo $heading3; ?></h2>
+												<h2 class="what_to_bring_title">
+
+												<?php
+												if($heading3){
+												?>
+												
+												<?php echo $heading3; ?></h2>
+
+												<?php
+												}
+												?>
+
 												<ul class="information_slips_list">
 
 												<?php echo $content3; ?>
