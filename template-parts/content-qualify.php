@@ -50,10 +50,8 @@
 					
 					
 					<?php
-
                     if ($qheading) {
-
-                        ?>
+                    ?>
 
                         <?php echo $qheading; ?>
 
@@ -88,19 +86,79 @@
 
 								<div class="qualify_box box">
 										<article id="article_box01" class="article_box">
-												<h2 class="am_i_eligible_title"><?php echo $heading1; ?></h2>
-												<p class="paragraph0101"><?php echo $statement; ?></p>
+												<h2 class="am_i_eligible_title">
+												
+												<?php
+                                                if ($heading1) {
+                                                ?>
 
-												<h3 class="volunteer_warning"><?php echo $paragraph1_heading; ?></h3>
+												<?php echo $heading1; ?></h2>
+
+												<?php
+												}
+												?>
+												<p class="paragraph0101">
+												
+												<?php
+												if($statement){
+                                                ?>	
+												}
+												<?php echo $statement; ?></p>
+
+												<?php
+												}
+												?>
+
+												<h3 class="volunteer_warning">
+
+												<?php
+												if($paragraph1_heading){
+												?>
+
+												<?php echo $paragraph1_heading; ?></h3>
+
+												<?php
+												}
+												?>
 
 												<ul class="volunteer_warning_list">
+
+												<?php
+												if($paragraph1_content){
+												?>
+
 												<?php echo $paragraph1_content; ?>
+
+												<?php
+												}
+												?>
+
 												</ul>
 
-												<h4 class="volunteer_CRA_Guidelines"><?php echo $paragraph2_heading; ?></h4>
+												<h4 class="volunteer_CRA_Guidelines">
+
+												<?php
+												if($paragraph2_heading){
+												?>
+
+												<?php echo $paragraph2_heading; ?></h4>
+
+												<?php
+												}
+												?>
 
 												<ul class="volunteer_CRA_Guidelines_list">
+
+												<?php
+												if($paragraph2_content){
+												?>
+
 												<?php echo $paragraph2_content; ?>
+
+												<?php
+												}
+												?>
+												
 												</ul>
 
 												<h5 class="chartered_Accountant_Guidelines"><?php echo $paragraph3_heading; ?></h5>
