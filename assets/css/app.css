@@ -1176,20 +1176,17 @@ map-section.leaflet-popup-content-wrapper {
 
     .peopleImg {
         width: 17%;
-        border: 2px solid black;
-        padding: 10px;
-        position: relative;
-        top: 10%;
-        left: 33%;
+        border: 1px solid black;
+        padding: 5px;
     }
 
     .testimony {
         position: relative;
         top: -34%;
         font-family: 'Shree Devanagari 714', sans-serif;
-        font-size: 18px;
+        font-size: 17px;
         text-align: justify;
-        padding-right: 15px;
+        padding-right: 35px;
     }
 
     .statement, #map-section h3 {
@@ -1261,6 +1258,21 @@ map-section.leaflet-popup-content-wrapper {
     .how_to_qualify_btn_container {
         height: 50%;
     }
+    
+    .peopleImg {
+        width: 17%;
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 13px;
+        text-align: justify;
+        padding-right: 25px;
+    }
 }
 
 /*
@@ -1306,6 +1318,21 @@ and (orientation: landscape) -w-
         margin: auto 0;
         flex-flow: column wrap;
     }
+    
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 24px;
+        text-align: justify;
+        padding-right: 65px;
+    }
 }
 
 /*
@@ -1350,8 +1377,19 @@ and (orientation: landscape) -w-
         display: block;
     }
 
-    .testimony p {
-        font-size: 1.05em;
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 24px;
+        text-align: justify;
+        padding-right: 65px;
     }
 }
 
@@ -1376,6 +1414,21 @@ and (orientation: landscape) -w-
     #map-list, #map-info {
         background-color: rgba(255, 255, 255, 0.7);
         border-radius: 30px;
+    }
+    
+    .peopleImg {
+        width: 17%;
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 22px;
+        text-align: justify;
+        padding-right: 15px;
     }
 }
 
@@ -1406,6 +1459,24 @@ and (orientation: landscape) -w-
     .testimony p {
         margin: 0 auto;
         width: 90%;
+    }
+    
+    .peopleImg {
+        width: 17%;
+        border: 1px solid black;
+        padding: 10px;
+        position: relative;
+        top: 10%;
+        left: 33%;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 23px;
+        text-align: justify;
+        padding-right: 15px;
     }
 }
 
@@ -1441,6 +1512,24 @@ and (orientation: landscape) -w-
     .characters {
         height: 500px;
     }
+    
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
+        position: relative;
+        top: 10%;
+        left: 33%;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 24px;
+        text-align: justify;
+        padding-right: 15px;
+    }
 }
 
 @media (min-width:100.063em) {
@@ -1465,5 +1554,23 @@ and (orientation: landscape) -w-
 
     .characters {
         height: 600px;
+    }
+    
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
+        position: relative;
+        top: 10%;
+        left: 33%;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 40px;
+        text-align: justify;
+        padding-right: 15px;
     }
 }
