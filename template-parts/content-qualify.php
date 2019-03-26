@@ -109,9 +109,19 @@
 
 												<?php
 												}
-
 												?>
-												<h3 class="volunteer_warning"><?php echo $paragraph1_heading; ?></h3>
+
+												<h3 class="volunteer_warning">
+
+												<?php
+												if($paragraph1_heading){
+												?>
+
+												<?php echo $paragraph1_heading; ?></h3>
+												
+												<?php
+												}
+												?>
 
 												<ul class="volunteer_warning_list">
 												<?php echo $paragraph1_content; ?>
