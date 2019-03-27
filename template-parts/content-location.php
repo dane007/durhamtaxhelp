@@ -12,9 +12,9 @@
 
 <?php
         $args = array(
-            'post_type' => 'locations',
+            'post_type' => 'location',
         );
-		
+
 		// WP Query variable to hold the args variable.
         $locations = new wp_Query( $args );
 
@@ -23,26 +23,35 @@
                 $locations->the_post();
                 // the_title();
 				// the_content();
-				
+
 				$locationCutomizeds = get_field('locations');
+        // var_dump($locationCutomizeds['location']['name']);
 
 				if(!empty($locationCutomizeds)){
 
 					foreach($locationCutomizeds as $locationCutomized){
-						$locationName= $locationCutomized['name'];
+						$locationName = $locationCutomized["name"];
 						$locationAddress = $locationCutomized['address'];
 						$locationInformation = $locationCutomized['information'];
-						
-					}
 
+            $locationsArray["location"] = $locationCutomizeds;
+            // echo $locationsArray;
 
-				}
-			}
-			wp_reset_postdata();
-        }
         ?>
+          <p class="locationsArray">
+          <?php
+          $locList = json_encode($locationCutomizeds);
+          echo $locList;
 
+          ?>
+          </p>
+        <?php
+      }
+    }
+    }
+          ?>
 <section class="content_sections" id="locations_page">
+
 		<div id='locations' class="locations-page page2">
 		<h1 class="section_titles">Locations</h1>
 				<div id="map-section" class="grid-x">
@@ -63,8 +72,15 @@
 						</div>
 
 						<div id="map-info" class="small-12 medium-12 large-3">
-								
+
 						</div>
 				</div>
 		</div>
 </section>
+<?php
+
+
+wp_reset_postdata();
+}
+
+?>
