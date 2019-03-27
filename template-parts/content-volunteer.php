@@ -27,6 +27,9 @@
                     $video_description = $volunteer_content['video_description'];
                     $title_2 = $volunteer_content['title_2'];
                     $content_2 = $volunteer_content['content_2'];
+                    $learnMoreLink = $volunteer_content['learn_more_button_link'];
+                    $organizations_button = $volunteer_content['organizations_button'];
+                    $learn_more_content = $volunteer_content['learn_more_content'];
                     // var_dump( $image );
 
                 ?>
@@ -42,11 +45,11 @@
                     ?>
 
                     <!-- Main Content for Volunteer-Section -->
-					
+
                     <h1 class="section_titles cell">
-					
+
 					<!-- If main title exists, show it -->
-                    <?php 
+                    <?php
                     if($main_title){
                     ?>
                     <?php echo $main_title; ?></h1>
@@ -61,12 +64,12 @@
                         <div class="cell small-12 large-4 volunteer_content_container">
                             <h4 class="volunteer_subtitles"><?php echo $title_1; ?></h4>
                             <p class="">
-                            
+
 							<!-- If content exists, show it -->
-                            <?php 
+                            <?php
                             if($content_1){
                             ?>
-        
+
                             <?php echo $content_1; ?>
 
                             <?php
@@ -77,27 +80,33 @@
 							<!-- Holds a button for the volunteer page -->
                             <div class="volunteer_button_container">
                                 <a href="#locations_page">
-                                    <button class="volunteer_button" type="button" name="button">Organizations >></button>
+                                    <button class="volunteer_button" type="button" name="button"><?php  echo $organizations_button ?></button>
                                 </a>
                             </div>
-                            <p id="volunteer_p2">To officially register or to get more information about being a volunteer, click the button below.</p>
+                            <p id="volunteer_p2"><?php
+                            if ($learn_more_content) {
+                              echo $learn_more_content;
+                            }
+                            else {
+                              echo "To officially register or to get more information about being a volunteer, click the button below.";
+                            } ?></p>
                             <div class="volunteer_button_container">
-                                <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/community-volunteer-income-tax-program/lend-a-hand-individuals.html">
+                                <a href="<?php echo $learnMoreLink ?>">
                                     <button class="volunteer_button" type="button" name="button">Learn More >></button>
                                 </a>
                             </div>
                         </div>
-						
+
 						<!-- Video container -->
                         <div class="cell small-12 large-4">
                             <div id="video_container">
                                 <div id="short_video">
-									
+
 									<!-- If video exists, show it. -->
-                                    <?php 
+                                    <?php
                                     if($attr ){
                                     ?>
-        
+
                                     <?php echo wp_video_shortcode( $attr ) ?>
 
                                     <?php
@@ -108,15 +117,15 @@
                             </div>
 							<!-- Video description container -->
                             <p id="video_description">
-								
+
 								<!-- If video description exists, show it. -->
-                                <?php 
+                                <?php
                                 if($video_description ){
                                 ?>
 
                                 <?php echo $video_description; ?>
 
-                                <?php 
+                                <?php
                                 }
                                 ?>
                             </p>
@@ -125,26 +134,26 @@
 						<!-- Content section 2 -->
                         <div class="cell small-12 large-4 volunteer_content_container">
                             <h4 class="volunteer_subtitles">
-							
+
 							<!-- If content exists, show it-->
-                            <?php 
+                            <?php
                             if($title_2 ){
                             ?>
 
                             <?php echo $title_2; ?></h4>
 
-                            <?php 
+                            <?php
                             }
                             ?>
 
                             <p class="">
 
-                            <?php 
+                            <?php
                             if($content_2 ){
                             ?>
                             <?php echo $content_2; ?>
-                            
-                            <?php 
+
+                            <?php
                             }
                             ?>
 
