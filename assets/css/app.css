@@ -187,7 +187,7 @@ a:hover {
 }
 
 #footer_holder img {
-    height: 100px;
+    height: 150px;
     padding: 5px;
     margin-left: 20px;
 }
@@ -684,6 +684,10 @@ map-section.leaflet-popup-content-wrapper {
     padding-top: 60px;
 }
 
+.wp-video {
+    margin: 0 auto;
+}
+
 #video_description {
     text-align: left;
     /* width: 400px; */
@@ -1116,7 +1120,7 @@ map-section.leaflet-popup-content-wrapper {
 
     .qualify_buttons {
         padding: 14px 10px 10px 10px;
-        font-size: 1.5em;
+        font-size: 1em;
         margin-right: 5px;
         width: auto;
     }
@@ -1167,7 +1171,7 @@ map-section.leaflet-popup-content-wrapper {
     }
 
     #footer_holder img {
-        height: 40px;
+        height: 50px;
         margin-left: 0;
     }
 
@@ -1257,10 +1261,6 @@ map-section.leaflet-popup-content-wrapper {
         height: auto;
     }
 
-    .how_to_qualify_btn_container {
-        height: 50%;
-    }
-
     .peopleImg {
         width: 17%;
         border: 1px solid black;
@@ -1274,6 +1274,15 @@ map-section.leaflet-popup-content-wrapper {
         font-size: 12px;
         text-align: justify;
         padding-right: 25px;
+    }
+
+    .qualify_buttons {
+        font-size: 1, 5em;
+    }
+
+    #footer_holder img {
+        height: 75px;
+        margin-left: 0;
     }
 }
 

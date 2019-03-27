@@ -39,6 +39,10 @@ const CALCULATE = document.querySelector('body .landing-page .calculate');
             return !isNaN(num) && num > 0;
         }
 
+        // Hide Calebs Parts
+        $("#article_box02").hide();
+        $("#article_box03").hide();
+
 
         // === L E A F L E T   M A P ===
         var mymap = L.map('leafletMap').setView([43.848900, -79.020986], 16);
