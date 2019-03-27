@@ -415,7 +415,7 @@ const CALCULATE = document.querySelector('body .landing-page .calculate');
 
     // N A V   C O N T R O L L E R
 
-    $('.title-bar').click(function() {
+    $('.title-bar, #menu-main-navigation li').click(function() {
         // get the menu
         let menu = document.querySelector('.row .top-bar');
 
