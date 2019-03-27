@@ -16,14 +16,16 @@
 		<div class="grid-container align-center financial_empowerment_grid">
 
 				<div class="grid-x grid-margin-x">
-						<div class="cell small-3 sidebar">
+						<div class="cell small-12 medium-3 sidebar">
 								<div id="sidebar">
+
+										<!-- Used for placing arrows for navigation-->
 										<div id="arrow1"><img src="<?php echo get_template_directory_uri() . '/assets/img/middle.png'; ?>"></div>
 										<div id="arrow2"><img src="<?php echo get_template_directory_uri() . '/assets/img/middle.png'; ?>"></div>
 										<div id="arrow3"><img src="<?php echo get_template_directory_uri() . '/assets/img/middle.png'; ?>"></div>
 										<div id="arrow4"><img src="<?php echo get_template_directory_uri() . '/assets/img/middle.png'; ?>"></div>
 								</div>
-
+								<!-- This content is used for implementing the side navigation -->
 								<div id="sideNav">
 
 										<nav>
@@ -47,24 +49,26 @@
 								</div>
 						</div>
 
-						<div class="cell small-9">
+						<div class="cell small-12 medium-9">
 
 								<div class="box">
-
+										<!-- Overview text for the content of finanical empowerment. -->
 										<div id="overview">
 
 												<h1> Overview</h1>
-												<p>Financial empowerment is an approach to poverty reduction that focuses
-		on improving the financial security of low-income people. It does this by introducing
-		a set of interventions that together help low-income Canadians to
-		grow their incomes, improve their credit scores, savings and debt levels, and
-		build wealth through education, employment, entrepreneurship and improved
-		housing.<br />
-		<br />Financial empowerment isn’t like most other poverty reduction approaches.
-		It focuses on helping low-income people participate and feel included in
-		our financial system. It increases their opportunities and knowledge, and
-		fosters behaviours that are critical to their economic security and their ability
-		to invest in their future.</p>
+												<p>     
+												        Financial empowerment is an approach to poverty reduction that focuses
+														on improving the financial security of low-income people. It does this by introducing
+														a set of interventions that together help low-income Canadians to
+														grow their incomes, improve their credit scores, savings and debt levels, and
+														build wealth through education, employment, entrepreneurship and improved
+														housing.<br />
+														<br />Financial empowerment isn’t like most other poverty reduction approaches.
+														It focuses on helping low-income people participate and feel included in
+														our financial system. It increases their opportunities and knowledge, and
+														fosters behaviours that are critical to their economic security and their ability
+														to invest in their future.
+												</p>
 
 										</div>
 

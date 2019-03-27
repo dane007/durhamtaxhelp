@@ -2,62 +2,14 @@
 const CONVERSION = document.querySelector('body .landing-page .conversion');
 const CALCULATE = document.querySelector('body .landing-page .calculate');
 
-// LOCATIONS
-let dataLocations = [{
-    name: "Diverse Financial Group",
-    id: "DivFinGrp",
-    location: [43.894260, -78.868295],
-    lat: 43.894260,
-    lng: -78.868295,
-    address: "190 Harwood Avenue South (inside G Centre), Ajax",
-    desc: "By apointment only Current and prior year returns call 647-887-8725"
-}, {
-    name: "Durham Community Legal Clinic",
-    id: "DurComLegClin",
-    location: [43.848900, -79.020986],
-    lat: 43.848900,
-    lng: -79.020986,
-    address: "200 John Street West, Unit B1, Oshawa",
-    desc: "By apointment only Current and prior year returns call 905-728-7321 ext. 259"
-}, {
-    name: "Ontario Works (Oshawa)",
-    id: "ONWrksOS",
-    location: [43.894231, -78.868267],
-    lat: 43.894231,
-    lng: -78.868267,
-    address: "200 John Street West, unit c1a, Oshawa, ON L1J 2B4",
-    desc: "Oshawa office: 905-436-6747 ext. 5208"
-}, {
-    name: "Ontario Works (Whitby)",
-    id: "ONWrksWT",
-    location: [43.898619, -78.940669],
-    lat: 43.898619,
-    lng: -78.940669,
-    address: "605 Rossland Rd E, Whitby, ON L1N 6A3",
-    desc: "Whitby office: 905-666-6239 ext. 2722"
-}, {
-    name: "Ontario Works (Ajax)",
-    id: "ONWrksAJ",
-    location: [43.848012, -79.022613],
-    lat: 43.848012,
-    lng: -79.022613,
-    address: "140 Commercial Ave, Ajax, ON L1S 2H5",
-    desc: "Ajax office: 905-428-7400 ext. 6606"
-}, {
-    name: "Local Diversity & Immigration Partnership Council",
-    id: "LocDivImPrtCnc",
-    location: [43.898603, -78.940277],
-    lat: 43.898603,
-    lng: -78.940277,
-    address: "605 Rossland Rd. E.",
-    desc: "P. O. Box 623\nWhitby, ON L1N 6A3"
-}];
 
 (function($) {
 
     // Initialize Slick Slider
     $(document).ready(function() {
 
+
+        //  === C A C L C U L A T E ===
         // after establishing the value of user input we can convert and
         // change the content to valid or non valid amount
         CALCULATE.addEventListener('click', function() {
@@ -81,14 +33,18 @@ let dataLocations = [{
             }
 
         });
-        $("#article_box02").hide();
-        $("#article_box03").hide();
 
+        // is calculation input positive
         function isPosNum(num) {
             return !isNaN(num) && num > 0;
         }
 
-        // Leaflet Map
+        // Hide Calebs Parts
+        $("#article_box02").hide();
+        $("#article_box03").hide();
+
+
+        // === L E A F L E T   M A P ===
         var mymap = L.map('leafletMap').setView([43.848900, -79.020986], 16);
 
         // Map settings
@@ -106,15 +62,51 @@ let dataLocations = [{
 
         // For all location items, add them to a location array with different map options...
         // - Take the dataLocations and use the values to assign popUp structure
-        for (i = 0; i < dataLocations.length; i++) {
-            locations[i] = L.marker(dataLocations[i].location).addTo(mymap);
+
+        let locArr = []; // locations array
+        // get locations
+        let locArr2 = document.querySelectorAll(".locationsArray"); // string object of posts
+        // let locArr = $(".locationsArray");
+        // console.log($(".locationsArray"));
+        // console.log(locArr2);
+        // console.log(locArr[0].innerText);
+
+        for (var i = 0; i < locArr2.length; i++) {
+            // turn string to object
+            locArr.push(JSON.parse(locArr2[i].innerText));
+
+            // parse long and lat to numbers
+            locArr[i].location.longitude = parseFloat(locArr[i].location.longitude);
+            locArr[i].location.latitude = parseFloat(locArr[i].location.latitude);
+
+            // show new object values
+            // console.log(locArr[i].location);
+        }
+        // locArr2.forEach(function(i) {
+        //     locArr.push(JSON.parse(locArr2[i].innerText))
+        // });
+
+        // console.log(locArr); // array of locations
+        // let locJSON = JSON.parse(locArr2[0].innerText);
+        // console.log(locJSON.location);
+
+
+
+
+        for (i = 0; i < locArr.length; i++) {
+            // locations lat & long
+            let longAndLat = [locArr[i].location.latitude, locArr[i].location.longitude];
+
+            // show values
+            // console.log(longAndLat);
+
+            locations[i] = L.marker(longAndLat).addTo(mymap);
             locations[i].bindPopup(`<div id="hotel${i}">
-      <h4>${dataLocations[i].name}</h4>
-      <h5>${dataLocations[i].address}</h5>
-      <h6>${dataLocations[i].desc}</63>
+      <h4>${locArr[i].location.name}</h4>
+      <h5>${locArr[i].location.Address}</h5>
+      <h6>${locArr[i].location.information}</63>
       </div>`);
         }
-
 
         // Sample circle
         // L.circle([43.849875, -79.035955], 250, {
@@ -142,23 +134,33 @@ let dataLocations = [{
 
         mymap.on('click', onMapClick);
 
-
         // Initialize map to first location items
         // center view to the first location
         locations[0].openPopup();
         mymap
-            .setView(new L.LatLng(dataLocations[0].lat, dataLocations[0].lng), 16, {
+            .setView(new L.LatLng(locArr[0].location.latitude, locArr[0].location.longitude), 16, {
                 animation: true
             });
 
         // Send list of locations to screen
         let content = "";
         for (var i = 0; i < locations.length; i++) {
-            content +=
-                `<div class="map-list-option" data-id="${i}" data-name='${dataLocations[i].id}' id='${dataLocations[i].id}'>
-      <h3>${dataLocations[i].name}</h3>
-      <h4>${dataLocations[i].address}</h4>
-      </div>`;
+            // activate first item
+            if (i === 0) {
+                content +=
+                    `<div class="map-list-option active" data-id="${locArr[i].location.id}" data-name='${locArr[i].location.id}' id='${locArr[i].location.id}'>
+                    <h3>${locArr[i].location.name}</h3>
+                    <h4>${locArr[i].location.Address}</h4>
+                    </div>`;
+            } else {
+                content +=
+                    `<div class="map-list-option" data-id="${locArr[i].location.id}"
+                    data-name='${locArr[i].location.id}' id='${locArr[i].location.id}'>
+                    <h3>${locArr[i].location.name}</h3>
+                    <h4>${locArr[i].location.Address}</h4>
+                    </div>`;
+            }
+
         }
 
         $("#map-list").html(content);
@@ -172,17 +174,38 @@ let dataLocations = [{
             $(this).attr('class', 'map-list-option active');
             content = "";
             var id = $(this).attr("data-id");
+            // console.log(locArr[id].location);
             var name = $(this).attr("data-name");
             // console.log(`ID: ${id}\nName: ${name}`);
 
-            content = `<h3>${dataLocations[id].name}</h3>
-      <h4>${dataLocations[id].address}</h4>
-      <p>${dataLocations[id].desc}</p>`;
-            doMoveMap(id, mymap, name, locations);
+            content = `<h3>${locArr[id].location.name}</h3>
+            <h4>${locArr[id].location.Address}</h4>
+            <p>${locArr[id].location.information}</p>`;
+            doMoveMap(id, mymap, name, locations, locArr);
 
 
             $("#map-info").html(content);
         });
+
+        // set the content to first item
+        $("#map-info").html(`<h3>${locArr[0].location.name}</h3>
+        <h4>${locArr[0].location.Address}</h4>
+        <p>${locArr[0].location.information}</p>`);
+
+        function doMoveMap(id, mymap, clinic, locations, locArr) {
+            locations[id].openPopup();
+            console.log(`ID(96): ${id}`);
+            // console.log(locations[id]._popup.openPopup());
+
+            // console.log(locArr[id].location.longitude, locArr[id].location.latitude);
+            mymap
+                .setView(new L.LatLng(parseFloat(locArr[id].location.latitude), locArr[id].location.longitude), 16, {
+                    animation: true
+                });
+        }
+
+
+
 
         (function animateIntro() {
 
@@ -390,30 +413,13 @@ let dataLocations = [{
 
     });
 
-    function doMoveMap(id, mymap, clinic, locations) {
-        locations[id].openPopup();
-        console.log(`ID(96): ${id}`);
-        console.log(locations[id]._popup.openPopup());
 
-        console.log(dataLocations[id].lng);
-        mymap
-            .setView(new L.LatLng(dataLocations[id].lat, dataLocations[id].lng), 16, {
-                animation: true
-            });
 
-    }
-    /*
-
-    .title-bar-title {
-        display: none;
-        opacity: 0;
-    }
-    */
 
 
     // N A V   C O N T R O L L E R
 
-    $('.title-bar').click(function() {
+    $('.title-bar, #menu-main-navigation li').click(function() {
         // get the menu
         let menu = document.querySelector('.row .top-bar');
 
@@ -437,13 +443,13 @@ let dataLocations = [{
 
         } else {
             $('.top-bar')
-                .css('height', '150px')
+                .css('height', '100vh')
                 .addClass("opened")
                 .slideDown(1000);
 
             $("#masthead nav")
                 .animate({
-                    width: '20%',
+                    width: '50%',
                 }, 1000);
 
             $(".title-bar")
@@ -457,15 +463,58 @@ let dataLocations = [{
     });
 
     // list items
-    const li1 = document.querySelector('#menu-main-navigation li:nth-child(1) a');
-    const li2 = document.querySelector('#menu-main-navigation li:nth-child(2) a');
+    const li1 = document.querySelector('#menu-main-navigation li:nth-child(1) a'),
+        li2 = document.querySelector('#menu-main-navigation li:nth-child(2) a'),
+        li3 = document.querySelector('#menu-main-navigation li:nth-child(3) a'),
+        li4 = document.querySelector('#menu-main-navigation li:nth-child(4) a'),
+        li5 = document.querySelector('#menu-main-navigation li:nth-child(5) a'),
+        li6 = document.querySelector('#menu-main-navigation li:nth-child(6) a'),
+        li7 = document.querySelector('#menu-main-navigation li:nth-child(7) a');
 
     // list content
-    let li1_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/home_icon.png" alt="">Home Page';
-    let li2_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/volunteer_icon.png" alt="">Contact Page';
+    let li1_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/home_icon.png" alt="">';
+    let li2_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/volunteer_icon.png" alt="">';
+    let li3_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/qualify_icon.png" alt="">';
+    let li4_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/locations_icon.png" alt="">';
+    let li5_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/volunteer_icon.png" alt="">';
+    let li6_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/financial_icon.png" alt="">';
+    let li7_content = '<img class="icon" src="http://durham-tax-help.local/wp-content/uploads/2019/03/testimonial_icon.png" alt="">';
 
     // add icons to nav
-    li1.innerHTML = li1_content;
-    li2.innerHTML = li2_content;
+    li1.innerHTML = li1_content + li1.innerHTML;
+    li2.innerHTML = li2_content + li2.innerHTML;
+    li3.innerHTML = li3_content + li3.innerHTML;
+    li4.innerHTML = li4_content + li4.innerHTML;
+    li5.innerHTML = li5_content + li5.innerHTML;
+    li6.innerHTML = li6_content + li6.innerHTML;
+    li7.innerHTML = li7_content + li7.innerHTML;
+
+
+
+    // Financial Empowerment Controllers
+    $("#sideNav li").click(function() {
+        let list = document.querySelectorAll("#sideNav li"); // grab li's
+        console.log(list); // show all the li's (array)
+
+        list.forEach(function(i) {
+            console.log(i); // items in array
+            i.classList.remove("activeEmp"); // remove active
+        })
+
+        // add class if already active or not
+        if (this.classList.contains("activeEmp")) {
+            // this.classList.remove("active");
+            console.log("already active");
+        } else {
+            this.classList.add("activeEmp");
+            console.log("made active");
+        }
+    });
+
+    // Testimonial cards
+    const nCards = document.querySelectorAll(".testimonials-page .card");
+    // console.log(nCards);
+
+
 
 })(jQuery);

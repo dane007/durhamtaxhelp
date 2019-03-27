@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6, p, span {
     margin: 0;
 }
 
+.locationsArray {
+    display: none;
+}
+
 .content-area {
     max-width: 1280px;
 }
@@ -82,6 +86,7 @@ footer a, footer a:active, footer a:visited {
 
 .sidebar {
     /* position: absolute; */
+    margin: 20px;
     margin-top: 0;
     /* width: 250px; */
     height: 460px;
@@ -114,17 +119,12 @@ nav {
     z-index: 2000;
     right: 0;
     width: 40px;
-    opacity: 0.8;
     border: 2px solid rgba(0, 0, 0, 0);
     border-radius: 0;
     overflow: hidden;
     transition: opacity 1s ease;
     transition: border 1s ease;
     /* border: 2px solid #022d41; */
-}
-
-#masthead nav:hover {
-    opacity: 1;
 }
 
 .icon {
@@ -145,11 +145,13 @@ nav {
 }
 
 .top-bar {
+    flex-flow: column nowrap;
     /* transition: all .3s cubic-bezier(.79, .14, .15, .86); */
 }
 
 .opened {
     border-radius: 0;
+    opacity: 1;
 }
 
 .title-bar-title {
@@ -185,7 +187,7 @@ a:hover {
 }
 
 #footer_holder img {
-    height: 100px;
+    height: 150px;
     padding: 5px;
     margin-left: 20px;
 }
@@ -682,6 +684,10 @@ map-section.leaflet-popup-content-wrapper {
     padding-top: 60px;
 }
 
+.wp-video {
+    margin: 0 auto;
+}
+
 #video_description {
     text-align: left;
     /* width: 400px; */
@@ -732,6 +738,12 @@ map-section.leaflet-popup-content-wrapper {
 #financial_empowerment {
     padding: 0 60px;
     padding-bottom: 140px;
+}
+
+.activeEmp {
+    transition: all 0.5s ease;
+    background-color: #30a5b6;
+    border-radius: 20px;
 }
 
 #financial_empowerment .section_titles {
@@ -841,7 +853,10 @@ map-section.leaflet-popup-content-wrapper {
     font-size: 18px;
     color: white;
     z-index: 2;
-    margin: 20px;
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
 }
 
 #sideNav li:hover {
@@ -993,93 +1008,39 @@ map-section.leaflet-popup-content-wrapper {
     margin-left: 10px;
 }
 
-.testimonials-page .card {
-    height: 360px;
-    padding-top: 12px;
-    /* width: 100%; */
-    border: none;
-    padding-left: 60px;
-    margin-top: 0;
-    /* background: url(http://durham-tax-help.local/wp-content/uploads/2019/02/scribble.png); */
-    background-image: url(../img/fr1.jpg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.testimonials-page .card:nth-child(1) {
-    background-image: url(../img/fr1.jpg);
-}
-
-.testimonials-page .card:nth-child(2) {
-    background-image: url(../img/fr2.jpg);
-}
-
-.testimonials-page .card:nth-child(3) {
-    background-image: url(../img/fr3.jpg);
-}
-
-.testimonials-page .card:nth-child(4) {
-    background-image: url(../img/fr4.jpg);
-}
-
-.testimonials-page .card * {
-    display: none;
-}
-
-.testimonials-page .imageBG {
-    opacity: 1;
-}
-
-.testimonials-page .container {
-    height: auto;
-    padding: 0 20px;
-    margin: 0 auto;
+.testimonials-page .cardContainer {
+    display: flex;
     width: 100%;
+    justify-content: center;
 }
 
-.testimonials-page .imageBG {
-    margin-top: 23%;
-    margin-left: -1%;
+.testimonials-page .card {
+    display: flex;
+    justify-content: center;
+    /* padding-left: 20px; */
+    border: 0;
 }
 
-.testimonials-page .textContainer>p {
+.imageBG {
+    width: 90%;
+}
+
+.peopleImg {
+    width: 17%;
+    border: 2px solid black;
+    padding: 10px;
+    position: relative;
+    top: 10%;
+    left: 33%;
+}
+
+.testimony {
+    position: relative;
+    top: -34%;
     font-family: 'Shree Devanagari 714', sans-serif;
-    font-size: 17px;
-    margin-top: 14%;
-    text-align: center;
-    padding: 18px 25px;
-    font-weight: 600;
-}
-
-.testimonials-page .textContainer {
-    margin-top: -37%;
-    height: 250px;
-    border: 2px solid #022D41;
-}
-
-.testimonials-page .imageFrame {
-    padding: 3px 5px;
-    height: 105px;
-    background: transparent;
-    margin-top: -54%;
-    border: none;
-    text-align: center;
-    padding-left: 25%;
-}
-
-.testimonials-page #frame {
-    width: 123px;
-    height: 125px;
-    /* background-color: white; */
-    border: 2px solid #022D41;
-    padding: 5px;
-    margin-left: -65%;
-}
-
-.testimonials-page .image {
-    /* width: 125px; */
-    height: 100%;
+    font-size: 18px;
+    text-align: justify;
+    padding-right: 15px;
 }
 
 /* BENEFITS FINDER SECTION */
@@ -1112,6 +1073,11 @@ map-section.leaflet-popup-content-wrapper {
 /*          CONTACT PAGE        */
 #contactHeading {
     text-align: center;
+    margin-top: 20%;
+}
+
+.contact-form {
+    margin-left: 33%;
 }
 
 /*          Q U E R I E S        */
@@ -1154,7 +1120,7 @@ map-section.leaflet-popup-content-wrapper {
 
     .qualify_buttons {
         padding: 14px 10px 10px 10px;
-        font-size: 1.5em;
+        font-size: 1em;
         margin-right: 5px;
         width: auto;
     }
@@ -1205,7 +1171,7 @@ map-section.leaflet-popup-content-wrapper {
     }
 
     #footer_holder img {
-        height: 40px;
+        height: 50px;
         margin-left: 0;
     }
 
@@ -1213,43 +1179,19 @@ map-section.leaflet-popup-content-wrapper {
         height: auto;
     }
 
-    .testimonials-page .container {
-        background-color: transparent;
-        margin: 0;
+    .peopleImg {
+        width: 17%;
+        border: 1px solid black;
+        padding: 5px;
     }
 
-    .testimonials-page .card {
-        height: 310px;
-        padding: 0 5px;
-    }
-
-    .testimonials-page .imageBG {
-        margin-top: 34%;
-        margin-left: 0;
-    }
-
-    .testimonials-page .textContainer>p {
-        font-size: 13px;
-        text-align: left;
-        padding: 20px 5px;
-    }
-
-    .testimonials-page .textContainer {
-        margin-top: -45%;
-        height: 205px;
-    }
-
-    .testimonials-page .imageFrame {
-        padding: 2px;
-        height: 85px;
-        margin-top: -71%;
-    }
-
-    .testimonials-page #frame {
-        width: 80px;
-        height: 80px;
-        background-color: white;
-        margin-left: 25%;
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 10px;
+        text-align: justify;
+        padding-right: 35px;
     }
 
     .statement, #map-section h3 {
@@ -1266,8 +1208,30 @@ map-section.leaflet-popup-content-wrapper {
         flex-flow: row wrap;
     }
 
+    #menu-main-navigation {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
     #site-navigation .top-bar {
         display: none;
+    }
+
+    .sidebar {
+        height: auto;
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    #financial_empowerment {
+        padding: 20px;
+        padding-top: 30px;
+    }
+
+    #sideNav ol {
+        flex-flow: row wrap;
     }
 }
 
@@ -1297,48 +1261,28 @@ map-section.leaflet-popup-content-wrapper {
         height: auto;
     }
 
-    .imageBG {
-        margin-top: 24%;
-        margin-left: 0;
-    }
-
-    .textContainer>p {
-        font-size: 17px;
-        margin-top: 19%;
-        text-align: center;
-        padding: 18px 25px;
-        font-weight: 800;
-    }
-
-    .textContainer {
-        margin-top: -46%;
-        height: 265px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 2px;
-        height: 95px;
-        margin-top: -59%;
-        border: none;
-        text-align: center;
-    }
-
-    #frame {
-        width: 108px;
-        height: 100px;
-        border: 2px solid #022D41;
+    .peopleImg {
+        width: 17%;
+        border: 1px solid black;
         padding: 5px;
-        margin-left: 28%;
     }
 
-    .image {
-        /* width: 125px; */
-        height: 100%;
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 12px;
+        text-align: justify;
+        padding-right: 25px;
     }
 
-    .how_to_qualify_btn_container {
-        height: 50%;
+    .qualify_buttons {
+        font-size: 1, 5em;
+    }
+
+    #footer_holder img {
+        height: 75px;
+        margin-left: 0;
     }
 }
 
@@ -1386,45 +1330,19 @@ and (orientation: landscape) -w-
         flex-flow: column wrap;
     }
 
-    .card {
-        height: 330px;
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
     }
 
-    .imageBG {
-        margin-top: 21%;
-        margin-left: 0;
-    }
-
-    .textContainer>p {
-        font-size: 19px;
-        margin-top: 12%;
-    }
-
-    .textContainer {
-        margin-top: -35%;
-        height: 235px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 2px;
-        height: 95px;
-        margin-top: -50%;
-        border: none;
-        text-align: center;
-    }
-
-    #frame {
-        width: 108px;
-        height: 100px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: 30%;
-    }
-
-    .image {
-        /* width: 125px; */
-        height: 100%;
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 18px;
+        text-align: justify;
+        padding-right: 65px;
     }
 }
 
@@ -1448,6 +1366,41 @@ and (orientation: landscape) -w-
     #sidebar div img {
         height: 76px;
         width: 300px;
+    }
+
+    .sidebar {
+        height: 460px
+    }
+
+    #financial_empowerment {
+        padding: 60px;
+    }
+
+    #sideNav ol {
+        flex-flow: column nowrap;
+    }
+
+    .activeEmp {
+        background-color: transparent;
+    }
+
+    #sidebar {
+        display: block;
+    }
+
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
+    }
+
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 24px;
+        text-align: justify;
+        padding-right: 65px;
     }
 }
 
@@ -1474,51 +1427,19 @@ and (orientation: landscape) -w-
         border-radius: 30px;
     }
 
-    /***********         TESTIMONIALS -  P A G E    5        ***********/
-    /* -------------- 5 ------------ */
-    .card {
-        height: 350px;
-        padding-top: 12px;
-        padding-left: 60px;
-        transform: scale(1.1);
+    .peopleImg {
+        width: 17%;
+        border: 1px solid black;
+        padding: 10px;
     }
 
-    .imageBG {
-        margin-top: 30%;
-        margin-left: -1%;
-    }
-
-    .textContainer>p {
-        font-size: 15px;
-        margin-top: 18%;
-        font-weight: 600;
-    }
-
-    .textContainer {
-        margin-top: -46%;
-        height: 250px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 2px;
-        height: 95px;
-        margin-top: -68%;
-        border: none;
-        text-align: center;
-    }
-
-    #frame {
-        width: 90px;
-        height: 90px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: 27%;
-    }
-
-    .image {
-        /* width: 125px; */
-        height: 100%;
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 14px;
+        text-align: justify;
+        padding-right: 15px;
     }
 }
 
@@ -1546,50 +1467,22 @@ and (orientation: landscape) -w-
         font-size: 1.5em;
     }
 
-    /***********         TESTIMONIALS -  P A G E    5        ***********/
-    /* -------------- 5 ------------ */
-    .card {
-        height: 350px;
-        padding-top: 12px;
-        padding-left: 60px;
+    .peopleImg {
+        width: 17%;
+        border: 1px solid black;
+        padding: 10px;
+        position: relative;
+        top: 10%;
+        left: 33%;
     }
 
-    .imageBG {
-        margin-top: 20%;
-        margin-left: -1%;
-    }
-
-    .textContainer>p {
-        font-size: 17px;
-        margin-top: 14%;
-    }
-
-    .textContainer {
-        margin-top: -36%;
-        height: 250px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 3px 5px;
-        height: 105px;
-        margin-top: -51%;
-        border: none;
-        text-align: center;
-        padding-left: 25%;
-    }
-
-    #frame {
-        width: 123px;
-        height: 125px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: -65%;
-    }
-
-    .image {
-        /* width: 125px; */
-        height: 100%;
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 16px;
+        text-align: justify;
+        padding-right: 15px;
     }
 }
 
@@ -1626,52 +1519,22 @@ and (orientation: landscape) -w-
         height: 500px;
     }
 
-    /***********         TESTIMONIALS -  P A G E    5        ***********/
-    /* -------------- 5 ------------ */
-    .container {
-        height: auto;
-        padding: 0 20px;
-        margin: 0 auto;
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
+        position: relative;
+        top: 10%;
+        left: 33%;
     }
 
-    .card {
-        height: 360px;
-        padding-top: 12px;
-        padding-left: 60px;
-    }
-
-    .imageBG {
-        margin-top: 23%;
-        margin-left: -1%;
-    }
-
-    .textContainer>p {
-        font-size: 17px;
-        margin-top: 14%;
-        font-weight: 600;
-    }
-
-    .textContainer {
-        margin-top: -37%;
-        height: 250px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 3px 5px;
-        height: 105px;
-        margin-top: -54%;
-        border: none;
-        text-align: center;
-        padding-left: 25%;
-    }
-
-    #frame {
-        width: 123px;
-        height: 125px;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: -65%;
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 18px;
+        text-align: justify;
+        padding-right: 15px;
     }
 }
 
@@ -1699,38 +1562,21 @@ and (orientation: landscape) -w-
         height: 600px;
     }
 
-    .imageBG {
-        margin-top: 23%;
-        margin-left: -1%;
+    .peopleImg {
+        width: 17%;
+        border: 2px solid black;
+        padding: 10px;
+        position: relative;
+        top: 10%;
+        left: 33%;
     }
 
-    .textContainer>p {
-        font-size: 17px;
-        margin-top: 14%;
-    }
-
-    .textContainer {
-        margin-top: -37%;
-        height: 250px;
-        border: 2px solid #022D41;
-    }
-
-    .imageFrame {
-        padding: 3px 5px;
-        height: 105px;
-        background: transparent;
-        margin-top: -54%;
-        border: none;
-        text-align: center;
-        padding-left: 25%;
-    }
-
-    #frame {
-        width: 123px;
-        height: 125px;
-        background-color: white;
-        border: 2px solid #022D41;
-        padding: 5px;
-        margin-left: -65%;
+    .testimony {
+        position: relative;
+        top: -34%;
+        font-family: 'Shree Devanagari 714', sans-serif;
+        font-size: 25px;
+        text-align: justify;
+        padding-right: 15px;
     }
 }

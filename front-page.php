@@ -21,18 +21,33 @@
                 <div class="page1">
                     <div class="site-branding">
                         <?php
-              					    the_custom_logo();
+                        // if theres no logo, write Durham Tax Help
+                        if (function_exists( 'the_custom_logo' ) ) {
+                					the_custom_logo();
+                        }
+                        else{
+                          echo "Durham Tax Help";
+                        }
               					?>
                                           <?php
               				$durham_tax_help = get_bloginfo( 'description', 'display' );
               				if ( $durham_tax_help || is_customize_preview() ) :
               					?>
                           <p class="site-description">
-                              <?php echo $durham_tax_help; /* WPCS: xss ok. */ ?>
-                          </p>
+
+                          <?php
+                          if ( $durham_tax_help){
+                          ?>
+                              <?php echo $durham_tax_help; /* WPCS: xss ok. */ ?> </p>
+
+                          <?php
+                          }
+                          ?>
+
                           <?php endif; ?>
                     </div>
 
+					<!-- If field group exists, get the home contents -->
                     <?php
 					if ( function_exists( 'get_field' ) ) {
 					$home_contents = get_field( 'home_contents' );
@@ -57,6 +72,8 @@
 
 					// var_dump( $image );
 				?>
+
+		  <!-- Holds character images -->
           <div class="characters">
               <img id="main_img_chara1" src="<?php echo $image1['url'] ?>" alt="">
               <img id="main_img_chara2" src="<?php echo $image2['url'] ?>" alt="">
@@ -67,19 +84,57 @@
 
           <div class="intro grid-x grid-margin-x">
 
-              <h1 id="main_site_title" class="title small-12"><?php echo $title; ?></h1>
+              <h1 id="main_site_title" class="title small-12">
+			<!-- If site title exists, show it -->
+              <?php
+              if ($title){
+              ?>
+
+              <?php echo $title; ?></h1>
+
+              <?php
+               }
+              ?>
               <p class="statement fadeOn small-12">
-                  <?php echo $statement; ?>
-              </p>
+
+			  <!-- If statement exists, show it -->
+              <?php
+              if ( $statement){
+              ?>
+                  <?php echo $statement; ?></p>
+
+              <?php
+              }
+              ?>
+
               <p class="conversion fadeOn small-12 medium-12">
-                  <?php echo $begin; ?>
-              </p>
+			  <!-- If content exists, show it-->
+              <?php
+              if ( $begin){
+              ?>
+
+              <?php echo $begin; ?></p>
+
+              <?php
+              }
+              ?>
+
               <div class="inp fadeOn small-6 medium-4 large-4">
                   <input class="userInp" type="number" name="" value="" placeholder="Example: 30000">
               </div>
               <div class="btn fadeOn small-6 medium-2 large-3">
                   <button class="calculate" type="button" name="button">
-                      <?php echo $qualify; ?>
+			  
+			  <!-- If content exists, show it-->
+              <?php
+              if ( $qualify){
+              ?>
+              <?php echo $qualify; ?>
+
+              <?php
+              }
+              ?>
+
                   </button>
               </div>
               <div class="two_button_container">
@@ -87,7 +142,16 @@
                   <div class="bigbtn fadeOn small-12">
                       <a href="#volunteer_page">
                           <button class="findTxHp" type="button" name="button">
+
+						<!-- Hold the button -->
+                        <?php
+                        if ( $findhelp){
+                        ?>
                               <?php echo $findhelp; ?>
+
+                        <?php
+                         }
+                        ?>
                           </button>
                       </a>
                   </div>
