@@ -10,9 +10,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<!-- Here is the landing page / header -->
-	<header class="entry-header">
-		<?php
+    <!-- Here is the landing page / header -->
+    <header class="entry-header">
+        <?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
@@ -21,26 +21,26 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
-				<?php
+        <div class="entry-meta">
+            <?php
 				durhamtaxhelp_posted_on();
 				durhamtaxhelp_posted_by();
 				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-<!-- Get main content -->
+        </div><!-- .entry-meta -->
+        <?php endif; ?>
+        <!-- Get main content -->
 
-	</header><!-- .entry-header -->
+    </header><!-- .entry-header -->
 
-	<?php durhamtaxhelp_post_thumbnail(); ?>
+    <?php durhamtaxhelp_post_thumbnail(); ?>
 
-<!-- After the header, add the qualify page -->
-<div id='splash' class="landing-page">
+    <!-- After the header, add the qualify page -->
+    <div id='splash' class="landing-page">
 
-</div>
+    </div>
 
-	<footer class="entry-footer">
-		<?php durhamtaxhelp_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+    <footer class="entry-footer">
+        <?php durhamtaxhelp_entry_footer(); ?>
+    </footer><!-- .entry-footer -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
