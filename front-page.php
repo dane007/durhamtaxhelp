@@ -47,6 +47,7 @@
                           <?php endif; ?>
                     </div>
 
+					<!-- If field group exists, get the home contents -->
                     <?php
 					if ( function_exists( 'get_field' ) ) {
 					$home_contents = get_field( 'home_contents' );
@@ -71,6 +72,8 @@
 
 					// var_dump( $image );
 				?>
+
+		  <!-- Holds character images -->
           <div class="characters">
               <img id="main_img_chara1" src="<?php echo $image1['url'] ?>" alt="">
               <img id="main_img_chara2" src="<?php echo $image2['url'] ?>" alt="">
@@ -82,7 +85,7 @@
           <div class="intro grid-x grid-margin-x">
 
               <h1 id="main_site_title" class="title small-12">
-
+			<!-- If site title exists, show it -->
               <?php
               if ($title){
               ?>
@@ -94,6 +97,7 @@
               ?>
               <p class="statement fadeOn small-12">
 
+			  <!-- If statement exists, show it -->
               <?php
               if ( $statement){
               ?>
@@ -104,7 +108,7 @@
               ?>
 
               <p class="conversion fadeOn small-12 medium-12">
-
+			  <!-- If content exists, show it-->
               <?php
               if ( $begin){
               ?>
@@ -120,7 +124,8 @@
               </div>
               <div class="btn fadeOn small-6 medium-2 large-3">
                   <button class="calculate" type="button" name="button">
-
+			  
+			  <!-- If content exists, show it-->
               <?php
               if ( $qualify){
               ?>
@@ -138,7 +143,7 @@
                       <a href="#volunteer_page">
                           <button class="findTxHp" type="button" name="button">
 
-
+						<!-- Hold the button -->
                         <?php
                         if ( $findhelp){
                         ?>

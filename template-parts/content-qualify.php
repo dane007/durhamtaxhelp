@@ -9,14 +9,19 @@
 
 ?>
 
+<!-- Content section holds the content of qualify page -->
 <section class="content_sections" id="qualify_page">
-		<?php
+
+    <!-- Gets the content of the fields if they exist -->
+    <?php
 				if ( function_exists( 'get_field' ) ) {
 				$qualify_contents = get_field( 'qualify_contents' );
 
-		// var_dump( $image );
+		
 		?>
-		<?php
+
+
+    <?php
 		foreach( $qualify_contents as $qualify_content ) {
 				$qheading = $qualify_content['heading'];
 				$heading1 = $qualify_content['heading1'];
@@ -37,28 +42,28 @@
 
 
 		?>
-		<?php
+    <?php
 		}
 		?>
 
 
 
-		<div class="grid-container htq_grid">
+    <div class="grid-container htq_grid">
 
-				<div class="grid-x grid-margin-x fullVH">
-					<h1 class="section_titles small-12">
-					
-					
-					<?php
+        <div class="grid-x grid-margin-x fullVH">
+            <h1 class="section_titles small-12">
+
+                <!-- If heading exists, show heading -->
+                <?php
                     if ($qheading) {
                     ?>
 
-                        <?php echo $qheading; ?>
+                <?php echo $qheading; ?>
 
 
-                    </h1>
+            </h1>
 
-                    <?php
+            <?php
 
                     
 
@@ -66,182 +71,193 @@
 
                     ?>
 
-						<div class="how_to_qualify_btn_container small-12 medium-4 large-3 grid-x">
-								<!-- Buttons -->
-								<button id="eligible_btn" class="qualify_buttons small-3 medium-12">
-										Am I Eligible?
-								</button>
+            <!-- Container for holding the buttons for each article of information -->
+            <div class="how_to_qualify_btn_container small-12 medium-4 large-3 grid-x">
+                <!-- Buttons -->
+                <button id="eligible_btn" class="qualify_buttons small-3 medium-12">
+                    Am I Eligible?
+                </button>
 
-								<button id="receipts_btn" class="qualify_buttons small-3 medium-12">
-									 Receipts
-								</button>
+                <button id="receipts_btn" class="qualify_buttons small-3 medium-12">
+                    Receipts
+                </button>
 
-								<button id="infoSlips_btn" class="qualify_buttons small-3 medium-12">
-										Information Slips
-								</button>
-						</div>
+                <button id="infoSlips_btn" class="qualify_buttons small-3 medium-12">
+                    Information Slips
+                </button>
+            </div>
 
-						<div class="small-12 medium-8 large-9 qualify_box">
+            <!-- Holds the qualify box -->
+            <div class="small-12 medium-8 large-9 qualify_box">
 
 
-								<div class="qualify_box box">
-										<article id="article_box01" class="article_box">
-												<h2 class="am_i_eligible_title">
-												
-												<?php
+                <div class="qualify_box box">
+                    <article id="article_box01" class="article_box">
+                        <h2 class="am_i_eligible_title">
+                            <!-- If the content exists, show said content -->
+                            <?php
                                                 if ($heading1) {
                                                 ?>
 
-												<?php echo $heading1; ?></h2>
+                            <?php echo $heading1; ?>
+                        </h2>
 
-												<?php
+                        <?php
 												}
 												?>
-												<p class="paragraph0101">
-												
-												<?php
+                        <p class="paragraph0101">
+
+                            <?php
 												if($statement){
-                                                ?>	
-												}
-												<?php echo $statement; ?></p>
+                                                ?>
+                            }
+                            <?php echo $statement; ?>
+                        </p>
 
-												<?php
+                        <?php
 												}
 												?>
 
-												<h3 class="volunteer_warning">
+                        <h3 class="volunteer_warning">
 
-												<?php
+                            <?php
 												if($paragraph1_heading){
 												?>
 
-												<?php echo $paragraph1_heading; ?></h3>
+                            <?php echo $paragraph1_heading; ?>
+                        </h3>
 
-												<?php
+                        <?php
 												}
 												?>
 
-												<ul class="volunteer_warning_list">
+                        <ul class="volunteer_warning_list">
 
-												<?php
+                            <?php
 												if($paragraph1_content){
 												?>
 
-												<?php echo $paragraph1_content; ?>
+                            <?php echo $paragraph1_content; ?>
 
-												<?php
+                            <?php
 												}
 												?>
 
-												</ul>
+                        </ul>
 
-												<h4 class="volunteer_CRA_Guidelines">
+                        <h4 class="volunteer_CRA_Guidelines">
 
-												<?php
+                            <?php
 												if($paragraph2_heading){
 												?>
 
-												<?php echo $paragraph2_heading; ?></h4>
+                            <?php echo $paragraph2_heading; ?>
+                        </h4>
 
-												<?php
+                        <?php
 												}
 												?>
 
-												<ul class="volunteer_CRA_Guidelines_list">
+                        <ul class="volunteer_CRA_Guidelines_list">
 
-												<?php
+                            <?php
 												if($paragraph2_content){
 												?>
 
-												<?php echo $paragraph2_content; ?>
+                            <?php echo $paragraph2_content; ?>
 
-												<?php
+                            <?php
 												}
 												?>
 
-												</ul>
+                        </ul>
 
-												<h5 class="chartered_Accountant_Guidelines"><?php echo $paragraph3_heading; ?></h5>
+                        <h5 class="chartered_Accountant_Guidelines">
+                            <?php echo $paragraph3_heading; ?>
+                        </h5>
 
-												<ul class="chartered_Accountant_Guidelines_list">
-												<?php echo $paragraph3_content; ?>
-												</ul>
-												<!--- End "Am I Eligible" section --->
-										</article>
+                        <ul class="chartered_Accountant_Guidelines_list">
+                            <?php echo $paragraph3_content; ?>
+                        </ul>
+                        <!--- End "Am I Eligible" section --->
+                    </article>
 
 
-										<article id="article_box02" class="article_box">
-												<h2 class="what_to_bring_title">
+                    <article id="article_box02" class="article_box">
+                        <h2 class="what_to_bring_title">
 
-												<?php
+                            <?php
 												if($heading2){
 												?>
 
-												<?php echo $heading2; ?></h2>
+                            <?php echo $heading2; ?>
+                        </h2>
 
-												<?php
+                        <?php
 												}
 												?>
 
-												<ul class="receipts_list">
+                        <ul class="receipts_list">
 
-												<?php
+                            <?php
 												if($content2){
 												?>
 
-												<?php echo $content2; ?>
+                            <?php echo $content2; ?>
 
-												<?php
+                            <?php
 												}
 												?>
 
-												</ul>
-										<!--- End "What to Bring: Receipts" section --->
-										</article>
+                        </ul>
+                        <!--- End "What to Bring: Receipts" section --->
+                    </article>
 
-										<article id="article_box03" class="article_box">
-												<h2 class="what_to_bring_title">
+                    <article id="article_box03" class="article_box">
+                        <h2 class="what_to_bring_title">
 
-												<?php
+                            <?php
 												if($heading3){
 												?>
 
-												<?php echo $heading3; ?></h2>
+                            <?php echo $heading3; ?>
+                        </h2>
 
-												<?php
+                        <?php
 												}
 												?>
 
-												<ul class="information_slips_list">
+                        <ul class="information_slips_list">
 
-												<?php
+                            <?php
 												if($content3){
 												?>
-												<?php echo $content3; ?>
+                            <?php echo $content3; ?>
 
-												<?php
+                            <?php
 												}
 												?>
-												
-												</ul>
-										<!--- End "What to Bring: Information Slips" section --->
-										</article>
-										<div class="download">
-										 <a href="<?php echo get_template_directory_uri() . '/assets/img/TaxFilingChecklist.pdf'; ?>" download>
-														<img src="<?php echo get_template_directory_uri() . '/assets/img/pdfDLImg.png'; ?>" />
-														<p class="dlPDF">Click here to download in PDF format.</p>
-										 </a>
-										 </div>
 
-								</div>
+                        </ul>
+                        <!--- End "What to Bring: Information Slips" section --->
+                    </article>
+                    <div class="download">
+                        <!-- Get the images to indicate that the document can be downloaded in PDF format -->
+                        <a href="<?php echo get_template_directory_uri() . '/assets/img/TaxFilingChecklist.pdf'; ?>" download>
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/pdfDLImg.png'; ?>" />
+                            <p class="dlPDF">Click here to download in PDF format.</p>
+                        </a>
+                    </div>
 
-						</div>
+                </div>
 
-				</div>
+            </div>
 
-		</div>
+        </div>
 
-		 <?php
+    </div>
+
+    <?php
 				}
 		?>
 
